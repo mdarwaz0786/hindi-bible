@@ -1,13 +1,13 @@
 import React from 'react';
 import { TouchableOpacity, Text, View, StyleSheet } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import GRADIENT_COLORS from '../../Constants/GradientColors.js';
 
 const GradiantButton = ({
   title,
   title2,
   onPress,
-  backgroundColors = ['#FF9A8B', '#FF6A88'],
-  bottomColor = '#D44F66',
+  gradientType = 'orange',
   color = '#fff',
   width = '100%',
   height = 40,
@@ -17,17 +17,16 @@ const GradiantButton = ({
   fontSize = 14,
   fontWeight = '500',
 }) => {
+  const colors = GRADIENT_COLORS[gradientType] || GRADIENT_COLORS.orange;
+
   return (
     <TouchableOpacity
-      style={[
-        styles.buttonWrapper,
-        { width, height, borderColor, borderWidth, borderRadius },
-      ]}
+      style={[styles.buttonWrapper, { width, height, borderColor, borderWidth, borderRadius }]}
       onPress={onPress}
       activeOpacity={0.8}
     >
       <LinearGradient
-        colors={[...backgroundColors, bottomColor]}
+        colors={colors}
         style={[styles.gradient, { borderRadius }]}
         start={{ x: 0.5, y: 0 }}
         end={{ x: 0.5, y: 1 }}

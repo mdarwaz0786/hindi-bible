@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
+import COLORS from '../../Constants/Colors';
 
 const TopBarPrimary = () => {
   return (
@@ -19,18 +20,19 @@ const styles = StyleSheet.create({
   topSection: {
     flexDirection: 'row',
     justifyContent: 'center',
+    alignItems: 'center',
     gap: 10,
   },
   iconContainer: {
-    marginLeft: 1,
+    marginBottom: 10,
   },
   icon: {
-    width: 45,
-    height: 45,
+    width: 55,
+    height: 55,
     resizeMode: 'contain',
   },
   heading: {
-    color: '#967f31',
+    color: COLORS.goldenBrown,
     fontWeight: '500',
     fontSize: 20,
   },
@@ -38,7 +40,7 @@ const styles = StyleSheet.create({
     textAlign: 'right',
     fontSize: 16,
     fontWeight: '500',
-    color: '#556943',
+    color: COLORS.deepMossGreen,
   },
 });
 

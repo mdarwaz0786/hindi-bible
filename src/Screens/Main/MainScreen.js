@@ -3,6 +3,7 @@ import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
+import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 
 const MainScreen = () => {
   const navigation = useNavigation();
@@ -15,19 +16,16 @@ const MainScreen = () => {
       <View style={styles.buttonTop}>
         <GradiantButton
           title="LOG OUT"
-          height="40"
+          height="35"
           width="30%"
-          backgroundColors={['#E74C3C', '#C0392B']}
-          bottomColor="#A93226"
+          gradientType="red"
           borderRadius={5}
         />
         <GradiantButton
           title="Home"
-          height="40"
+          height="35"
           width="30%"
-          fontSize={16}
-          backgroundColors={['#fed040', '#fed040']}
-          bottomColor="#be9007"
+          gradientType="yellow"
           borderRadius={5}
           onPress={() => navigation.navigate('Home')}
         />
@@ -35,11 +33,10 @@ const MainScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="MENU"
-          height="40"
+          height="35"
           width="30%"
           fontSize={16}
-          backgroundColors={['#587dc8', '#587dc8']}
-          bottomColor="#3867b8"
+          gradientType="blue"
           borderRadius={5}
         />
       </View>
@@ -49,9 +46,7 @@ const MainScreen = () => {
             title="Bible Study"
             height="45"
             width="45%"
-            backgroundColors={['#F8B88C', '#E89A6A']}
-            bottomColor="#d67a43"
-            color="#fff"
+            gradientType="golden"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -61,9 +56,7 @@ const MainScreen = () => {
             title="Books"
             height="45"
             width="45%"
-            backgroundColors={['#F8B88C', '#E89A6A']}
-            bottomColor="#d67a43"
-            color="#fff"
+            gradientType="golden"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -74,9 +67,7 @@ const MainScreen = () => {
             title="Videos"
             height="45"
             width="45%"
-            backgroundColors={['#F8B88C', '#E89A6A']}
-            bottomColor="#d67a43"
-            color="#fff"
+            gradientType="golden"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -85,9 +76,7 @@ const MainScreen = () => {
             title="Audios"
             height="45"
             width="45%"
-            backgroundColors={['#F8B88C', '#E89A6A']}
-            bottomColor="#d67a43"
-            color="#fff"
+            gradientType="golden"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -98,9 +87,7 @@ const MainScreen = () => {
             title="Literature"
             height="45"
             width="45%"
-            backgroundColors={['#F8B88C', '#E89A6A']}
-            bottomColor="#d67a43"
-            color="#fff"
+            gradientType="golden"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -109,9 +96,7 @@ const MainScreen = () => {
             title="Imp. Info."
             height="45"
             width="45%"
-            backgroundColors={['#F8B88C', '#E89A6A']}
-            bottomColor="#d67a43"
-            color="#fff"
+            gradientType="golden"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -122,9 +107,7 @@ const MainScreen = () => {
             title="TGC Photos"
             height="45"
             width="45%"
-            backgroundColors={['#F8B88C', '#E89A6A']}
-            bottomColor="#d67a43"
-            color="#fff"
+            gradientType="golden"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -134,9 +117,7 @@ const MainScreen = () => {
             titl2="School (CBS)"
             height="45"
             width="45%"
-            backgroundColors={['#F8B88C', '#E89A6A']}
-            bottomColor="#d67a43"
-            color="#fff"
+            gradientType="golden"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -147,9 +128,7 @@ const MainScreen = () => {
             title="DEVOTION"
             height="45"
             width="45%"
-            backgroundColors={['#F8B88C', '#E89A6A']}
-            bottomColor="#d67a43"
-            color="#fff"
+            gradientType="golden"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -158,9 +137,7 @@ const MainScreen = () => {
             title=""
             height="45"
             width="45%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -171,9 +148,7 @@ const MainScreen = () => {
             title=""
             height="45"
             width="45%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -182,9 +157,7 @@ const MainScreen = () => {
             title=""
             height="45"
             width="45%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -194,11 +167,10 @@ const MainScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="Contact Us"
-          height="40"
-          width="45%"
+          height="35"
+          width="40%"
           fontSize={16}
-          backgroundColors={['#7FAF5C', '#5E8C3A']}
-          bottomColor="#3f6b26"
+          gradientType="green"
           borderRadius={5}
           onPress={() => navigation.navigate('ContactUs')}
         />
@@ -210,11 +182,10 @@ const MainScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF2CC',
-    padding: 10,
+    backgroundColor: BACKGROUND_COLORS.primary,
   },
   topBar: {
-    marginTop: 12,
+    marginTop: 25,
     marginBottom: 16,
   },
   button: {
@@ -225,7 +196,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    columnGap: 30,
+    columnGap: 50,
     marginBottom: 20,
   },
   buttonContainer: {

@@ -4,6 +4,8 @@ import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
+import COLORS from '../../Constants/Colors.js';
+import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 
 const LoginSuccessScreen = () => {
   const navigation = useNavigation();
@@ -20,16 +22,15 @@ const LoginSuccessScreen = () => {
           height="40"
           width="30%"
           fontSize={16}
-          backgroundColors={['#fed040', '#fed040']}
-          bottomColor="#be9007"
+          gradientType="yellow"
           borderRadius={5}
           onPress={() => navigation.navigate('Home')}
         />
       </View>
 
       <View style={styles.messageContainer}>
-        <Text style={[styles.text, { marginBottom: 50 }]}>YOUR FREE TRIAL WILL EXPIRE BY <Text style={{ color: '#fed040' }}>20:41</Text> TOMORROW</Text>
-        <Text style={styles.text}>आपका फ्री ट्रायल कल <Text style={{ color: '#fed040' }}>20:41</Text> को समाप्त हो जाएगा</Text>
+        <Text style={[styles.text, { marginBottom: 50 }]}>YOUR FREE TRIAL WILL EXPIRE BY <Text style={{ color: COLORS.goldenYellow }}>20:41</Text> TOMORROW</Text>
+        <Text style={styles.text}>आपका फ्री ट्रायल कल <Text style={{ color: COLORS.goldenYellow }}>20:41</Text> को समाप्त हो जाएगा</Text>
       </View>
 
       <View style={styles.button}>
@@ -38,8 +39,7 @@ const LoginSuccessScreen = () => {
           height="40"
           width="30%"
           fontSize={16}
-          backgroundColors={['#f09f61', '#f09f61']}
-          bottomColor="#c05a17"
+          gradientType="golden"
           borderRadius={5}
           onPress={() => navigation.navigate('Main')}
         />
@@ -51,27 +51,26 @@ const LoginSuccessScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF2CC',
-    padding: 10,
+    backgroundColor: BACKGROUND_COLORS.primary,
   },
   topBar: {
-    marginTop: 12,
+    marginTop: 25,
     marginBottom: 16,
   },
   button: {
     alignItems: 'center',
-    marginVertical: 10,
   },
   messageContainer: {
-    backgroundColor: '#4474c1',
+    backgroundColor: BACKGROUND_COLORS.skyBlue,
     borderWidth: 1,
-    borderColor: '#000',
-    paddingHorizontal: 10,
+    borderColor: COLORS.black,
+    paddingHorizontal: 16,
     paddingVertical: 50,
     marginVertical: 25,
+    marginHorizontal: 30,
   },
   text: {
-    color: '#fff',
+    color: COLORS.white,
     fontSize: 18,
     textAlign: 'center',
   },

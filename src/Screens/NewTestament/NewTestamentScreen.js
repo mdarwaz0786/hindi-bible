@@ -411,7 +411,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   topBar: {
-    marginTop: 12,
+    marginTop: 25,
     marginBottom: 16,
   },
   buttonTop: {

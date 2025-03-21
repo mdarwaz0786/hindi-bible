@@ -3,6 +3,7 @@ import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
+import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 
 const BibleStudyScreen = () => {
   const navigation = useNavigation();
@@ -15,20 +16,17 @@ const BibleStudyScreen = () => {
       <View style={styles.buttonTop}>
         <GradiantButton
           title="MENU"
-          height="40"
+          height="35"
           width="30%"
           fontSize={16}
-          backgroundColors={['#587dc8', '#587dc8']}
-          bottomColor="#3867b8"
+          gradientType="blue"
           borderRadius={5}
-          onPress={() => navigation.navigate('Main')}
         />
         <GradiantButton
           title="LOG OUT"
-          height="40"
+          height="35"
           width="30%"
-          backgroundColors={['#E74C3C', '#C0392B']}
-          bottomColor="#A93226"
+          gradientType="red"
           borderRadius={5}
         />
       </View>
@@ -38,8 +36,7 @@ const BibleStudyScreen = () => {
           height="40"
           width="35%"
           fontSize={16}
-          backgroundColors={['#7bb659', '#7bb659']}
-          bottomColor="#66a637"
+          gradientType="green"
           borderRadius={5}
         />
       </View>
@@ -48,10 +45,8 @@ const BibleStudyScreen = () => {
           <GradiantButton
             title="Bible Books"
             height="45"
-            width="48%"
-            backgroundColors={['#F8B88C', '#E89A6A']}
-            bottomColor="#d67a43"
-            color="#fff"
+            width="40%"
+            gradientType="golden"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -62,10 +57,8 @@ const BibleStudyScreen = () => {
           <GradiantButton
             title="Bible Subjects"
             height="45"
-            width="48%"
-            backgroundColors={['#F8B88C', '#E89A6A']}
-            bottomColor="#d67a43"
-            color="#fff"
+            width="40%"
+            gradientType="golden"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -75,10 +68,8 @@ const BibleStudyScreen = () => {
           <GradiantButton
             title="Bible Reading"
             height="45"
-            width="48%"
-            backgroundColors={['#F8B88C', '#E89A6A']}
-            bottomColor="#d67a43"
-            color="#fff"
+            width="40%"
+            gradientType="golden"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -88,10 +79,8 @@ const BibleStudyScreen = () => {
           <GradiantButton
             title="Bible Drama"
             height="45"
-            width="48%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            width="40%"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -105,11 +94,10 @@ const BibleStudyScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF2CC',
-    padding: 10,
+    backgroundColor: BACKGROUND_COLORS.primary,
   },
   topBar: {
-    marginTop: 12,
+    marginTop: 25,
     marginBottom: 16,
   },
   button: {
@@ -129,7 +117,7 @@ const styles = StyleSheet.create({
   },
   buttonWrapper: {
     alignItems: 'center',
-    marginBottom: 16,
+    marginBottom: 22,
   },
 });
 

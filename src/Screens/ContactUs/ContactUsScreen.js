@@ -4,6 +4,8 @@ import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
+import COLORS from '../../Constants/Colors.js';
+import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 
 const ContactUsScreen = () => {
   const navigation = useNavigation();
@@ -16,11 +18,11 @@ const ContactUsScreen = () => {
       <View style={styles.homeButton}>
         <GradiantButton
           title="Home"
-          height="35"
-          width="30%"
-          backgroundColors={['#F7D154', '#E3B500']}
-          bottomColor="#c89600"
+          height="30"
+          width="25%"
+          gradientType="yellow"
           borderRadius={5}
+          fontSize={16}
           onPress={() => navigation.navigate('Home')}
         />
       </View>
@@ -48,10 +50,10 @@ const ContactUsScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF2CC',
+    backgroundColor: BACKGROUND_COLORS.primary,
   },
   topBar: {
-    marginTop: 20,
+    marginTop: 25,
     marginBottom: 30,
   },
   homeButton: {
@@ -60,7 +62,7 @@ const styles = StyleSheet.create({
     marginRight: 60,
   },
   contactSection: {
-    backgroundColor: '#960001',
+    backgroundColor: BACKGROUND_COLORS.darkRed,
     marginTop: 30,
   },
   section: {
@@ -68,8 +70,8 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: 'center',
-    fontSize: 16,
-    color: '#fff',
+    fontSize: 18,
+    color: COLORS.white,
   },
 });
 

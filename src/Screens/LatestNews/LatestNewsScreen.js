@@ -3,6 +3,8 @@ import React from 'react';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import Video from 'react-native-video';
 import { useNavigation } from '@react-navigation/native';
+import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
+import COLORS from '../../Constants/Colors.js';
 
 const LatestNewsScreen = () => {
   const navigation = useNavigation();
@@ -13,19 +15,17 @@ const LatestNewsScreen = () => {
           title="LOG OUT"
           height="27"
           width="25%"
-          backgroundColors={['#E74C3C', '#C0392B']}
-          bottomColor="#A93226"
+          gradientType="red"
           borderRadius={5}
-          fontWeight={400}
+          fontWeight={500}
         />
         <GradiantButton
           title="Home"
           height="27"
           width="25%"
-          backgroundColors={['#F7D154', '#E3B500']}
-          bottomColor="#c89600"
+          gradientType="yellow"
           borderRadius={5}
-          fontWeight={400}
+          fontWeight={500}
           onPress={() => navigation.navigate('Home')}
         />
       </View>
@@ -48,7 +48,7 @@ const LatestNewsScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: BACKGROUND_COLORS.black,
     padding: 16,
   },
   topSection: {
@@ -59,8 +59,8 @@ const styles = StyleSheet.create({
   },
   videoContainer: {
     marginTop: 100,
-    borderWidth: 1,
-    borderColor: '#c89600',
+    borderWidth: 2,
+    borderColor: COLORS.mustardYellow,
     borderRadius: 5,
     overflow: 'hidden',
     width: '100%',
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     textAlign: 'center',
     marginTop: 50,
-    fontSize: 15,
+    fontSize: 18,
   },
 });
 

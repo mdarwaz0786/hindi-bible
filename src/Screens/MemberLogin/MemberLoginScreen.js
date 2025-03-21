@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   topBar: {
-    marginTop: 12,
+    marginTop: 25,
     marginBottom: 16,
   },
   button: {

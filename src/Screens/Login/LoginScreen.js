@@ -4,6 +4,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
+import COLORS from '../../Constants/Colors.js';
+import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 
 const LoginScreen = () => {
   const navigation = useNavigation();
@@ -21,31 +23,30 @@ const LoginScreen = () => {
           height="40"
           width="30%"
           fontSize={16}
-          backgroundColors={['#fed040', '#fed040']}
-          bottomColor="#be9007"
+          gradientType="yellow"
           borderRadius={5}
           onPress={() => navigation.navigate('Home')}
         />
       </View>
 
       <View style={styles.formContainer}>
-        <Text style={styles.formTitle}>Create Account (खाता बनाएं)</Text>
+        <Text style={styles.formTitle}>CREATE ACCOUNT (अकाउंट बनाइये)</Text>
 
         <View style={styles.inputGroup}>
-          <Text style={styles.label}>Username</Text>
+          <Text style={styles.label}>USERNAME</Text>
           <TextInput
             style={styles.input}
           />
         </View>
 
         <View style={styles.inputGroup}>
-          <Text style={styles.label}>Password</Text>
+          <Text style={styles.label}>PASSWORD</Text>
           <TextInput
             style={styles.input}
             secureTextEntry={!passwordVisible}
           />
           <TouchableOpacity style={styles.showButton} onPress={() => setPasswordVisible(!passwordVisible)}>
-            <Icon name={passwordVisible ? 'eye' : 'eye-off'} size={25} color="#fff" />
+            <Icon name={passwordVisible ? 'eye' : 'eye-off'} size={25} color={COLORS.white} />
             <Text style={styles.showText}>{passwordVisible ? 'Hide Password' : 'Show Password'}</Text>
           </TouchableOpacity>
         </View>
@@ -53,12 +54,11 @@ const LoginScreen = () => {
 
       <View style={styles.button}>
         <GradiantButton
-          title="Login"
+          title="LOGIN"
           height="40"
           width="30%"
           fontSize={16}
-          backgroundColors={['#f09f61', '#f09f61']}
-          bottomColor="#c05a17"
+          gradientType="golden"
           borderRadius={5}
           onPress={() => navigation.navigate('LoginSuccess')}
         />
@@ -70,30 +70,29 @@ const LoginScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF2CC',
-    padding: 10,
+    backgroundColor: BACKGROUND_COLORS.primary,
   },
   topBar: {
-    marginTop: 12,
-    marginBottom: 16,
+    marginTop: 25,
+    marginBottom: 10,
   },
   button: {
     alignItems: 'center',
-    marginVertical: 10,
   },
   formContainer: {
-    backgroundColor: '#4474c1',
+    backgroundColor: BACKGROUND_COLORS.skyBlue,
     borderWidth: 1,
-    borderColor: '#000',
+    borderColor: COLORS.black,
     padding: 20,
-    paddingHorizontal: 40,
-    marginVertical: 30,
-    borderRadius: 10,
+    paddingHorizontal: 25,
+    marginTop: 20,
+    marginBottom: 35,
+    marginHorizontal: 30,
   },
   formTitle: {
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: '400',
-    color: '#fff',
+    color: COLORS.white,
     textAlign: 'center',
     marginBottom: 25,
   },
@@ -101,18 +100,18 @@ const styles = StyleSheet.create({
     marginBottom: 25,
   },
   label: {
-    color: '#fff',
-    fontSize: 16,
+    color: COLORS.white,
+    fontSize: 14,
     fontWeight: '400',
     marginBottom: 5,
     textAlign: 'center',
   },
   input: {
-    backgroundColor: '#fff',
+    backgroundColor: BACKGROUND_COLORS.white,
     borderRadius: 5,
     padding: 10,
     fontSize: 16,
-    color: '#000',
+    color: COLORS.black,
   },
   showButton: {
     flexDirection: 'row',
@@ -124,7 +123,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     fontSize: 18,
     fontWeight: '400',
-    color: '#90EE90',
+    color: COLORS.lightGreen,
   },
 });
 

@@ -3,6 +3,7 @@ import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
+import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 
 const OldTestamentScreen = () => {
   const navigation = useNavigation();
@@ -17,16 +18,14 @@ const OldTestamentScreen = () => {
           title="Old Testament"
           height="35"
           width="35%"
-          backgroundColors={['#7bb659', '#7bb659']}
-          bottomColor="#66a637"
+          gradientType="green"
           borderRadius={5}
         />
         <GradiantButton
           title="LOG OUT"
           height="35"
           width="25%"
-          backgroundColors={['#E74C3C', '#C0392B']}
-          bottomColor="#A93226"
+          gradientType="red"
           borderRadius={5}
         />
         <GradiantButton
@@ -34,8 +33,7 @@ const OldTestamentScreen = () => {
           height="35"
           width="20%"
           fontSize={16}
-          backgroundColors={['#fed040', '#fed040']}
-          bottomColor="#be9007"
+          gradientType="yellow"
           borderRadius={5}
           onPress={() => navigation.goBack()}
         />
@@ -46,9 +44,7 @@ const OldTestamentScreen = () => {
             title="Genesis"
             height="35"
             width="20%"
-            backgroundColors={['#F8B88C', '#E89A6A']}
-            bottomColor="#d67a43"
-            color="#fff"
+            gradientType="golden"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -58,9 +54,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -69,9 +63,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -80,9 +72,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -93,9 +83,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -104,9 +92,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -115,9 +101,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -126,9 +110,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -140,9 +122,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -151,9 +131,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -162,9 +140,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -173,9 +149,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -187,9 +161,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -198,9 +170,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -209,9 +179,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -220,9 +188,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -233,9 +199,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -244,9 +208,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -255,9 +217,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -266,9 +226,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -280,9 +238,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -291,9 +247,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -302,9 +256,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -313,9 +265,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -327,9 +277,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -338,9 +286,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -349,9 +295,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -360,9 +304,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -374,9 +316,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -385,9 +325,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -396,9 +334,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -407,9 +343,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -421,9 +355,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -432,9 +364,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -443,9 +373,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -454,9 +382,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -468,9 +394,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -479,9 +403,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -490,9 +412,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#c1c2c0', '#c1c2c0']}
-            bottomColor="#8f8f91"
-            color="#fff"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -501,9 +421,7 @@ const OldTestamentScreen = () => {
             title=""
             height="35"
             width="20%"
-            backgroundColors={['#9fb8de', '#9fb8de']}
-            bottomColor="#4e73b1"
-            color="#fff"
+            gradientType="lightBlue"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -517,12 +435,12 @@ const OldTestamentScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF2CC',
-    padding: 10,
+    backgroundColor: BACKGROUND_COLORS.primary,
+    padding: 16,
   },
   topBar: {
-    marginTop: 12,
-    marginBottom: 16,
+    marginTop: 25,
+    marginBottom: 5,
   },
   buttonTop: {
     flexDirection: 'row',

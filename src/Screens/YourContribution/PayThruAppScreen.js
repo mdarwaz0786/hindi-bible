@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF2CC',
   },
   topBar: {
-    marginTop: 12,
+    marginTop: 25,
     marginBottom: 16,
   },
   button: {

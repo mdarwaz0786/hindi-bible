@@ -1,11 +1,11 @@
 /* eslint-disable react-native/no-inline-styles */
-import { View, Text, StyleSheet, Linking } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import GradientButton from '../../Components/Button/GradientButton.js';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 
-const HomeScreen = () => {
+const MemberLoginHomeScreen = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
@@ -43,96 +43,30 @@ const HomeScreen = () => {
           onPress={() => navigation.navigate('ContactUs')}
         />
       </View>
-
-      <View style={[styles.introVideo, { marginTop: 40 }]}>
-        <GradientButton
-          title="INTRO VIDEO"
-          height="100"
-          width="50%"
-          backgroundColors={['#C8E3BA', '#A4C895']}
-          bottomColor="#8ab57a"
-          color="#333"
-          borderColor="#ccc445"
-          borderWidth={2}
-          borderRadius={5}
-          fontSize={16}
-          onPress={() => navigation.navigate('IntroVideo')}
-        />
-      </View>
-
       <View style={styles.introVideo}>
         <GradientButton
-          title="1 Day free trial"
-          title2="Ek din ka free trial"
+          title="Edit Profile"
           height="50"
-          width="50%"
+          width="40%"
           backgroundColors={['#F8B88C', '#E89A6A']}
           bottomColor="#d67a43"
-          color="#fff"
-          borderRadius={5}
-          fontSize={15}
-          fontWeight="500"
-          onPress={() => navigation.navigate('Register')}
-        />
-      </View>
-
-      <View style={styles.introVideo}>
-        <GradientButton
-          title="Your Contribution"
-          title2="Aapka Arthik Yogdan"
-          height="50"
-          width="50%"
-          backgroundColors={['#F8B88C', '#E89A6A']}
-          bottomColor="#d67a43"
-          color="#fff"
-          borderRadius={5}
-          fontSize={15}
-          fontWeight="500"
-          onPress={() => navigation.navigate('YourContribution')}
-        />
-      </View>
-
-      <View style={styles.introVideo}>
-        <GradientButton
-          title="New Sign up"
-          height="50"
-          width="50%"
-          backgroundColors={['#F8B88C', '#E89A6A']}
-          bottomColor="#d67a43"
-          color="#fff"
-          borderRadius={5}
-          fontSize={15}
-          fontWeight="500"
-        />
-      </View>
-
-      <View style={styles.introVideo}>
-        <GradientButton
-          title="Member Log in"
-          height="50"
-          width="50%"
-          backgroundColors={['#F8B88C', '#E89A6A']}
-          bottomColor="#d67a43"
-          color="#fff"
-          borderRadius={5}
-          fontSize={15}
-          fontWeight="500"
-          onPress={() => navigation.navigate('MemberLoginHome')}
-        />
-      </View>
-
-      <View style={styles.introVideo}>
-        <GradientButton
-          title="hindibiblestudy.com"
-          height="35"
-          width="60%"
-          backgroundColors={['#86BCE6', '#6A9FD1']}
-          bottomColor="#487bb0"
           color="#fff"
           borderRadius={5}
           fontSize={16}
           fontWeight="500"
-          onPress={() => Linking.openURL('https://hindibiblestudy.com')}
+          onPress={() => navigation.navigate('EditProfile')}
+        />
+        <GradientButton
+          title="LOG IN"
+          height="50"
+          width="40%"
+          backgroundColors={['#F8B88C', '#E89A6A']}
+          bottomColor="#d67a43"
+          color="#fff"
+          borderRadius={5}
+          fontSize={16}
+          fontWeight="500"
+          onPress={() => navigation.navigate('MemberLogin')}
         />
       </View>
     </View>
@@ -165,10 +99,11 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   introVideo: {
-    marginTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
+    rowGap: 35,
+    marginTop: 80,
   },
 });
 
-export default HomeScreen;
+export default MemberLoginHomeScreen;

@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
@@ -9,7 +9,7 @@ const YourContributionScreen = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.topBar}>
         <TopBarPrimary />
       </View>
@@ -59,9 +59,10 @@ const YourContributionScreen = () => {
           backgroundColors={['#fed040', '#fed040']}
           bottomColor="#be9007"
           borderRadius={5}
+          onPress={() => navigation.navigate('PayThruApp')}
         />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

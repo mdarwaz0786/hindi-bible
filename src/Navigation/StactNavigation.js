@@ -19,6 +19,10 @@ import SingleMattScreen from '../Screens/Matt/SingleMattScreen.js';
 import MemberLoginScreen from '../Screens/MemberLogin/MemberLoginScreen.js';
 import YourContributionScreen from '../Screens/YourContribution/YourContributionScreen.js';
 import PayDirectScreen from '../Screens/YourContribution/PayDirectScreen.js';
+import MemberLoginHomeScreen from '../Screens/MemberLogin/MemberLoginHomeScreen.js';
+import EditProfileScreen from '../Screens/MemberLogin/EditProfileScreen.js';
+import LoginMemberScreen from '../Screens/MemberLogin/LoginMemberScreen.js';
+import PayThruAppScreen from '../Screens/YourContribution/PayThruAppScreen.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -40,9 +44,13 @@ const StackNavigation = () => (
     <Stack.Screen name="NewTestament" component={NewTestamentScreen} />
     <Stack.Screen name="Matt" component={MattScreen} />
     <Stack.Screen name="SingleMatt" component={SingleMattScreen} />
+    <Stack.Screen name="MemberLoginHome" component={MemberLoginHomeScreen} />
     <Stack.Screen name="MemberLogin" component={MemberLoginScreen} />
+    <Stack.Screen name="LoginMember" component={LoginMemberScreen} />
+    <Stack.Screen name="EditProfile" component={EditProfileScreen} />
     <Stack.Screen name="YourContribution" component={YourContributionScreen} />
     <Stack.Screen name="PayDirect" component={PayDirectScreen} />
+    <Stack.Screen name="PayThruApp" component={PayThruAppScreen} />
   </Stack.Navigator>
 );
 

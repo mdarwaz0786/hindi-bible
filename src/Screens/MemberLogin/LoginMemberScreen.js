@@ -1,14 +1,13 @@
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Modal } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
 
-const MemberLoginScreen = () => {
+const LoginMemberScreen = () => {
   const navigation = useNavigation();
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <View style={styles.container}>
@@ -47,32 +46,12 @@ const MemberLoginScreen = () => {
             <Icon name={passwordVisible ? 'eye' : 'eye-off'} size={25} color="#fff" />
             <Text style={styles.showText}>{passwordVisible ? 'Hide Password' : 'Show Password'}</Text>
           </TouchableOpacity>
-          <View style={styles.buttonContainer}>
-            <GradiantButton
-              title="Change username - password"
-              height="40"
-              width="100%"
-              fontSize={16}
-              backgroundColors={['#7FAF5C', '#5E8C3A']}
-              bottomColor="#3f6b26"
-              borderRadius={5}
-            />
-            <GradiantButton
-              title="Forgot username / password"
-              height="40"
-              width="100%"
-              fontSize={16}
-              backgroundColors={['#f09f61', '#f09f61']}
-              bottomColor="#c05a17"
-              borderRadius={5}
-            />
-          </View>
         </View>
       </View>
 
       <View style={styles.button}>
         <GradiantButton
-          title="LOG IN"
+          title="Login"
           height="40"
           width="30%"
           fontSize={16}
@@ -82,19 +61,6 @@ const MemberLoginScreen = () => {
           onPress={() => navigation.navigate('Main')}
         />
       </View>
-
-      <Modal animationType="fade" transparent={true} visible={modalVisible}>
-        <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
-            <Text style={styles.modalText}>
-              IS PHONE PAR PEHLE SE HI EK ACCOUNT REGISTERED HAI – KRIPAYA USI USERNAME PASSWORD SE LOG IN KIJIYE
-            </Text>
-            <TouchableOpacity style={styles.okButton} onPress={() => setModalVisible(false)}>
-              <Text style={styles.okButtonText}>OK</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
     </View>
   );
 };
@@ -103,7 +69,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFF2CC',
-    padding: 20,
+    padding: 10,
   },
   topBar: {
     marginTop: 12,
@@ -120,14 +86,8 @@ const styles = StyleSheet.create({
     padding: 20,
     paddingHorizontal: 40,
     marginVertical: 30,
+    marginHorizontal: 20,
     borderRadius: 10,
-  },
-  formTitle: {
-    fontSize: 16,
-    fontWeight: '400',
-    color: '#fff',
-    textAlign: 'center',
-    marginBottom: 25,
   },
   inputGroup: {
     marginBottom: 25,
@@ -151,7 +111,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginLeft: 16,
     marginTop: 20,
-    marginBottom: 20,
   },
   showText: {
     marginLeft: 10,
@@ -159,41 +118,6 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     color: '#90EE90',
   },
-  buttonContainer: {
-    rowGap: 12,
-  },
-  modalContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'rgba(0,0,0,0.5)',
-  },
-  modalContent: {
-    backgroundColor: '#8e0000',
-    padding: 20,
-    borderRadius: 10,
-    width: '80%',
-    alignItems: 'center',
-  },
-  modalText: {
-    fontSize: 16,
-    color: '#fff',
-    textAlign: 'center',
-    marginBottom: 20,
-  },
-  okButton: {
-    backgroundColor: '#f09f61',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-    width: '50%',
-    alignItems: 'center',
-  },
-  okButtonText: {
-    fontSize: 16,
-    color: '#fff',
-    fontWeight: 'bold',
-  },
 });
 
-export default MemberLoginScreen;
+export default LoginMemberScreen;

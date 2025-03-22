@@ -1,9 +1,10 @@
-import { StyleSheet, View, ScrollView } from 'react-native';
+import { StyleSheet, View, ScrollView, Text } from 'react-native';
 import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
+import COLORS from '../../Constants/Colors.js';
 
 const PaymentSuccessScreen = () => {
   const navigation = useNavigation();
@@ -28,11 +29,17 @@ const PaymentSuccessScreen = () => {
 
       <View style={styles.mainContainer}>
         <View style={styles.infoContainer}>
-          <View style={styles.button}>
+          <Text style={styles.topText}>Thank You For Your Contribution To Our Ministry!</Text>
+          <Text style={styles.topText}>हमारी सेवकाई में आपके योगदान के लिए धन्यवाद!</Text>
+          <Text style={styles.topText}>RS. 1.00</Text>
+          <Text style={styles.bottomText}>Your donation status is success.</Text>
+          <Text style={styles.bottomText}>Transaction id</Text>
+          <Text style={styles.bottomText}>hgtt1234gft7890</Text>
+          <View style={styles.homeButton}>
             <GradiantButton
               title="HOME PAGE"
               height="35"
-              width="35%"
+              width="40%"
               fontSize={14}
               fontWeight={500}
               gradientType="lightBlue"
@@ -65,9 +72,25 @@ const styles = StyleSheet.create({
     backgroundColor: BACKGROUND_COLORS.deepBrown,
     borderWidth: 1,
     borderRadius: 10,
-    margin: 10,
+    margin: 30,
     padding: 20,
     paddingHorizontal: 30,
+  },
+  topText: {
+    fontSize: 18,
+    color: COLORS.white,
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  bottomText: {
+    fontSize: 14,
+    color: COLORS.white,
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  homeButton: {
+    alignItems: 'center',
+    marginBottom: 20,
   },
 });
 

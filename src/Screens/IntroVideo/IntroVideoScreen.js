@@ -1,11 +1,15 @@
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, ImageBackground } from 'react-native';
 import React from 'react';
 import Video from 'react-native-video';
 
 const IntroVideoScreen = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.videoContainer}>
+      <ImageBackground
+        source={require('../../Assets/videoFrame.jpeg')}
+        style={styles.imageBackground}
+        resizeMode="cover"
+      >
         <Video
           source={require('../../Assets/myvideo.mp4')}
           style={styles.video}
@@ -13,7 +17,7 @@ const IntroVideoScreen = () => {
           resizeMode="cover"
           paused={true}
         />
-      </View>
+      </ImageBackground>
     </View>
   );
 };
@@ -25,16 +29,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  videoContainer: {
-    marginTop: 100,
-    borderRadius: 5,
-    overflow: 'hidden',
+  imageBackground: {
     width: '100%',
-    height: 250,
+    height: 200,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   video: {
-    width: '100%',
-    height: '100%',
+    width: '95%',
+    height: 182,
   },
 });
 

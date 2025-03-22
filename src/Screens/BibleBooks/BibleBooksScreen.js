@@ -15,16 +15,32 @@ const BibleBooksScreen = () => {
       </View>
       <View style={styles.buttonTop}>
         <GradiantButton
+          title="Home"
+          height="30"
+          width="20%"
+          gradientType="yellow"
+          borderRadius={5}
+          onPress={() => navigation.navigate('Home')}
+        />
+        <GradiantButton
+          title="Menu"
+          height="30"
+          width="20%"
+          gradientType="blue"
+          borderRadius={5}
+          onPress={() => navigation.navigate('Main')}
+        />
+        <GradiantButton
           title="LOG OUT"
-          height="35"
-          width="28%"
+          height="30"
+          width="20%"
           gradientType="red"
           borderRadius={5}
         />
         <GradiantButton
           title="Back"
-          height="35"
-          width="28%"
+          height="30"
+          width="20%"
           fontSize={16}
           gradientType="yellow"
           borderRadius={5}
@@ -37,7 +53,7 @@ const BibleBooksScreen = () => {
           height="40"
           width="40%"
           fontSize={16}
-          gradientType="green"
+          gradientType="headingGreen"
           borderRadius={5}
         />
       </View>
@@ -78,7 +94,7 @@ const styles = StyleSheet.create({
   },
   topBar: {
     marginTop: 25,
-    marginBottom: 16,
+    marginBottom: 10,
   },
   button: {
     alignItems: 'center',
@@ -88,7 +104,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    columnGap: 30,
+    columnGap: 15,
     marginBottom: 20,
     marginTop: 10,
   },

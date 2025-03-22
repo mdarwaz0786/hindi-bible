@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import { StyleSheet, View } from 'react-native';
 import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
@@ -15,11 +16,20 @@ const OldTestamentScreen = () => {
       </View>
       <View style={styles.buttonTop}>
         <GradiantButton
-          title="Old Testament"
+          title="Menu"
           height="30"
-          width="35%"
-          gradientType="green"
+          width="25%"
+          gradientType="blue"
           borderRadius={5}
+          onPress={() => navigation.navigate('Main')}
+        />
+        <GradiantButton
+          title="Home"
+          height="30"
+          width="25%"
+          gradientType="yellow"
+          borderRadius={5}
+          onPress={() => navigation.navigate('Home')}
         />
         <GradiantButton
           title="LOG OUT"
@@ -38,6 +48,17 @@ const OldTestamentScreen = () => {
           onPress={() => navigation.goBack()}
         />
       </View>
+
+      <View style={{ alignItems: 'center' }}>
+        <GradiantButton
+          title="Old Testament"
+          height="30"
+          width="35%"
+          gradientType="green"
+          borderRadius={5}
+        />
+      </View>
+
       <View style={styles.buttonContainer}>
         <View style={styles.buttonWrapper}>
           <GradiantButton
@@ -446,7 +467,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    columnGap: 30,
+    columnGap: 10,
     marginBottom: 16,
   },
   buttonContainer: {

@@ -9,7 +9,9 @@ const GRADIENT_COLORS = {
   lightGreen: ['#C8E3BA', '#A4C895', '#8ab57a'],
   vibrantGreen: ['#32B750', '#23A841', '#1C8A36'],
 
-  orange: ['#F39C12', '#E67E22', '#D35400'],
+  headingGreen: ['#3f6b26', '#3f6b26', '#3f6b26'],
+
+  orange: ['#E88A50', '#C15317', '#AB430F', '#963509'],
   lightOrange: ['#FFCC80', '#FFB74D', '#FFA726'],
 
   darkBlue: ['#86BCE6', '#6A9FD1', '#487bb0'],

@@ -18,7 +18,7 @@ const RegisterScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="Home"
-          height="40"
+          height="35"
           width="30%"
           fontSize={16}
           gradientType="yellow"
@@ -47,10 +47,10 @@ const RegisterScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="NEXT"
-          height="40"
+          height="35"
           width="30%"
           fontSize={16}
-          gradientType="golden"
+          gradientType="orange"
           borderRadius={5}
           onPress={() => navigation.navigate('Login')}
         />

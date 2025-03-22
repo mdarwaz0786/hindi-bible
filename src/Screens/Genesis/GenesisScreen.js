@@ -5,6 +5,7 @@ import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
 import Video from 'react-native-video';
+import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 
 const GenesisScreen = () => {
   const navigation = useNavigation();
@@ -17,27 +18,24 @@ const GenesisScreen = () => {
       <View style={styles.buttonTop}>
         <GradiantButton
           title="GENESIS CLASSES"
-          height="35"
+          height="30"
           width="40%"
-          backgroundColors={['#7bb659', '#7bb659']}
-          bottomColor="#66a637"
+          gradientType="green"
           borderRadius={5}
         />
         <GradiantButton
           title="LOG OUT"
-          height="35"
+          height="30"
           width="25%"
-          backgroundColors={['#E74C3C', '#C0392B']}
-          bottomColor="#A93226"
+          gradientType="red"
           borderRadius={5}
         />
         <GradiantButton
           title="Back"
-          height="35"
+          height="30"
           width="20%"
           fontSize={16}
-          backgroundColors={['#fed040', '#fed040']}
-          bottomColor="#be9007"
+          gradientType="yellow"
           borderRadius={5}
           onPress={() => navigation.goBack()}
         />
@@ -75,7 +73,7 @@ const GenesisScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF2CC',
+    backgroundColor: BACKGROUND_COLORS.primary,
     padding: 10,
   },
   topBar: {
@@ -90,15 +88,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   videoWrapper: {
-    backgroundColor: '#fff',
-    paddingHorizontal: 25,
-    borderTopWidth: 3,
-    borderBottomWidth: 3,
-    borderTopColor: '#000',
-    borderBottomColor: '#000',
+    backgroundColor: BACKGROUND_COLORS.white,
+    paddingHorizontal: 16,
+    marginHorizontal: 10,
   },
   videoContainer: {
-    borderRadius: 5,
     overflow: 'hidden',
     width: '100%',
     height: 250,

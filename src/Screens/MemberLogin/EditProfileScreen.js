@@ -3,6 +3,8 @@ import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
+import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
+import COLORS from '../../Constants/Colors.js';
 
 const EditProfileScreen = () => {
   const navigation = useNavigation();
@@ -16,11 +18,10 @@ const EditProfileScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="Home"
-          height="40"
+          height="35"
           width="30%"
           fontSize={16}
-          backgroundColors={['#fed040', '#fed040']}
-          bottomColor="#be9007"
+          gradientType="yellow"
           borderRadius={5}
           onPress={() => navigation.navigate('Home')}
         />
@@ -46,11 +47,10 @@ const EditProfileScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="NEXT"
-          height="40"
+          height="35"
           width="30%"
           fontSize={16}
-          backgroundColors={['#f09f61', '#f09f61']}
-          bottomColor="#c05a17"
+          gradientType="orange"
           borderRadius={5}
           onPress={() => navigation.navigate('LoginMember')}
         />
@@ -62,7 +62,7 @@ const EditProfileScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF2CC',
+    backgroundColor: BACKGROUND_COLORS.primary,
     padding: 10,
   },
   topBar: {
@@ -74,9 +74,9 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   formContainer: {
-    backgroundColor: '#4474c1',
+    backgroundColor: BACKGROUND_COLORS.skyBlue,
     borderWidth: 1,
-    borderColor: '#000',
+    borderColor: COLORS.black,
     padding: 20,
     paddingHorizontal: 40,
     marginVertical: 30,
@@ -86,18 +86,18 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   label: {
-    color: '#fff',
+    color: COLORS.white,
     fontSize: 14,
     fontWeight: '400',
     marginBottom: 5,
     textAlign: 'center',
   },
   input: {
-    backgroundColor: '#fff',
+    backgroundColor: BACKGROUND_COLORS.white,
     borderRadius: 5,
     padding: 10,
     fontSize: 16,
-    color: '#000',
+    color: COLORS.black,
   },
 });
 

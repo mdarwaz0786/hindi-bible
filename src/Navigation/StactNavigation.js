@@ -23,6 +23,9 @@ import MemberLoginHomeScreen from '../Screens/MemberLogin/MemberLoginHomeScreen.
 import EditProfileScreen from '../Screens/MemberLogin/EditProfileScreen.js';
 import LoginMemberScreen from '../Screens/MemberLogin/LoginMemberScreen.js';
 import PayThruAppScreen from '../Screens/YourContribution/PayThruAppScreen.js';
+import PayNow from '../Screens/YourContribution/PayNow.js';
+import ConfirmPay from '../Screens/YourContribution/ConfirmPay.js';
+import PaymentSuccessScreen from '../Screens/YourContribution/PaymentSuccess.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -51,6 +54,9 @@ const StackNavigation = () => (
     <Stack.Screen name="YourContribution" component={YourContributionScreen} />
     <Stack.Screen name="PayDirect" component={PayDirectScreen} />
     <Stack.Screen name="PayThruApp" component={PayThruAppScreen} />
+    <Stack.Screen name="PayNow" component={PayNow} />
+    <Stack.Screen name="ConfirmPay" component={ConfirmPay} />
+    <Stack.Screen name="PaymentSuccess" component={PaymentSuccessScreen} />
   </Stack.Navigator>
 );
 

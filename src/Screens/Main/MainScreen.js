@@ -16,15 +16,15 @@ const MainScreen = () => {
       <View style={styles.buttonTop}>
         <GradiantButton
           title="LOG OUT"
-          height="35"
-          width="30%"
+          height="30"
+          width="25%"
           gradientType="red"
           borderRadius={5}
         />
         <GradiantButton
           title="Home"
-          height="35"
-          width="30%"
+          height="30"
+          width="25%"
           gradientType="yellow"
           borderRadius={5}
           onPress={() => navigation.navigate('Home')}
@@ -33,8 +33,8 @@ const MainScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="MENU"
-          height="35"
-          width="30%"
+          height="30"
+          width="25%"
           fontSize={16}
           gradientType="blue"
           borderRadius={5}
@@ -46,7 +46,7 @@ const MainScreen = () => {
             title="Bible Study"
             height="45"
             width="45%"
-            gradientType="golden"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -56,7 +56,7 @@ const MainScreen = () => {
             title="Books"
             height="45"
             width="45%"
-            gradientType="golden"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -67,7 +67,7 @@ const MainScreen = () => {
             title="Videos"
             height="45"
             width="45%"
-            gradientType="golden"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -76,7 +76,7 @@ const MainScreen = () => {
             title="Audios"
             height="45"
             width="45%"
-            gradientType="golden"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -87,7 +87,7 @@ const MainScreen = () => {
             title="Literature"
             height="45"
             width="45%"
-            gradientType="golden"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -96,7 +96,7 @@ const MainScreen = () => {
             title="Imp. Info."
             height="45"
             width="45%"
-            gradientType="golden"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -107,17 +107,17 @@ const MainScreen = () => {
             title="TGC Photos"
             height="45"
             width="45%"
-            gradientType="golden"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
           />
           <GradiantButton
             title="Children Bible"
-            titl2="School (CBS)"
+            title2="School (CBS)"
             height="45"
             width="45%"
-            gradientType="golden"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -128,7 +128,7 @@ const MainScreen = () => {
             title="DEVOTION"
             height="45"
             width="45%"
-            gradientType="golden"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -167,8 +167,8 @@ const MainScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="Contact Us"
-          height="35"
-          width="40%"
+          height="30"
+          width="35%"
           fontSize={16}
           gradientType="green"
           borderRadius={5}

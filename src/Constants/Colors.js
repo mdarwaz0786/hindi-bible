@@ -8,6 +8,8 @@ const COLORS = {
   mustardYellow: '#ccc445',
   goldenYellow: '#FED040',
   lightGreen: '#90EE90',
+  burntSienna: '#a85734',
+  red: '#FF0000',
 };
 
 export default COLORS;

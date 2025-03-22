@@ -1,9 +1,10 @@
-/* eslint-disable react-native/no-inline-styles */
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import GradientButton from '../../Components/Button/GradientButton.js';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
+import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
+import COLORS from '../../Constants/Colors.js';
 
 const MemberLoginHomeScreen = () => {
   const navigation = useNavigation();
@@ -13,32 +14,29 @@ const MemberLoginHomeScreen = () => {
         <TopBarPrimary />
       </View>
 
-      <Text style={styles.heading}><Text style={{ color: '#d67a43' }}>TGC</Text> HINDI BIBLE STUDY APP</Text>
+      <Text style={styles.heading}><Text style={{ color: COLORS.peru }}>TGC</Text> HINDI BIBLE STUDY APP</Text>
 
       <View style={styles.buttonContainer}>
         <GradientButton
           title="Subscribers"
-          height="35"
+          height="30"
           width="30%"
-          backgroundColors={['#F7D154', '#E3B500']}
-          bottomColor="#c89600"
+          gradientType="yellow"
           borderRadius={5}
         />
         <GradientButton
           title="Latest News"
-          height="35"
-          width="35%"
-          backgroundColors={['#6A9FC8', '#4C7FA2']}
-          bottomColor="#2e5d82"
+          height="30"
+          width="30%"
+          gradientType="blue"
           borderRadius={5}
           onPress={() => navigation.navigate('LatestNews')}
         />
         <GradientButton
           title="Contact Us"
-          height="35"
+          height="30"
           width="30%"
-          backgroundColors={['#7FAF5C', '#5E8C3A']}
-          bottomColor="#3f6b26"
+          gradientType="green"
           borderRadius={5}
           onPress={() => navigation.navigate('ContactUs')}
         />
@@ -46,11 +44,9 @@ const MemberLoginHomeScreen = () => {
       <View style={styles.introVideo}>
         <GradientButton
           title="Edit Profile"
-          height="50"
-          width="40%"
-          backgroundColors={['#F8B88C', '#E89A6A']}
-          bottomColor="#d67a43"
-          color="#fff"
+          height="45"
+          width="35%"
+          gradientType="orange"
           borderRadius={5}
           fontSize={16}
           fontWeight="500"
@@ -58,11 +54,9 @@ const MemberLoginHomeScreen = () => {
         />
         <GradientButton
           title="LOG IN"
-          height="50"
-          width="40%"
-          backgroundColors={['#F8B88C', '#E89A6A']}
-          bottomColor="#d67a43"
-          color="#fff"
+          height="45"
+          width="35%"
+          gradientType="orange"
           borderRadius={5}
           fontSize={16}
           fontWeight="500"
@@ -76,7 +70,7 @@ const MemberLoginHomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF2CC',
+    backgroundColor: BACKGROUND_COLORS.primary,
     padding: 10,
   },
   topBar: {
@@ -87,8 +81,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 16,
     fontWeight: '500',
-    color: '#36573d',
-    textShadowColor: 'rgba(0, 0, 0, 0.3)',
+    color: COLORS.deepMossGreen,
+    textShadowColor: COLORS.shadowColor,
     textShadowOffset: { width: 0, height: 3 },
     textShadowRadius: 5,
   },

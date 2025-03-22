@@ -27,18 +27,18 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   icon: {
-    width: 55,
-    height: 55,
+    width: 60,
+    height: 60,
     resizeMode: 'contain',
   },
   heading: {
     color: COLORS.goldenBrown,
     fontWeight: '500',
-    fontSize: 20,
+    fontSize: 24,
   },
   subHeading: {
     textAlign: 'right',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '500',
     color: COLORS.deepMossGreen,
   },

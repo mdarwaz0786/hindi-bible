@@ -5,6 +5,7 @@ import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
 import Video from 'react-native-video';
+import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 
 const MattScreen = () => {
   const navigation = useNavigation();
@@ -17,27 +18,24 @@ const MattScreen = () => {
       <View style={styles.buttonTop}>
         <GradiantButton
           title="MATTHEW CLASSES"
-          height="35"
-          width="45%"
-          backgroundColors={['#7bb659', '#7bb659']}
-          bottomColor="#66a637"
+          height="30"
+          width="48%"
+          gradientType="green"
           borderRadius={5}
         />
         <GradiantButton
           title="LOG OUT"
-          height="35"
+          height="30"
           width="25%"
-          backgroundColors={['#E74C3C', '#C0392B']}
-          bottomColor="#A93226"
+          gradientType="red"
           borderRadius={5}
         />
         <GradiantButton
           title="Back"
-          height="35"
+          height="30"
           width="20%"
           fontSize={16}
-          backgroundColors={['#fed040', '#fed040']}
-          bottomColor="#be9007"
+          gradientType="yellow"
           borderRadius={5}
           onPress={() => navigation.goBack()}
         />
@@ -75,8 +73,7 @@ const MattScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF2CC',
-    padding: 10,
+    backgroundColor: BACKGROUND_COLORS.primary,
   },
   topBar: {
     marginTop: 25,
@@ -88,14 +85,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     columnGap: 20,
     marginBottom: 20,
+    marginHorizontal: 20,
   },
   videoWrapper: {
-    backgroundColor: '#fff',
+    backgroundColor: BACKGROUND_COLORS.white,
     paddingHorizontal: 10,
-    borderTopWidth: 3,
-    borderBottomWidth: 3,
-    borderTopColor: '#000',
-    borderBottomColor: '#000',
+    marginHorizontal: 16,
   },
   videoContainer: {
     borderRadius: 5,

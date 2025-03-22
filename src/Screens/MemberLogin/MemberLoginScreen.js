@@ -4,6 +4,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
+import COLORS from '../../Constants/Colors.js';
+import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 
 const MemberLoginScreen = () => {
   const navigation = useNavigation();
@@ -19,11 +21,10 @@ const MemberLoginScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="Home"
-          height="40"
+          height="35"
           width="30%"
           fontSize={16}
-          backgroundColors={['#fed040', '#fed040']}
-          bottomColor="#be9007"
+          gradientType="yellow"
           borderRadius={5}
           onPress={() => navigation.navigate('Home')}
         />
@@ -31,39 +32,39 @@ const MemberLoginScreen = () => {
 
       <View style={styles.formContainer}>
         <View style={styles.inputGroup}>
-          <Text style={styles.label}>Username</Text>
+          <Text style={styles.label}>USERNAME</Text>
           <TextInput
             style={styles.input}
           />
         </View>
 
         <View style={styles.inputGroup}>
-          <Text style={styles.label}>Password</Text>
+          <Text style={styles.label}>PASSWORD</Text>
           <TextInput
             style={styles.input}
             secureTextEntry={!passwordVisible}
           />
           <TouchableOpacity style={styles.showButton} onPress={() => setPasswordVisible(!passwordVisible)}>
-            <Icon name={passwordVisible ? 'eye' : 'eye-off'} size={25} color="#fff" />
+            <Icon name={passwordVisible ? 'eye' : 'eye-off'} size={25} color={COLORS.white} />
             <Text style={styles.showText}>{passwordVisible ? 'Hide Password' : 'Show Password'}</Text>
           </TouchableOpacity>
           <View style={styles.buttonContainer}>
             <GradiantButton
-              title="Change username - password"
+              title="CHANGE USERNAME - PASSWORD"
               height="40"
               width="100%"
-              fontSize={16}
-              backgroundColors={['#7FAF5C', '#5E8C3A']}
-              bottomColor="#3f6b26"
+              fontSize={13}
+              fontWeight="400"
+              gradientType="green"
               borderRadius={5}
             />
             <GradiantButton
-              title="Forgot username / password"
+              title="Forgot username / Password"
               height="40"
               width="100%"
-              fontSize={16}
-              backgroundColors={['#f09f61', '#f09f61']}
-              bottomColor="#c05a17"
+              fontWeight="400"
+              fontSize={15}
+              gradientType="orange"
               borderRadius={5}
             />
           </View>
@@ -73,11 +74,10 @@ const MemberLoginScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="LOG IN"
-          height="40"
+          height="35"
           width="30%"
           fontSize={16}
-          backgroundColors={['#f09f61', '#f09f61']}
-          bottomColor="#c05a17"
+          gradientType="orange"
           borderRadius={5}
           onPress={() => navigation.navigate('Main')}
         />
@@ -89,9 +89,15 @@ const MemberLoginScreen = () => {
             <Text style={styles.modalText}>
               IS PHONE PAR PEHLE SE HI EK ACCOUNT REGISTERED HAI – KRIPAYA USI USERNAME PASSWORD SE LOG IN KIJIYE
             </Text>
-            <TouchableOpacity style={styles.okButton} onPress={() => setModalVisible(false)}>
-              <Text style={styles.okButtonText}>OK</Text>
-            </TouchableOpacity>
+            <GradiantButton
+              title="OK"
+              height="35"
+              width="30%"
+              fontSize={16}
+              gradientType="orange"
+              borderRadius={5}
+              onPress={() => setModalVisible(false)}
+            />
           </View>
         </View>
       </Modal>
@@ -102,30 +108,28 @@ const MemberLoginScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF2CC',
-    padding: 20,
+    backgroundColor: BACKGROUND_COLORS.primary,
   },
   topBar: {
     marginTop: 25,
-    marginBottom: 16,
+    marginBottom: 10,
   },
   button: {
     alignItems: 'center',
-    marginVertical: 10,
   },
   formContainer: {
-    backgroundColor: '#4474c1',
+    backgroundColor: BACKGROUND_COLORS.skyBlue,
     borderWidth: 1,
-    borderColor: '#000',
-    padding: 20,
+    borderColor: COLORS.black,
+    paddingTop: 25,
     paddingHorizontal: 40,
     marginVertical: 30,
-    borderRadius: 10,
+    marginHorizontal: 20,
   },
   formTitle: {
     fontSize: 16,
     fontWeight: '400',
-    color: '#fff',
+    color: COLORS.white,
     textAlign: 'center',
     marginBottom: 25,
   },
@@ -133,18 +137,18 @@ const styles = StyleSheet.create({
     marginBottom: 25,
   },
   label: {
-    color: '#fff',
-    fontSize: 16,
+    color: COLORS.white,
+    fontSize: 14,
     fontWeight: '400',
     marginBottom: 5,
     textAlign: 'center',
   },
   input: {
-    backgroundColor: '#fff',
+    backgroundColor: BACKGROUND_COLORS.white,
     borderRadius: 5,
     padding: 10,
-    fontSize: 16,
-    color: '#000',
+    fontSize: 14,
+    color: COLORS.black,
   },
   showButton: {
     flexDirection: 'row',
@@ -155,9 +159,9 @@ const styles = StyleSheet.create({
   },
   showText: {
     marginLeft: 10,
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: '400',
-    color: '#90EE90',
+    color: COLORS.lightGreen,
   },
   buttonContainer: {
     rowGap: 12,
@@ -169,7 +173,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.5)',
   },
   modalContent: {
-    backgroundColor: '#8e0000',
+    backgroundColor: BACKGROUND_COLORS.darkRed,
     padding: 20,
     borderRadius: 10,
     width: '80%',
@@ -177,22 +181,9 @@ const styles = StyleSheet.create({
   },
   modalText: {
     fontSize: 16,
-    color: '#fff',
+    color: COLORS.white,
     textAlign: 'center',
     marginBottom: 20,
-  },
-  okButton: {
-    backgroundColor: '#f09f61',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-    width: '50%',
-    alignItems: 'center',
-  },
-  okButtonText: {
-    fontSize: 16,
-    color: '#fff',
-    fontWeight: 'bold',
   },
 });
 

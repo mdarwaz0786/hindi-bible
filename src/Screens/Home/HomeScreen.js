@@ -15,7 +15,7 @@ const HomeScreen = () => {
         <TopBarPrimary />
       </View>
 
-      <Text style={styles.heading}><Text style={{ color: COLORS.peru }}>TGC</Text> HINDI BIBLE STUDY APP</Text>
+      <Text style={styles.heading}><Text style={{ color: COLORS.peru }}>TGC</Text> HINDI BIBLE STUDY</Text>
 
       <View style={styles.buttonContainer}>
         <GradientButton
@@ -28,7 +28,7 @@ const HomeScreen = () => {
         <GradientButton
           title="Latest News"
           height="30"
-          width="35%"
+          width="30%"
           gradientType="darkBlue"
           borderRadius={5}
           onPress={() => navigation.navigate('LatestNews')}
@@ -83,7 +83,7 @@ const HomeScreen = () => {
           color={COLORS.white}
           borderRadius={5}
           fontSize={15}
-          fontWeight="400"
+          fontWeight="500"
           onPress={() => navigation.navigate('YourContribution')}
         />
       </View>
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: '500',
     color: COLORS.deepMossGreen,
     textShadowColor: COLORS.shadowColor,

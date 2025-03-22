@@ -16,15 +16,16 @@ const BibleStudyScreen = () => {
       <View style={styles.buttonTop}>
         <GradiantButton
           title="MENU"
-          height="35"
+          height="30"
           width="30%"
           fontSize={16}
           gradientType="blue"
           borderRadius={5}
+          onPress={() => navigation.navigate('Main')}
         />
         <GradiantButton
           title="LOG OUT"
-          height="35"
+          height="30"
           width="30%"
           gradientType="red"
           borderRadius={5}
@@ -33,7 +34,7 @@ const BibleStudyScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="Bible Study"
-          height="40"
+          height="35"
           width="35%"
           fontSize={16}
           gradientType="green"
@@ -46,7 +47,7 @@ const BibleStudyScreen = () => {
             title="Bible Books"
             height="45"
             width="40%"
-            gradientType="golden"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -58,7 +59,7 @@ const BibleStudyScreen = () => {
             title="Bible Subjects"
             height="45"
             width="40%"
-            gradientType="golden"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -69,7 +70,7 @@ const BibleStudyScreen = () => {
             title="Bible Reading"
             height="45"
             width="40%"
-            gradientType="golden"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"

@@ -1,4 +1,3 @@
-/* eslint-disable quotes */
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable comma-dangle */
 import { StyleSheet, Text, View, TextInput, ScrollView } from 'react-native';
@@ -6,6 +5,8 @@ import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
+import COLORS from '../../Constants/Colors.js';
+import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 
 const PayThruAppScreen = () => {
   const navigation = useNavigation();
@@ -19,11 +20,10 @@ const PayThruAppScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="BACK"
-          height="35"
+          height="30"
           width="25%"
           fontSize={16}
-          backgroundColors={['#fed040', '#fed040']}
-          bottomColor="#be9007"
+          gradientType="yellow"
           borderRadius={5}
           onPress={() => navigation.goBack()}
         />
@@ -31,8 +31,8 @@ const PayThruAppScreen = () => {
 
       <View style={styles.mainContainer}>
         <View style={styles.formContainer}>
-          <Text style={[styles.formTitle, { fontSize: 20, marginBottom: 10, }]}>Payment Gateway</Text>
-          <Text style={[styles.formTitle, { fontSize: 14, marginBottom: 20, padding: 5, color: "#fff", backgroundColor: "#ed4f1d" }]}>Credit card/Debit Card/Wallet</Text>
+          <Text style={[styles.formTitle, { fontSize: 20, marginBottom: 20, }]}>Payment Gateway</Text>
+          <Text style={[styles.formTitle, { fontSize: 14, marginBottom: 20, padding: 5, color: COLORS.white, backgroundColor: BACKGROUND_COLORS.vibrantOrange }]}>Credit card/Debit Card/Wallet</Text>
           <Text style={styles.formTitle}>If you give  your details, we could acknowledge your payment.</Text>
           <Text style={[styles.formTitle, { marginBottom: 20 }]}>यदि आप अपना विवरण देंगे तो हम आपके भुगतान की पुष्टि कर सकते हैं।</Text>
 
@@ -62,9 +62,8 @@ const PayThruAppScreen = () => {
               height="35"
               width="35%"
               fontSize={14}
-              fontWeight={400}
-              backgroundColors={['#0a8ed4', '#0a8ed4']}
-              bottomColor="#2079a5"
+              fontWeight={500}
+              gradientType="lightBlue"
               borderRadius={5}
               onPress={() => navigation.navigate('PayNow')}
             />
@@ -78,53 +77,52 @@ const PayThruAppScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF2CC',
+    backgroundColor: BACKGROUND_COLORS.primary,
   },
   topBar: {
     marginTop: 25,
-    marginBottom: 16,
   },
   button: {
     alignItems: 'center',
   },
   mainContainer: {
-    backgroundColor: '#d3a262',
+    backgroundColor: BACKGROUND_COLORS.warmTan,
     marginTop: 20,
   },
   formContainer: {
-    backgroundColor: '#1f0b02',
+    backgroundColor: BACKGROUND_COLORS.deepBrown,
     borderWidth: 1,
     borderRadius: 10,
-    borderColor: '#000',
     margin: 10,
     padding: 20,
+    paddingHorizontal: 30,
   },
   formTitle: {
     fontSize: 14,
     fontWeight: '400',
-    color: '#fff',
+    color: COLORS.white,
     marginBottom: 5,
   },
   inputGroup: {
     marginBottom: 30,
   },
   label: {
-    color: '#fff',
+    color: COLORS.white,
     fontSize: 14,
     fontWeight: '400',
-    marginBottom: 5,
+    marginBottom: 8,
   },
   redStar: {
-    color: 'red',
+    color: COLORS.red,
     fontSize: 14,
-    fontWeight: 'bold',
+    fontWeight: '500',
   },
   input: {
-    backgroundColor: '#fff',
+    backgroundColor: BACKGROUND_COLORS.white,
     borderRadius: 5,
     padding: 10,
     fontSize: 16,
-    color: '#000',
+    color: COLORS.black,
   },
 });
 

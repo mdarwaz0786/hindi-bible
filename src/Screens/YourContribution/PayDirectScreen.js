@@ -3,6 +3,8 @@ import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
+import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
+import COLORS from '../../Constants/Colors.js';
 
 const PayDirectScreen = () => {
   const navigation = useNavigation();
@@ -16,11 +18,10 @@ const PayDirectScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="BACK"
-          height="40"
+          height="35"
           width="30%"
           fontSize={16}
-          backgroundColors={['#fed040', '#fed040']}
-          bottomColor="#be9007"
+          gradientType="yellow"
           borderRadius={5}
           onPress={() => navigation.goBack()}
         />
@@ -72,26 +73,25 @@ const PayDirectScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF2CC',
-    padding: 10,
+    backgroundColor: BACKGROUND_COLORS.primary,
   },
   topBar: {
     marginTop: 25,
-    marginBottom: 16,
   },
   button: {
     alignItems: 'center',
     marginVertical: 10,
   },
   payDirectContainer: {
-    backgroundColor: '#900204',
+    backgroundColor: BACKGROUND_COLORS.darkRed,
     borderWidth: 1,
-    borderColor: '#000',
+    borderColor: COLORS.black,
     padding: 20,
     marginTop: 10,
+    marginHorizontal: 10,
   },
   text: {
-    color: '#fff',
+    color: COLORS.white,
     fontSize: 16,
     fontWeight: '400',
     textAlign: 'center',
@@ -99,6 +99,7 @@ const styles = StyleSheet.create({
   scannerContainer: {
     flex: 1,
     marginTop: 20,
+    marginHorizontal: 10,
   },
   scanner: {
     width: '100%',
@@ -107,14 +108,14 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
   },
   accountContainer: {
-    backgroundColor: '#ce9259',
-    padding: 20,
-    marginVertical: 20,
+    backgroundColor: BACKGROUND_COLORS.warmTan,
+    padding: 30,
+    marginTop: 20,
   },
   accountTitle: {
     fontSize: 20,
-    fontWeight: 'bold',
-    color: '#333',
+    fontWeight: '500',
+    color: COLORS.black,
     textAlign: 'center',
     marginBottom: 15,
   },
@@ -125,18 +126,18 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 16,
-    fontWeight: 'bold',
-    color: '#444',
+    fontWeight: '500',
+    color: COLORS.black,
   },
   value: {
     fontSize: 16,
-    color: '#222',
+    color: COLORS.black,
   },
   infoTitle: {
-    backgroundColor: '#f0622b',
-    color: '#fff',
+    backgroundColor: BACKGROUND_COLORS.vibrantOrange,
+    color: COLORS.white,
     textAlign: 'center',
-    padding: 20,
+    padding: 16,
     marginBottom: 20,
   },
 });

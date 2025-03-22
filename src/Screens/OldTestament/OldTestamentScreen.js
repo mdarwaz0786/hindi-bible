@@ -16,21 +16,21 @@ const OldTestamentScreen = () => {
       <View style={styles.buttonTop}>
         <GradiantButton
           title="Old Testament"
-          height="35"
+          height="30"
           width="35%"
           gradientType="green"
           borderRadius={5}
         />
         <GradiantButton
           title="LOG OUT"
-          height="35"
+          height="30"
           width="25%"
           gradientType="red"
           borderRadius={5}
         />
         <GradiantButton
           title="Back"
-          height="35"
+          height="30"
           width="20%"
           fontSize={16}
           gradientType="yellow"
@@ -42,9 +42,9 @@ const OldTestamentScreen = () => {
         <View style={styles.buttonWrapper}>
           <GradiantButton
             title="Genesis"
-            height="35"
+            height="30"
             width="20%"
-            gradientType="golden"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -52,7 +52,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -61,7 +61,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -70,7 +70,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -81,7 +81,7 @@ const OldTestamentScreen = () => {
         <View style={styles.buttonWrapper}>
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -90,7 +90,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -99,7 +99,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -108,46 +108,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
-            width="20%"
-            gradientType="gray"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-        </View>
-
-        <View style={styles.buttonWrapper}>
-          <GradiantButton
-            title=""
-            height="35"
-            width="20%"
-            gradientType="gray"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-          <GradiantButton
-            title=""
-            height="35"
-            width="20%"
-            gradientType="gray"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-          <GradiantButton
-            title=""
-            height="35"
-            width="20%"
-            gradientType="gray"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-          <GradiantButton
-            title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -159,7 +120,7 @@ const OldTestamentScreen = () => {
         <View style={styles.buttonWrapper}>
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -168,7 +129,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -177,7 +138,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -186,45 +147,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
-            width="20%"
-            gradientType="gray"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-        </View>
-        <View style={styles.buttonWrapper}>
-          <GradiantButton
-            title=""
-            height="35"
-            width="20%"
-            gradientType="gray"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-          <GradiantButton
-            title=""
-            height="35"
-            width="20%"
-            gradientType="gray"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-          <GradiantButton
-            title=""
-            height="35"
-            width="20%"
-            gradientType="gray"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-          <GradiantButton
-            title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -236,7 +159,7 @@ const OldTestamentScreen = () => {
         <View style={styles.buttonWrapper}>
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -245,7 +168,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -254,7 +177,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -263,7 +186,45 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
+            width="20%"
+            gradientType="gray"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+        </View>
+        <View style={styles.buttonWrapper}>
+          <GradiantButton
+            title=""
+            height="30"
+            width="20%"
+            gradientType="gray"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+          <GradiantButton
+            title=""
+            height="30"
+            width="20%"
+            gradientType="gray"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+          <GradiantButton
+            title=""
+            height="30"
+            width="20%"
+            gradientType="gray"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+          <GradiantButton
+            title=""
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -275,7 +236,7 @@ const OldTestamentScreen = () => {
         <View style={styles.buttonWrapper}>
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -284,7 +245,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -293,7 +254,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -302,46 +263,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
-            width="20%"
-            gradientType="gray"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-        </View>
-
-        <View style={styles.buttonWrapper}>
-          <GradiantButton
-            title=""
-            height="35"
-            width="20%"
-            gradientType="gray"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-          <GradiantButton
-            title=""
-            height="35"
-            width="20%"
-            gradientType="gray"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-          <GradiantButton
-            title=""
-            height="35"
-            width="20%"
-            gradientType="gray"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-          <GradiantButton
-            title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -353,7 +275,7 @@ const OldTestamentScreen = () => {
         <View style={styles.buttonWrapper}>
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -362,7 +284,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -371,7 +293,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -380,7 +302,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -392,7 +314,7 @@ const OldTestamentScreen = () => {
         <View style={styles.buttonWrapper}>
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -401,7 +323,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -410,7 +332,7 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
             width="20%"
             gradientType="gray"
             borderRadius={5}
@@ -419,7 +341,85 @@ const OldTestamentScreen = () => {
           />
           <GradiantButton
             title=""
-            height="35"
+            height="30"
+            width="20%"
+            gradientType="gray"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+        </View>
+
+        <View style={styles.buttonWrapper}>
+          <GradiantButton
+            title=""
+            height="30"
+            width="20%"
+            gradientType="gray"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+          <GradiantButton
+            title=""
+            height="30"
+            width="20%"
+            gradientType="gray"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+          <GradiantButton
+            title=""
+            height="30"
+            width="20%"
+            gradientType="gray"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+          <GradiantButton
+            title=""
+            height="30"
+            width="20%"
+            gradientType="gray"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+        </View>
+
+        <View style={styles.buttonWrapper}>
+          <GradiantButton
+            title=""
+            height="30"
+            width="20%"
+            gradientType="gray"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+          <GradiantButton
+            title=""
+            height="30"
+            width="20%"
+            gradientType="gray"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+          <GradiantButton
+            title=""
+            height="30"
+            width="20%"
+            gradientType="gray"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+          <GradiantButton
+            title=""
+            height="30"
             width="20%"
             gradientType="lightBlue"
             borderRadius={5}
@@ -447,7 +447,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     columnGap: 30,
-    marginBottom: 20,
+    marginBottom: 16,
   },
   buttonContainer: {
     marginTop: 20,

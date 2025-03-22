@@ -47,7 +47,7 @@ const BibleBooksScreen = () => {
             title="Old Testament"
             height="40"
             width="50%"
-            gradientType="golden"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -59,7 +59,7 @@ const BibleBooksScreen = () => {
             title="New Testament"
             height="40"
             width="50%"
-            gradientType="golden"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"

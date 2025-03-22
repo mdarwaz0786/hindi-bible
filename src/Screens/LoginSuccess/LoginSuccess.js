@@ -19,7 +19,7 @@ const LoginSuccessScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="Home"
-          height="40"
+          height="35"
           width="30%"
           fontSize={16}
           gradientType="yellow"
@@ -36,10 +36,10 @@ const LoginSuccessScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="OK"
-          height="40"
+          height="35"
           width="30%"
           fontSize={16}
-          gradientType="golden"
+          gradientType="orange"
           borderRadius={5}
           onPress={() => navigation.navigate('Main')}
         />

@@ -7,8 +7,9 @@ const GRADIENT_COLORS = {
 
   green: ['#7FAF5C', '#5E8C3A', '#3f6b26'],
   lightGreen: ['#C8E3BA', '#A4C895', '#8ab57a'],
+  vibrantGreen: ['#32B750', '#23A841', '#1C8A36'],
 
-  orange: ['#F8B88C', '#E89A6A', '#d67a43'],
+  orange: ['#F39C12', '#E67E22', '#D35400'],
   lightOrange: ['#FFCC80', '#FFB74D', '#FFA726'],
 
   darkBlue: ['#86BCE6', '#6A9FD1', '#487bb0'],
@@ -16,6 +17,7 @@ const GRADIENT_COLORS = {
 
   red: ['#B71C1C', '#D32F2F', '#F44336'],
   lightRed: ['#FF8A80', '#FF5252', '#FF1744'],
+  vibrantRed: ['#E04658', '#DC3446', '#C1283A'],
 
   gray: ['#BDBDBD', '#9E9E9E', '#757575'],
   lightGray: ['#E0E0E0', '#BDBDBD', '#9E9E9E'],

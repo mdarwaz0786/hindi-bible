@@ -1,9 +1,10 @@
-/* eslint-disable react-native/no-inline-styles */
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
+import COLORS from '../../Constants/Colors.js';
+import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 
 const YourContributionScreen = () => {
   const navigation = useNavigation();
@@ -17,19 +18,18 @@ const YourContributionScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="Home"
-          height="40"
+          height="35"
           width="30%"
           fontSize={16}
-          backgroundColors={['#fed040', '#fed040']}
-          bottomColor="#be9007"
+          gradientType="yellow"
           borderRadius={5}
           onPress={() => navigation.navigate('Home')}
         />
       </View>
 
       <View style={styles.payDirectContainer}>
-        <Text style={[styles.text, { color: '#a85734' }]}>डायरेक्ट हमारे बैंक में पैसे भेजने के लिए PAY DIRECT दबाइए</Text>
-        <Text style={[styles.text, { color: '#a85734' }]}>TO SEND MONEY TO OUR BANK DIRECTLY CLICK PAY DIRECT</Text>
+        <Text style={[styles.text, { color: COLORS.burntSienna }]}>डायरेक्ट हमारे बैंक में पैसे भेजने के लिए PAY DIRECT दबाइए</Text>
+        <Text style={[styles.text, { color: COLORS.burntSienna }]}>TO SEND MONEY TO OUR BANK DIRECTLY CLICK PAY DIRECT</Text>
       </View>
 
       <View style={styles.button}>
@@ -38,14 +38,13 @@ const YourContributionScreen = () => {
           height="40"
           width="40%"
           fontSize={16}
-          backgroundColors={['#7FAF5C', '#5E8C3A']}
-          bottomColor="#3f6b26"
+          gradientType="green"
           borderRadius={5}
           onPress={() => navigation.navigate('PayDirect')}
         />
       </View>
 
-      <View style={[styles.payDirectContainer, { backgroundColor: '#7e6000' }]}>
+      <View style={[styles.payDirectContainer, { backgroundColor: BACKGROUND_COLORS.darkGold }]}>
         <Text style={styles.text}>APP के ज़रिये पैसे भेजने के लिए PAY THRU APP दबाइए</Text>
         <Text style={styles.text}>TO SEND MONEY TO THRUOUGH APP CLICK PAY THRU APP</Text>
       </View>
@@ -56,8 +55,7 @@ const YourContributionScreen = () => {
           height="40"
           width="40%"
           fontSize={16}
-          backgroundColors={['#fed040', '#fed040']}
-          bottomColor="#be9007"
+          gradientType="yellow"
           borderRadius={5}
           onPress={() => navigation.navigate('PayThruApp')}
         />
@@ -69,27 +67,27 @@ const YourContributionScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF2CC',
-    padding: 10,
+    backgroundColor: BACKGROUND_COLORS.primary,
   },
   topBar: {
     marginTop: 25,
-    marginBottom: 16,
+    marginBottom: 10,
   },
   button: {
     alignItems: 'center',
-    marginVertical: 10,
   },
   payDirectContainer: {
-    backgroundColor: '#fed966',
+    backgroundColor: BACKGROUND_COLORS.softYellow,
     borderWidth: 1,
-    borderColor: '#000',
+    borderColor: COLORS.black,
     padding: 20,
     marginTop: 30,
     rowGap: 20,
+    marginHorizontal: 16,
+    marginBottom: 10,
   },
   text: {
-    color: '#fff',
+    color: COLORS.white,
     fontSize: 16,
     fontWeight: '400',
   },

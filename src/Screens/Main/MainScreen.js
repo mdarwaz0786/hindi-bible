@@ -15,11 +15,12 @@ const MainScreen = () => {
       </View>
       <View style={styles.buttonTop}>
         <GradiantButton
-          title="LOG OUT"
+          title="Log Out"
           height="30"
           width="25%"
           gradientType="red"
           borderRadius={5}
+          fontSize={17}
         />
         <GradiantButton
           title="Home"
@@ -27,15 +28,16 @@ const MainScreen = () => {
           width="25%"
           gradientType="yellow"
           borderRadius={5}
+          fontSize={17}
           onPress={() => navigation.navigate('Home')}
         />
       </View>
       <View style={styles.button}>
         <GradiantButton
-          title="MENU"
+          title="Menu"
           height="30"
           width="25%"
-          fontSize={16}
+          fontSize={17}
           gradientType="blue"
           borderRadius={5}
         />
@@ -48,7 +50,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={15}
+            fontSize={17}
             fontWeight="500"
             onPress={() => navigation.navigate('BibleStudy')}
           />
@@ -58,7 +60,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={15}
+            fontSize={17}
             fontWeight="500"
           />
         </View>
@@ -69,7 +71,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={15}
+            fontSize={17}
             fontWeight="500"
           />
           <GradiantButton
@@ -78,7 +80,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={15}
+            fontSize={17}
             fontWeight="500"
           />
         </View>
@@ -89,16 +91,16 @@ const MainScreen = () => {
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={15}
+            fontSize={17}
             fontWeight="500"
           />
           <GradiantButton
-            title="Imp. Info."
+            title="Zaruri Suchna"
             height="45"
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={15}
+            fontSize={17}
             fontWeight="500"
           />
         </View>
@@ -109,7 +111,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={15}
+            fontSize={17}
             fontWeight="500"
           />
           <GradiantButton
@@ -119,18 +121,18 @@ const MainScreen = () => {
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={15}
+            fontSize={15.5}
             fontWeight="500"
           />
         </View>
         <View style={styles.buttonWrapper}>
           <GradiantButton
-            title="DEVOTION"
+            title="Devotion"
             height="45"
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={15}
+            fontSize={17}
             fontWeight="500"
           />
           <GradiantButton
@@ -139,7 +141,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="gray"
             borderRadius={5}
-            fontSize={15}
+            fontSize={17}
             fontWeight="500"
           />
         </View>
@@ -150,7 +152,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="gray"
             borderRadius={5}
-            fontSize={15}
+            fontSize={17}
             fontWeight="500"
           />
           <GradiantButton
@@ -159,7 +161,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="gray"
             borderRadius={5}
-            fontSize={15}
+            fontSize={17}
             fontWeight="500"
           />
         </View>

@@ -5,10 +5,13 @@ const BACKGROUND_COLORS = {
   white: '#ffffff',
   skyBlue: '#4474c1',
   deepBrown: '#1e0a02',
-  darkGold: '#7e6000',
+  darkGold: '#725600',
   softYellow: '#FED966',
   vibrantOrange: '#F0622B',
   warmTan: '#CE9259',
+  green: '#3f6b26',
+  lightGreen: '#6eb141',
+  paleYellow: '#FFFFA3',
 };
 
 export default BACKGROUND_COLORS;

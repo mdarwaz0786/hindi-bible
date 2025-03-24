@@ -8,7 +8,7 @@ import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import { Text } from '@react-navigation/elements';
 import COLORS from '../../Constants/Colors.js';
 
-const InternationalScreen = () => {
+const PayScreen = () => {
   const navigation = useNavigation();
 
   return (
@@ -31,18 +31,25 @@ const InternationalScreen = () => {
 
       <View style={styles.buttonContainer}>
         <View style={styles.textContainer}>
-          <Text style={{ color: COLORS.goldenYellow, fontSize: 16, textAlign: 'center' }}>Aap 1 ya 1 se zyaada saal select kar sakte hai.</Text>
-          <Text style={{ color: COLORS.white, fontSize: 16, textAlign: 'center' }}>Yoc can select 1 or more years.</Text>
+          <View style={styles.textBox1}>
+            <Text style={[styles.textStyle, { color: COLORS.darkRed, fontWeight: '700' }]}>Rs. 1200 ($14.00)</Text>
+            <Text style={[styles.textStyle, { color: COLORS.black }]}>ONE YEAR FEES</Text>
+            <Text style={[styles.textStyle, { color: COLORS.black }]}>एक वर्ष की फीस</Text>
+          </View>
+          <View style={styles.textBox2}>
+            <Text style={[styles.textStyle, { color: COLORS.goldenYellow }]}>YOUR PACKAGE PERIOD</Text>
+            <Text style={styles.textStyle}>24-02-2025 - 23-02-2026</Text>
+          </View>
         </View>
         <View style={styles.button}>
           <GradiantButton
-            title="Select Years"
-            height="40"
-            width="40%"
+            title="Pay"
+            height="35"
+            width="32%"
             fontSize={16}
             gradientType="orange"
             borderRadius={5}
-            onPress={() => navigation.navigate('Pay')}
+            onPress={() => navigation.navigate('PaymentGateway')}
           />
         </View>
       </View>
@@ -66,13 +73,29 @@ const styles = StyleSheet.create({
     rowGap: 40,
   },
   textContainer: {
-    backgroundColor: BACKGROUND_COLORS.darkRed,
     padding: 20,
+    marginHorizontal: 10,
+    rowGap: 20,
+    backgroundColor: BACKGROUND_COLORS.lightGreen,
+  },
+  textBox1: {
+    backgroundColor: BACKGROUND_COLORS.paleYellow,
     borderWidth: 1,
     borderColor: COLORS.black,
-    marginHorizontal: 20,
-    rowGap: 20,
+    padding: 16,
+  },
+  textBox2: {
+    backgroundColor: BACKGROUND_COLORS.darkRed,
+    borderWidth: 1,
+    borderColor: COLORS.black,
+    padding: 16,
+  },
+  textStyle: {
+    fontSize: 18,
+    textAlign: 'center',
+    marginBottom: 5,
+    color: COLORS.white,
   },
 });
 
-export default InternationalScreen;
+export default PayScreen;

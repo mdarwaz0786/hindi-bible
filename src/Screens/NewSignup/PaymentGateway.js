@@ -8,7 +8,7 @@ import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import { Text } from '@react-navigation/elements';
 import COLORS from '../../Constants/Colors.js';
 
-const InternationalScreen = () => {
+const PaymentGatewayScreen = () => {
   const navigation = useNavigation();
 
   return (
@@ -31,18 +31,17 @@ const InternationalScreen = () => {
 
       <View style={styles.buttonContainer}>
         <View style={styles.textContainer}>
-          <Text style={{ color: COLORS.goldenYellow, fontSize: 16, textAlign: 'center' }}>Aap 1 ya 1 se zyaada saal select kar sakte hai.</Text>
-          <Text style={{ color: COLORS.white, fontSize: 16, textAlign: 'center' }}>Yoc can select 1 or more years.</Text>
+          <Text style={{ color: COLORS.black, fontSize: 16, textAlign: 'center' }}>Payment Gateway Screen</Text>
         </View>
         <View style={styles.button}>
           <GradiantButton
-            title="Select Years"
+            title="Sccess"
             height="40"
             width="40%"
             fontSize={16}
             gradientType="orange"
             borderRadius={5}
-            onPress={() => navigation.navigate('Pay')}
+            onPress={() => navigation.navigate('Register')}
           />
         </View>
       </View>
@@ -66,13 +65,8 @@ const styles = StyleSheet.create({
     rowGap: 40,
   },
   textContainer: {
-    backgroundColor: BACKGROUND_COLORS.darkRed,
-    padding: 20,
-    borderWidth: 1,
-    borderColor: COLORS.black,
-    marginHorizontal: 20,
-    rowGap: 20,
+    marginVertical: 30,
   },
 });
 
-export default InternationalScreen;
+export default PaymentGatewayScreen;

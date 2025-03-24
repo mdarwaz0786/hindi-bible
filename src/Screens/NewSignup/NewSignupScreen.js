@@ -35,6 +35,7 @@ const NewSignupScreen = () => {
             fontSize={16}
             gradientType="green"
             borderRadius={5}
+            onPress={() => navigation.navigate('India')}
           />
         </View>
         <View style={styles.button}>

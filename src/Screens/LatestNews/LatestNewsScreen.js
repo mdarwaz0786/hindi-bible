@@ -12,7 +12,7 @@ const LatestNewsScreen = () => {
     <View style={styles.container}>
       <View style={styles.topSection}>
         <GradiantButton
-          title="LOG OUT"
+          title="Log Out"
           height="27"
           width="25%"
           gradientType="red"

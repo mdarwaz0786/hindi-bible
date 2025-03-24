@@ -31,7 +31,7 @@ const BibleBooksScreen = () => {
           onPress={() => navigation.navigate('Main')}
         />
         <GradiantButton
-          title="LOG OUT"
+          title="Log Out"
           height="30"
           width="20%"
           gradientType="red"
@@ -42,7 +42,7 @@ const BibleBooksScreen = () => {
           height="30"
           width="20%"
           fontSize={16}
-          gradientType="yellow"
+          gradientType="purple"
           borderRadius={5}
           onPress={() => navigation.goBack()}
         />

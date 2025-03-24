@@ -28,6 +28,9 @@ import ConfirmPay from '../Screens/YourContribution/ConfirmPay.js';
 import PaymentSuccessScreen from '../Screens/YourContribution/PaymentSuccess.js';
 import NewSignupScreen from '../Screens/NewSignup/NewSignupScreen.js';
 import InternationalScreen from '../Screens/NewSignup/InternationalScreen.js';
+import PayScreen from '../Screens/NewSignup/PayScreen.js';
+import PaymentGateway from '../Screens/NewSignup/PaymentGateway.js';
+import IndiaScreen from '../Screens/NewSignup/IndiaScreen.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -61,6 +64,9 @@ const StackNavigation = () => (
     <Stack.Screen name="PaymentSuccess" component={PaymentSuccessScreen} />
     <Stack.Screen name="NewSignup" component={NewSignupScreen} />
     <Stack.Screen name="International" component={InternationalScreen} />
+    <Stack.Screen name="India" component={IndiaScreen} />
+    <Stack.Screen name="Pay" component={PayScreen} />
+    <Stack.Screen name="PaymentGateway" component={PaymentGateway} />
   </Stack.Navigator>
 );
 

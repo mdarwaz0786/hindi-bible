@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import { View, Text, StyleSheet, Linking } from 'react-native';
+import { View, Text, StyleSheet, Linking, ScrollView } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import GradientButton from '../../Components/Button/GradientButton.js';
@@ -12,12 +12,12 @@ const HomeScreen = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.topBar}>
         <TopBarPrimary />
       </View>
 
-      <Text style={[styles.heading, { fontFamily: 'Cambria' }]}><Text style={{ color: COLORS.peru, fontFamily: 'Cambria' }}>TGC</Text> HINDI BIBLE STUDY</Text>
+      <Text style={[styles.heading, { fontFamily: 'Cambria', lineHeight: 25 }]}><Text style={{ color: COLORS.peru }}>TGC</Text> HINDI BIBLE STUDY</Text>
 
       <View style={styles.buttonContainer}>
         <GradientButton
@@ -45,19 +45,20 @@ const HomeScreen = () => {
         />
       </View>
 
-      <VideoPlayer
-        videoSource={require('../../Assets/myvideo.mp4')}
-        thumbnail={require('../../Assets/videoThumbnail.jpeg')}
-        frameSource={require('../../Assets/videoFrame.jpeg')}
-        style={{ marginTop: 20, marginBottom: 0 }}
-      />
+      <View style={styles.videoPlayer}>
+        <VideoPlayer
+          videoSource={require('../../Assets/myvideo.mp4')}
+          thumbnail={require('../../Assets/videoThumbnail.jpeg')}
+          frameSource={require('../../Assets/videoFrame.jpeg')}
+        />
+      </View>
 
       <View style={styles.button}>
         <GradientButton
-          title="1 Day free trial"
-          title2="Ek din ka free trial"
-          height="48"
-          width="48%"
+          title="1 Day Free Trial"
+          title2="Ek Din Ka Free Trial"
+          height="55"
+          width="50%"
           gradientType="orange"
           color={COLORS.white}
           borderRadius={5}
@@ -71,8 +72,8 @@ const HomeScreen = () => {
         <GradientButton
           title="Your Contribution"
           title2="Aapka Arthik Yogdan"
-          height="48"
-          width="48%"
+          height="55"
+          width="50%"
           gradientType="orange"
           color={COLORS.white}
           borderRadius={5}
@@ -84,9 +85,9 @@ const HomeScreen = () => {
 
       <View style={styles.button}>
         <GradientButton
-          title="New Sign up"
-          height="48"
-          width="48%"
+          title="New Sign Up"
+          height="55"
+          width="50%"
           gradientType="orange"
           color={COLORS.white}
           borderRadius={5}
@@ -98,9 +99,9 @@ const HomeScreen = () => {
 
       <View style={styles.button}>
         <GradientButton
-          title="Member Log in"
-          height="48"
-          width="48%"
+          title="Member Log In"
+          height="55"
+          width="50%"
           gradientType="orange"
           color={COLORS.white}
           borderRadius={5}
@@ -123,7 +124,7 @@ const HomeScreen = () => {
           onPress={() => Linking.openURL('https://hindibiblestudy.com')}
         />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -131,7 +132,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: BACKGROUND_COLORS.primary,
-    padding: 10,
+    padding: 16,
+    paddingTop: 0,
   },
   topBar: {
     marginTop: 25,
@@ -140,46 +142,27 @@ const styles = StyleSheet.create({
   heading: {
     textAlign: 'center',
     fontSize: 20,
-    fontWeight: '500',
+    fontWeight: '600',
     color: COLORS.deepMossGreen,
-    textShadowColor: COLORS.shadowColor,
-    textShadowOffset: { width: 0, height: 3 },
     textShadowRadius: 5,
   },
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 15,
+    marginBottom: 0,
   },
   button: {
-    marginTop: 16,
+    marginTop: 15,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  videoFrame: {
-    marginTop: 20,
-    width: '100%',
-    height: 150,
+  videoPlayer: {
+    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  videoContainer: {
-    width: '95%',
-    height: '88%',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  video: {
-    width: '100%',
-    height: '100%',
-  },
-  playIconContainer: {
-    position: 'absolute',
-    alignSelf: 'center',
-    top: '50%',
-    left: '50%',
-    transform: [{ translateX: -25 }, { translateY: -25 }],
+    marginTop: 35,
   },
 });
 

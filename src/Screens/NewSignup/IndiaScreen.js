@@ -8,7 +8,7 @@ import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import { Text } from '@react-navigation/elements';
 import COLORS from '../../Constants/Colors.js';
 
-const InternationalScreen = () => {
+const IndiaScreen = () => {
   const navigation = useNavigation();
 
   return (
@@ -75,4 +75,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default InternationalScreen;
+export default IndiaScreen;

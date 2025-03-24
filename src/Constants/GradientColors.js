@@ -17,12 +17,15 @@ const GRADIENT_COLORS = {
   darkBlue: ['#86BCE6', '#6A9FD1', '#487bb0'],
   lightDarkBlue: ['#A5D6A7', '#81C784', '#66BB6A'],
 
-  red: ['#B71C1C', '#D32F2F', '#F44336'],
+  red: ['#FF6659', '#D32F2F', '#B71C1C'],
   lightRed: ['#FF8A80', '#FF5252', '#FF1744'],
   vibrantRed: ['#E04658', '#DC3446', '#C1283A'],
 
   gray: ['#BDBDBD', '#9E9E9E', '#757575'],
   lightGray: ['#E0E0E0', '#BDBDBD', '#9E9E9E'],
+
+  purple: ['#A34FC2', '#8D3AAF', '#6F1E92'],
+  lightPurple: ['#E1BEE7', '#CE93D8', '#BA68C8'],
 };
 
 export default GRADIENT_COLORS;

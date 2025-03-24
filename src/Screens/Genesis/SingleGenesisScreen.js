@@ -24,7 +24,7 @@ const SingleGenesisScreen = () => {
           borderRadius={5}
         />
         <GradiantButton
-          title="LOG OUT"
+          title="Log Out"
           height="30"
           width="25%"
           gradientType="red"

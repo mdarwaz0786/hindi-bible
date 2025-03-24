@@ -5,6 +5,7 @@ import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
+import Button from '../../Components/Button/Button.js';
 
 const OldTestamentScreen = () => {
   const navigation = useNavigation();
@@ -32,7 +33,7 @@ const OldTestamentScreen = () => {
           onPress={() => navigation.navigate('Home')}
         />
         <GradiantButton
-          title="LOG OUT"
+          title="Log Out"
           height="30"
           width="25%"
           gradientType="red"
@@ -50,11 +51,11 @@ const OldTestamentScreen = () => {
       </View>
 
       <View style={{ alignItems: 'center' }}>
-        <GradiantButton
+        <Button
           title="Old Testament"
           height="30"
           width="35%"
-          gradientType="green"
+          backgroundColor={BACKGROUND_COLORS.green}
           borderRadius={5}
         />
       </View>

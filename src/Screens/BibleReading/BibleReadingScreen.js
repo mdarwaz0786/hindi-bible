@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import Button from '../../Components/Button/Button.js';
 
-const BibleBooksScreen = () => {
+const BibleReadingScreen = () => {
   const navigation = useNavigation();
 
   return (
@@ -53,7 +53,7 @@ const BibleBooksScreen = () => {
       </View>
       <View style={styles.button}>
         <Button
-          title="Bible Books"
+          title="Bible Reading"
           height="40"
           width="43%"
           fontSize={15}
@@ -71,7 +71,7 @@ const BibleBooksScreen = () => {
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
-            onPress={() => navigation.navigate('OldTestament')}
+            onPress={() => navigation.navigate('BibleReadingOldTestament')}
           />
         </View>
         <View style={styles.buttonWrapper}>
@@ -83,7 +83,7 @@ const BibleBooksScreen = () => {
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
-            onPress={() => navigation.navigate('NewTestament')}
+            onPress={() => navigation.navigate('BibleReadingNewTestament')}
           />
         </View>
       </View>
@@ -122,4 +122,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BibleBooksScreen;
+export default BibleReadingScreen;

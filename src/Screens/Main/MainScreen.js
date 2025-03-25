@@ -4,6 +4,7 @@ import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
+import Button from '../../Components/Button/Button.js';
 
 const MainScreen = () => {
   const navigation = useNavigation();
@@ -20,7 +21,7 @@ const MainScreen = () => {
           width="25%"
           gradientType="red"
           borderRadius={5}
-          fontSize={17}
+          fontSize={15}
         />
         <GradiantButton
           title="Home"
@@ -28,17 +29,17 @@ const MainScreen = () => {
           width="25%"
           gradientType="yellow"
           borderRadius={5}
-          fontSize={17}
+          fontSize={15}
           onPress={() => navigation.navigate('Home')}
         />
       </View>
       <View style={styles.button}>
-        <GradiantButton
+        <Button
           title="Menu"
-          height="30"
+          height="35"
           width="25%"
-          fontSize={17}
-          gradientType="blue"
+          fontSize={15}
+          backgroundColor={BACKGROUND_COLORS.green}
           borderRadius={5}
         />
       </View>
@@ -50,7 +51,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={17}
+            fontSize={15}
             fontWeight="500"
             onPress={() => navigation.navigate('BibleStudy')}
           />
@@ -60,7 +61,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={17}
+            fontSize={15}
             fontWeight="500"
           />
         </View>
@@ -71,8 +72,9 @@ const MainScreen = () => {
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={17}
+            fontSize={15}
             fontWeight="500"
+            onPress={() => navigation.navigate('Videos')}
           />
           <GradiantButton
             title="Audios"
@@ -80,7 +82,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={17}
+            fontSize={15}
             fontWeight="500"
           />
         </View>
@@ -91,7 +93,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={17}
+            fontSize={15}
             fontWeight="500"
           />
           <GradiantButton
@@ -100,7 +102,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={17}
+            fontSize={15}
             fontWeight="500"
           />
         </View>
@@ -111,7 +113,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={17}
+            fontSize={15}
             fontWeight="500"
           />
           <GradiantButton
@@ -132,7 +134,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="orange"
             borderRadius={5}
-            fontSize={17}
+            fontSize={15}
             fontWeight="500"
           />
           <GradiantButton
@@ -141,7 +143,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="gray"
             borderRadius={5}
-            fontSize={17}
+            fontSize={15}
             fontWeight="500"
           />
         </View>
@@ -152,7 +154,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="gray"
             borderRadius={5}
-            fontSize={17}
+            fontSize={15}
             fontWeight="500"
           />
           <GradiantButton
@@ -161,7 +163,7 @@ const MainScreen = () => {
             width="45%"
             gradientType="gray"
             borderRadius={5}
-            fontSize={17}
+            fontSize={15}
             fontWeight="500"
           />
         </View>
@@ -169,7 +171,7 @@ const MainScreen = () => {
       <View style={styles.button}>
         <GradiantButton
           title="Contact Us"
-          height="30"
+          height="35"
           width="35%"
           fontSize={16}
           gradientType="green"

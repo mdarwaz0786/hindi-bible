@@ -1,13 +1,16 @@
+/* eslint-disable react-native/no-inline-styles */
 import { StyleSheet, View } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import Button from '../../Components/Button/Button.js';
+import AudioPlayer from '../../Components/Audio/AudioPlayer.js';
 
-const BibleBooksScreen = () => {
+const BibleReadingMattScreen = () => {
   const navigation = useNavigation();
+  const [playingId, setPlayingId] = useState(null);
 
   return (
     <View style={styles.container}>
@@ -16,15 +19,6 @@ const BibleBooksScreen = () => {
       </View>
       <View style={styles.buttonTop}>
         <GradiantButton
-          title="Home"
-          height="30"
-          width="20%"
-          gradientType="yellow"
-          borderRadius={5}
-          fontSize={15}
-          onPress={() => navigation.navigate('Home')}
-        />
-        <GradiantButton
           title="Menu"
           height="30"
           width="20%"
@@ -32,6 +26,15 @@ const BibleBooksScreen = () => {
           borderRadius={5}
           fontSize={15}
           onPress={() => navigation.navigate('Main')}
+        />
+        <GradiantButton
+          title="Home"
+          height="30"
+          width="20%"
+          gradientType="yellow"
+          borderRadius={5}
+          fontSize={15}
+          onPress={() => navigation.navigate('Home')}
         />
         <GradiantButton
           title="Log Out"
@@ -46,46 +49,45 @@ const BibleBooksScreen = () => {
           height="30"
           width="20%"
           fontSize={15}
-          gradientType="purple"
+          gradientType="yellow"
           borderRadius={5}
           onPress={() => navigation.goBack()}
         />
       </View>
-      <View style={styles.button}>
+
+      <View style={{ alignItems: 'center' }}>
         <Button
-          title="Bible Books"
-          height="40"
-          width="43%"
-          fontSize={15}
+          title="Matthew"
+          height="30"
+          width="25%"
           backgroundColor={BACKGROUND_COLORS.green}
           borderRadius={5}
+          fontSize={15}
         />
       </View>
-      <View style={styles.buttonContainer}>
-        <View style={styles.buttonWrapper}>
-          <GradiantButton
-            title="Old Testament"
-            height="40"
-            width="50%"
-            gradientType="orange"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-            onPress={() => navigation.navigate('OldTestament')}
-          />
-        </View>
-        <View style={styles.buttonWrapper}>
-          <GradiantButton
-            title="New Testament"
-            height="40"
-            width="50%"
-            gradientType="orange"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-            onPress={() => navigation.navigate('NewTestament')}
-          />
-        </View>
+
+      <View style={styles.audioContainer}>
+        <AudioPlayer
+          id="1"
+          chapterTitle="MATTHEW1"
+          source={require('../../Assets/myaudio.mp3')}
+          setPlayingId={setPlayingId}
+          playingId={playingId}
+        />
+        <AudioPlayer
+          id="2"
+          chapterTitle="MATTHEW1"
+          source={require('../../Assets/myaudio.mp3')}
+          setPlayingId={setPlayingId}
+          playingId={playingId}
+        />
+        <AudioPlayer
+          id="3"
+          chapterTitle="MATTHEW1"
+          source={require('../../Assets/myaudio.mp3')}
+          setPlayingId={setPlayingId}
+          playingId={playingId}
+        />
       </View>
     </View>
   );
@@ -98,11 +100,7 @@ const styles = StyleSheet.create({
   },
   topBar: {
     marginTop: 25,
-    marginBottom: 10,
-  },
-  button: {
-    alignItems: 'center',
-    marginTop: 40,
+    marginBottom: 5,
   },
   buttonTop: {
     flexDirection: 'row',
@@ -112,14 +110,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginTop: 10,
   },
-  buttonContainer: {
-    paddingHorizontal: 30,
-    marginTop: 50,
-  },
-  buttonWrapper: {
-    alignItems: 'center',
-    marginBottom: 22,
+  audioContainer: {
+    backgroundColor: BACKGROUND_COLORS.skyBlue,
+    margin: 16,
+    padding: 20,
+    rowGap: 20,
   },
 });
 
-export default BibleBooksScreen;
+export default BibleReadingMattScreen;

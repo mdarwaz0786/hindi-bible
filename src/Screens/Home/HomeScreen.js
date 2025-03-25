@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
   },
   topBar: {
     marginTop: 25,
-    marginBottom: 15,
+    marginBottom: 16,
   },
   heading: {
     textAlign: 'center',
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
     marginBottom: 0,
   },
   button: {
-    marginTop: 15,
+    marginTop: 12,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 35,
+    marginTop: 20,
   },
 });
 

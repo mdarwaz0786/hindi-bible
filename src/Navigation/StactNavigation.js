@@ -31,6 +31,19 @@ import InternationalScreen from '../Screens/NewSignup/InternationalScreen.js';
 import PayScreen from '../Screens/NewSignup/PayScreen.js';
 import PaymentGateway from '../Screens/NewSignup/PaymentGateway.js';
 import IndiaScreen from '../Screens/NewSignup/IndiaScreen.js';
+import BibleSubjectScreen from '../Screens/BibleSubject/BibleSubjectScreen.js';
+import BibleReadingScreen from '../Screens/BibleReading/BibleReadingScreen.js';
+import BibleReadingOldTestamentScreen from '../Screens/BibleReading/BibleReadingOldTestamentScreen.js';
+import BibleReadingNewTestamentScreen from '../Screens/BibleReading/BibleReadingNewTestamentScreen.js';
+import BibleReadingGenesisScreen from '../Screens/BibleReading/BibleReadingGenesisScreen.js';
+import BibleReadingMattScreen from '../Screens/BibleReading/BibleReadingMattScreen.js';
+import BibleDramaScreen from '../Screens/BibleDrama/BibleDramaScreen.js';
+import VideosScreen from '../Screens/Videos/VideosScreen.js';
+import HindiMessageScreen from '../Screens/Videos/HindiMessageScreen.js';
+import SingleVideo from '../Components/Video/SingleVideo.js';
+import TgcSongsScreen from '../Screens/Videos/TgcSongsScreen.js';
+import ShortFilmPlayScreen from '../Screens/Videos/ShorFilmPlayScreen.js';
+import InterviewScreen from '../Screens/Videos/InterviewScreen.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -67,6 +80,19 @@ const StackNavigation = () => (
     <Stack.Screen name="India" component={IndiaScreen} />
     <Stack.Screen name="Pay" component={PayScreen} />
     <Stack.Screen name="PaymentGateway" component={PaymentGateway} />
+    <Stack.Screen name="BibleSubjects" component={BibleSubjectScreen} />
+    <Stack.Screen name="BibleReading" component={BibleReadingScreen} />
+    <Stack.Screen name="BibleReadingOldTestament" component={BibleReadingOldTestamentScreen} />
+    <Stack.Screen name="BibleReadingGenesis" component={BibleReadingGenesisScreen} />
+    <Stack.Screen name="BibleReadingNewTestament" component={BibleReadingNewTestamentScreen} />
+    <Stack.Screen name="BibleReadingMatt" component={BibleReadingMattScreen} />
+    <Stack.Screen name="BibleDrama" component={BibleDramaScreen} />
+    <Stack.Screen name="Videos" component={VideosScreen} />
+    <Stack.Screen name="HindiMessage" component={HindiMessageScreen} />
+    <Stack.Screen name="SingleVideo" component={SingleVideo} />
+    <Stack.Screen name="TgcSongs" component={TgcSongsScreen} />
+    <Stack.Screen name="ShortFilmPlay" component={ShortFilmPlayScreen} />
+    <Stack.Screen name="Interview" component={InterviewScreen} />
   </Stack.Navigator>
 );
 

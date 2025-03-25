@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import Button from '../../Components/Button/Button.js';
 
-const BibleStudyScreen = () => {
+const VideosScreen = () => {
   const navigation = useNavigation();
 
   return (
@@ -53,9 +53,9 @@ const BibleStudyScreen = () => {
       </View>
       <View style={styles.button}>
         <Button
-          title="Bible Study"
+          title="Videos"
           height="35"
-          width="35%"
+          width="25%"
           fontSize={15}
           backgroundColor={BACKGROUND_COLORS.green}
           borderRadius={5}
@@ -64,50 +64,126 @@ const BibleStudyScreen = () => {
       <View style={styles.buttonContainer}>
         <View style={styles.buttonWrapper}>
           <GradiantButton
-            title="Bible Books"
+            title="Hindi Messages"
             height="45"
-            width="40%"
+            width="45%"
             gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
-            onPress={() => navigation.navigate('BibleBooks')}
+            onPress={() => navigation.navigate('HindiMessage')}
           />
-        </View>
-        <View style={styles.buttonWrapper}>
           <GradiantButton
-            title="Bible Subjects"
+            title="TGC Songs"
             height="45"
-            width="40%"
+            width="45%"
             gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
-            onPress={() => navigation.navigate('BibleSubjects')}
+            onPress={() => navigation.navigate('TgcSongs')}
           />
         </View>
         <View style={styles.buttonWrapper}>
           <GradiantButton
-            title="Bible Reading"
+            title="Short Films Plays"
             height="45"
-            width="40%"
+            width="45%"
             gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
-            onPress={() => navigation.navigate('BibleReading')}
+            onPress={() => navigation.navigate('ShortFilmPlay')}
+          />
+          <GradiantButton
+            title="Interviews"
+            height="45"
+            width="45%"
+            gradientType="orange"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+            onPress={() => navigation.navigate('Interview')}
           />
         </View>
         <View style={styles.buttonWrapper}>
           <GradiantButton
-            title="Bible Drama"
+            title="Youtube"
             height="45"
-            width="40%"
+            width="45%"
+            gradientType="orange"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+          <GradiantButton
+            title="Events"
+            height="45"
+            width="45%"
+            gradientType="orange"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+        </View>
+        <View style={styles.buttonWrapper}>
+          <GradiantButton
+            title="Counselling"
+            height="45"
+            width="45%"
+            gradientType="orange"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+          <GradiantButton
+            title="ENG Messages"
+            height="45"
+            width="45%"
+            gradientType="orange"
+            borderRadius={5}
+            fontSize={15.5}
+            fontWeight="500"
+          />
+        </View>
+        <View style={styles.buttonWrapper}>
+          <GradiantButton
+            title="Bible Stories"
+            height="45"
+            width="45%"
+            gradientType="orange"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+          <GradiantButton
+            title="Group Zoom"
+            height="45"
+            width="45%"
+            gradientType="orange"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+        </View>
+        <View style={styles.buttonWrapper}>
+          <GradiantButton
+            title=""
+            height="45"
+            width="45%"
             gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
-            onPress={() => navigation.navigate('BibleDrama')}
+          />
+          <GradiantButton
+            title=""
+            height="45"
+            width="45%"
+            gradientType="gray"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
           />
         </View>
       </View>
@@ -137,13 +213,16 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   buttonContainer: {
-    paddingHorizontal: 30,
-    marginTop: 40,
+    paddingHorizontal: 16,
+    marginTop: 20,
   },
   buttonWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 22,
+    columnGap: 10,
+    marginBottom: 16,
   },
 });
 
-export default BibleStudyScreen;
+export default VideosScreen;

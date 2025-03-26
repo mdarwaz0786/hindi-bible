@@ -12,7 +12,6 @@ import BibleStudyScreen from '../Screens/BibleStudy/BibleStudyScreen.js';
 import BibleBooksScreen from '../Screens/BibleBooks/BibleBooksScreen.js';
 import OldTestamentScreen from '../Screens/OldTestament/OldTestamentScreen.js';
 import GenesisScreen from '../Screens/Genesis/GenesisScreen.js';
-import SingleGenesisScreen from '../Screens/Genesis/SingleGenesisScreen.js';
 import NewTestamentScreen from '../Screens/NewTestament/NewTestamentScreen.js';
 import MattScreen from '../Screens/Matt/MattScreen.js';
 import SingleMattScreen from '../Screens/Matt/SingleMattScreen.js';
@@ -76,7 +75,6 @@ const StackNavigation = () => (
     <Stack.Screen name="BibleBooks" component={BibleBooksScreen} />
     <Stack.Screen name="OldTestament" component={OldTestamentScreen} />
     <Stack.Screen name="Genesis" component={GenesisScreen} />
-    <Stack.Screen name="SingleGenesis" component={SingleGenesisScreen} />
     <Stack.Screen name="NewTestament" component={NewTestamentScreen} />
     <Stack.Screen name="Matt" component={MattScreen} />
     <Stack.Screen name="SingleMatt" component={SingleMattScreen} />

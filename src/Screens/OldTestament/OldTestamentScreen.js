@@ -44,7 +44,7 @@ const OldTestamentScreen = () => {
           height="30"
           width="20%"
           fontSize={16}
-          gradientType="yellow"
+          gradientType="purple"
           borderRadius={5}
           onPress={() => navigation.goBack()}
         />

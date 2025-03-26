@@ -7,7 +7,7 @@ import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import Button from '../../Components/Button/Button.js';
 import Video from '../../Components/Video/Video.js';
 
-const InterviewScreen = () => {
+const DevotionScreen = () => {
   const navigation = useNavigation();
 
   return (
@@ -54,7 +54,7 @@ const InterviewScreen = () => {
       </View>
       <View style={styles.button}>
         <Button
-          title="Interview"
+          title="Devotion"
           height="35"
           width="25%"
           fontSize={15}
@@ -71,7 +71,7 @@ const InterviewScreen = () => {
               videoSource: require('../../Assets/myvideo.mp4'),
               thumbnail: require('../../Assets/videoThumbnail.jpeg'),
               frameSource: require('../../Assets/videoFrame.jpeg'),
-              buttonTitle: 'Interview',
+              buttonTitle: 'Devotion',
               title: 'Video 1 - How to learn coding in simple and easy way...',
               publishedOn: '15 February 2025',
               description: 'Exploring the Wonders of Space: A Journey Beyond Earth, Mastering React Native: Build Your First Mobile App, The Secret Life of Ocean Creatures: Underwater Wonders,',
@@ -86,8 +86,8 @@ const InterviewScreen = () => {
               videoSource: require('../../Assets/myvideo.mp4'),
               thumbnail: require('../../Assets/videoThumbnail.jpeg'),
               frameSource: require('../../Assets/videoFrame.jpeg'),
-              buttonTitle: 'Interview',
-              title: 'Video 1 - How to learn web development to learn web development...',
+              buttonTitle: 'Devotion',
+              title: 'Video 2 - How to learn web development to learn web development...',
               publishedOn: '20 March 2025',
               description: 'Historys Greatest Inventions That Changed the World, and 10-Minute Home Workout for a Healthier Lifestyle are some fascinating video titles covering topics from technology to science and personal well-being.',
             })
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
   },
   button: {
     alignItems: 'center',
-    marginVertical: 10,
+    marginTop: 10,
   },
   buttonTop: {
     flexDirection: 'row',
@@ -126,4 +126,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default InterviewScreen;
+export default DevotionScreen;

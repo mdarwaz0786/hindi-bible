@@ -5,9 +5,8 @@ import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import Button from '../../Components/Button/Button.js';
-import Video from '../../Components/Video/Video.js';
 
-const InterviewScreen = () => {
+const YoutubeScreen = () => {
   const navigation = useNavigation();
 
   return (
@@ -54,45 +53,39 @@ const InterviewScreen = () => {
       </View>
       <View style={styles.button}>
         <Button
-          title="Interview"
-          height="35"
-          width="25%"
+          title="Videos"
+          height="40"
+          width="40%"
           fontSize={15}
           backgroundColor={BACKGROUND_COLORS.green}
           borderRadius={5}
         />
       </View>
-      <View style={styles.videoContainer}>
-        <Video
-          thumbnail={require('../../Assets/videoThumbnail.jpeg')}
-          frameSource={require('../../Assets/videoFrame.jpeg')}
-          onPress={() =>
-            navigation.navigate('SingleVideo', {
-              videoSource: require('../../Assets/myvideo.mp4'),
-              thumbnail: require('../../Assets/videoThumbnail.jpeg'),
-              frameSource: require('../../Assets/videoFrame.jpeg'),
-              buttonTitle: 'Interview',
-              title: 'Video 1 - How to learn coding in simple and easy way...',
-              publishedOn: '15 February 2025',
-              description: 'Exploring the Wonders of Space: A Journey Beyond Earth, Mastering React Native: Build Your First Mobile App, The Secret Life of Ocean Creatures: Underwater Wonders,',
-            })
-          }
-        />
-        <Video
-          thumbnail={require('../../Assets/videoThumbnail.jpeg')}
-          frameSource={require('../../Assets/videoFrame.jpeg')}
-          onPress={() =>
-            navigation.navigate('SingleVideo', {
-              videoSource: require('../../Assets/myvideo.mp4'),
-              thumbnail: require('../../Assets/videoThumbnail.jpeg'),
-              frameSource: require('../../Assets/videoFrame.jpeg'),
-              buttonTitle: 'Interview',
-              title: 'Video 1 - How to learn web development to learn web development...',
-              publishedOn: '20 March 2025',
-              description: 'Historys Greatest Inventions That Changed the World, and 10-Minute Home Workout for a Healthier Lifestyle are some fascinating video titles covering topics from technology to science and personal well-being.',
-            })
-          }
-        />
+      <View style={styles.buttonContainer}>
+        <View style={styles.buttonWrapper}>
+          <GradiantButton
+            title="Topic Platlist"
+            height="40"
+            width="50%"
+            gradientType="orange"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+            onPress={() => navigation.navigate('TopicPlaylist')}
+          />
+        </View>
+        <View style={styles.buttonWrapper}>
+          <GradiantButton
+            title="All Videos"
+            height="40"
+            width="50%"
+            gradientType="orange"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+            onPress={() => navigation.navigate('AllVideos')}
+          />
+        </View>
       </View>
     </View>
   );
@@ -105,11 +98,10 @@ const styles = StyleSheet.create({
   },
   topBar: {
     marginTop: 25,
-    marginBottom: 16,
   },
   button: {
     alignItems: 'center',
-    marginVertical: 10,
+    marginTop: 10,
   },
   buttonTop: {
     flexDirection: 'row',
@@ -119,11 +111,14 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginTop: 10,
   },
-  videoContainer: {
+  buttonContainer: {
+    paddingHorizontal: 30,
+    marginTop: 50,
+  },
+  buttonWrapper: {
     alignItems: 'center',
-    rowGap: 20,
-    marginTop: 20,
+    marginBottom: 22,
   },
 });
 
-export default InterviewScreen;
+export default YoutubeScreen;

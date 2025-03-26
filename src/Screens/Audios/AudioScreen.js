@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import Button from '../../Components/Button/Button.js';
 
-const VideosScreen = () => {
+const AudioScreen = () => {
   const navigation = useNavigation();
 
   return (
@@ -53,7 +53,7 @@ const VideosScreen = () => {
       </View>
       <View style={styles.button}>
         <Button
-          title="Videos"
+          title="Audios"
           height="35"
           width="25%"
           fontSize={15}
@@ -64,15 +64,46 @@ const VideosScreen = () => {
       <View style={styles.buttonContainer}>
         <View style={styles.buttonWrapper}>
           <GradiantButton
-            title="Hindi Messages"
+            title="Counselling"
             height="45"
             width="45%"
             gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
-            onPress={() => navigation.navigate('HindiMessage')}
+            onPress={() => navigation.navigate('Counselling')}
           />
+          <GradiantButton
+            title="Gavahi"
+            height="45"
+            width="45%"
+            gradientType="orange"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+        </View>
+        <View style={styles.buttonWrapper}>
+          <GradiantButton
+            title="Short Plays"
+            height="45"
+            width="45%"
+            gradientType="orange"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+          <GradiantButton
+            title="Q & A"
+            height="45"
+            width="45%"
+            gradientType="orange"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+        </View>
+        <View style={styles.buttonWrapper}>
           <GradiantButton
             title="TGC Songs"
             height="45"
@@ -81,53 +112,7 @@ const VideosScreen = () => {
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
-            onPress={() => navigation.navigate('TgcSongs')}
           />
-        </View>
-        <View style={styles.buttonWrapper}>
-          <GradiantButton
-            title="Short Films Plays"
-            height="45"
-            width="45%"
-            gradientType="orange"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-            onPress={() => navigation.navigate('ShortFilmPlay')}
-          />
-          <GradiantButton
-            title="Interviews"
-            height="45"
-            width="45%"
-            gradientType="orange"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-            onPress={() => navigation.navigate('Interview')}
-          />
-        </View>
-        <View style={styles.buttonWrapper}>
-          <GradiantButton
-            title="Youtube"
-            height="45"
-            width="45%"
-            gradientType="orange"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-            onPress={() => navigation.navigate('Youtube')}
-          />
-          <GradiantButton
-            title="Events"
-            height="45"
-            width="45%"
-            gradientType="orange"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-        </View>
-        <View style={styles.buttonWrapper}>
           <GradiantButton
             title="Counselling"
             height="45"
@@ -137,19 +122,10 @@ const VideosScreen = () => {
             fontSize={15}
             fontWeight="500"
           />
-          <GradiantButton
-            title="ENG Messages"
-            height="45"
-            width="45%"
-            gradientType="orange"
-            borderRadius={5}
-            fontSize={15.5}
-            fontWeight="500"
-          />
         </View>
         <View style={styles.buttonWrapper}>
           <GradiantButton
-            title="Bible Stories"
+            title="ENG Messages"
             height="45"
             width="45%"
             gradientType="orange"
@@ -158,10 +134,30 @@ const VideosScreen = () => {
             fontWeight="500"
           />
           <GradiantButton
-            title="Group Zoom"
+            title=""
             height="45"
             width="45%"
-            gradientType="orange"
+            gradientType="gray"
+            borderRadius={5}
+            fontSize={15.5}
+            fontWeight="500"
+          />
+        </View>
+        <View style={styles.buttonWrapper}>
+          <GradiantButton
+            title=""
+            height="45"
+            width="45%"
+            gradientType="gray"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+          <GradiantButton
+            title=""
+            height="45"
+            width="45%"
+            gradientType="gray"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
@@ -199,7 +195,7 @@ const styles = StyleSheet.create({
   },
   topBar: {
     marginTop: 25,
-    marginBottom: 16,
+    marginBottom: 10,
   },
   button: {
     alignItems: 'center',
@@ -214,16 +210,14 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   buttonContainer: {
-    paddingHorizontal: 16,
+    paddingHorizontal: 30,
     marginTop: 20,
   },
   buttonWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
-    columnGap: 10,
     marginBottom: 16,
   },
 });
 
-export default VideosScreen;
+export default AudioScreen;

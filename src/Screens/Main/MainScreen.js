@@ -63,6 +63,7 @@ const MainScreen = () => {
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
+            onPress={() => navigation.navigate('Book')}
           />
         </View>
         <View style={styles.buttonWrapper}>
@@ -84,6 +85,7 @@ const MainScreen = () => {
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
+            onPress={() => navigation.navigate('Audio')}
           />
         </View>
         <View style={styles.buttonWrapper}>
@@ -95,6 +97,7 @@ const MainScreen = () => {
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
+            onPress={() => navigation.navigate('Literature')}
           />
           <GradiantButton
             title="Zaruri Suchna"
@@ -104,6 +107,7 @@ const MainScreen = () => {
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
+            onPress={() => navigation.navigate('ZaruriSuchna')}
           />
         </View>
         <View style={styles.buttonWrapper}>
@@ -115,6 +119,7 @@ const MainScreen = () => {
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
+            onPress={() => navigation.navigate('TgcPhoto')}
           />
           <GradiantButton
             title="Children Bible"
@@ -125,6 +130,7 @@ const MainScreen = () => {
             borderRadius={5}
             fontSize={15.5}
             fontWeight="500"
+            onPress={() => navigation.navigate('ChildrenBibleSchool')}
           />
         </View>
         <View style={styles.buttonWrapper}>
@@ -136,6 +142,7 @@ const MainScreen = () => {
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
+            onPress={() => navigation.navigate('Devotion')}
           />
           <GradiantButton
             title=""

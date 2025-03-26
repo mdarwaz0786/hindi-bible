@@ -44,6 +44,21 @@ import SingleVideo from '../Components/Video/SingleVideo.js';
 import TgcSongsScreen from '../Screens/Videos/TgcSongsScreen.js';
 import ShortFilmPlayScreen from '../Screens/Videos/ShorFilmPlayScreen.js';
 import InterviewScreen from '../Screens/Videos/InterviewScreen.js';
+import YoutubeScreen from '../Screens/Videos/YoutubeScreen.js';
+import TopicPlaylistScreen from '../Screens/Videos/TopicPlaylistScreen.js';
+import AllVideosScreen from '../Screens/Videos/AllVideosScreen.js';
+import AudioScreen from '../Screens/Audios/AudioScreen.js';
+import CounsellingScreen from '../Screens/Audios/CounsellingScreen.js';
+import BookScreen from '../Screens/Books/BookScreen.js';
+import TgcBookScreen from '../Screens/Books/TgcBookScreen.js';
+import OtherBookScreen from '../Screens/Books/OtherBookScreen.js';
+import LiteratureScreen from '../Screens/Literature/LiteratureScreen.js';
+import ArticleScreen from '../Screens/Literature/ArticleScreen.js';
+import PdfDownloadScreen from '../Screens/Literature/PdfDownloadScreen.js';
+import ZaruriSuchnaScreen from '../Screens/ZaruriSuchna/ZaruriSuchnaScreen.js';
+import TgcPhotoScreen from '../Screens/TgcPhoto/TgcPhotoScreen.js';
+import DevotionScreen from '../Screens/Devotion/DevotionScreen.js';
+import ChildrenBibleScreen from '../Screens/ChildrenBibleSchool/ChildrenBibleSchoolScreen.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -93,6 +108,21 @@ const StackNavigation = () => (
     <Stack.Screen name="TgcSongs" component={TgcSongsScreen} />
     <Stack.Screen name="ShortFilmPlay" component={ShortFilmPlayScreen} />
     <Stack.Screen name="Interview" component={InterviewScreen} />
+    <Stack.Screen name="Youtube" component={YoutubeScreen} />
+    <Stack.Screen name="TopicPlaylist" component={TopicPlaylistScreen} />
+    <Stack.Screen name="AllVideos" component={AllVideosScreen} />
+    <Stack.Screen name="Audio" component={AudioScreen} />
+    <Stack.Screen name="Counselling" component={CounsellingScreen} />
+    <Stack.Screen name="Book" component={BookScreen} />
+    <Stack.Screen name="TgcBook" component={TgcBookScreen} />
+    <Stack.Screen name="OtherBook" component={OtherBookScreen} />
+    <Stack.Screen name="Literature" component={LiteratureScreen} />
+    <Stack.Screen name="Article" component={ArticleScreen} />
+    <Stack.Screen name="PdfDownload" component={PdfDownloadScreen} />
+    <Stack.Screen name="ZaruriSuchna" component={ZaruriSuchnaScreen} />
+    <Stack.Screen name="TgcPhoto" component={TgcPhotoScreen} />
+    <Stack.Screen name="Devotion" component={DevotionScreen} />
+    <Stack.Screen name="ChildrenBibleSchool" component={ChildrenBibleScreen} />
   </Stack.Navigator>
 );
 

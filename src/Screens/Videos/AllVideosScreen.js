@@ -1,4 +1,4 @@
-import { Dimensions, ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
@@ -7,26 +7,25 @@ import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import Button from '../../Components/Button/Button.js';
 import { WebView } from 'react-native-webview';
 
-const { width } = Dimensions.get('window');
-const playlistId = 'PLgkbyoPwHaNFXNjERggELen0bbYLfjyKL';
-const embedUrl = `https://www.youtube.com/embed/videoseries?list=${playlistId}`;
-
 const AllVideosScreen = () => {
   const navigation = useNavigation();
+  const playlistId = 'PLgkbyoPwHaNFXNjERggELen0bbYLfjyKL';
+  const embedUrl = `https://www.youtube.com/playlist?list=${playlistId}`;
 
   return (
     <ScrollView style={styles.container}>
       <View style={styles.topBar}>
         <TopBarPrimary />
       </View>
+
+      {/* Top Buttons */}
       <View style={styles.buttonTop}>
         <GradiantButton
           title="Home"
           height="30"
           width="20%"
           gradientType="yellow"
-          borderRadius={5}
-          fontSize={15}
+          borderRadius={5} fontSize={16}
           onPress={() => navigation.navigate('Home')}
         />
         <GradiantButton
@@ -35,7 +34,7 @@ const AllVideosScreen = () => {
           width="20%"
           gradientType="blue"
           borderRadius={5}
-          fontSize={15}
+          fontSize={16}
           onPress={() => navigation.navigate('Main')}
         />
         <GradiantButton
@@ -44,41 +43,43 @@ const AllVideosScreen = () => {
           width="20%"
           gradientType="red"
           borderRadius={5}
-          fontSize={15}
+          fontSize={16}
         />
         <GradiantButton
           title="Back"
           height="30"
           width="20%"
-          fontSize={15}
+          fontSize={16}
           gradientType="purple"
           borderRadius={5}
           onPress={() => navigation.goBack()}
         />
       </View>
+
       <View style={styles.button}>
         <Button
           title="All Videos"
           height="40"
-          width="25%"
-          fontSize={15}
+          width="35%"
+          fontSize={16}
           backgroundColor={BACKGROUND_COLORS.green}
           borderRadius={5}
         />
       </View>
-      <ScrollView contentContainerStyle={styles.scrollView}>
+
+      <View style={styles.horizontalScrollView}>
         <View style={styles.videoContainer}>
           <WebView
             source={{ uri: embedUrl }}
-            style={styles.webview}
             javaScriptEnabled={true}
             domStorageEnabled={true}
             allowsFullscreenVideo={true}
             originWhitelist={['*']}
             mixedContentMode="always"
+            nestedScrollEnabled={true}
           />
         </View>
-      </ScrollView>
+      </View>
     </ScrollView>
   );
 };
@@ -93,6 +94,7 @@ const styles = StyleSheet.create({
   },
   button: {
     alignItems: 'center',
+    marginBottom: 16,
   },
   buttonTop: {
     flexDirection: 'row',
@@ -102,17 +104,15 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginTop: 10,
   },
-  scrollView: {
-    flexGrow: 1,
+  horizontalScrollView: {
+    height: 1000,
+    flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 20,
+    justifyContent: 'center',
   },
   videoContainer: {
-    width: width - 20,
-    height: 300,
-  },
-  webview: {
-    flex: 1,
+    width: '100%',
+    alignSelf: 'center',
   },
 });
 

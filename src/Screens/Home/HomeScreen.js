@@ -23,17 +23,17 @@ const HomeScreen = () => {
         <GradientButton
           title="Subscribers"
           height="30"
-          width="30%"
+          width="26%"
           gradientType="yellow"
           borderRadius={5}
         />
         <View style={styles.subscriber}>
-          <Text style={styles.subscriberText}>555</Text>
+          <Text style={styles.subscriberText}>123456</Text>
         </View>
         <GradientButton
           title="Latest News"
           height="30"
-          width="30%"
+          width="28%"
           gradientType="blue"
           borderRadius={5}
           onPress={() => navigation.navigate('LatestNews')}
@@ -41,7 +41,7 @@ const HomeScreen = () => {
         <GradientButton
           title="Contact Us"
           height="30"
-          width="30%"
+          width="25%"
           gradientType="green"
           borderRadius={5}
           onPress={() => navigation.navigate('ContactUs')}
@@ -135,8 +135,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: BACKGROUND_COLORS.primary,
-    padding: 16,
-    paddingTop: 0,
   },
   topBar: {
     marginTop: 25,
@@ -154,16 +152,18 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: 15,
-    marginBottom: 0,
+    marginHorizontal: 10,
   },
   subscriber: {
+    backgroundColor: BACKGROUND_COLORS.white,
     borderWidth: 1,
     borderColor: 'green',
-    borderRadius: 3,
-    padding: 4,
+    borderRadius: 5,
+    padding: 5,
+    marginLeft: -15,
   },
   subscriberText: {
-    color: '#000',
+    color: '#333',
   },
   button: {
     marginTop: 12,

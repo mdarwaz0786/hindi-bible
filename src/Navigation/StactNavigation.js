@@ -58,6 +58,7 @@ import ZaruriSuchnaScreen from '../Screens/ZaruriSuchna/ZaruriSuchnaScreen.js';
 import TgcPhotoScreen from '../Screens/TgcPhoto/TgcPhotoScreen.js';
 import DevotionScreen from '../Screens/Devotion/DevotionScreen.js';
 import ChildrenBibleScreen from '../Screens/ChildrenBibleSchool/ChildrenBibleSchoolScreen.js';
+import TeenBibleSchoolScreen from '../Screens/TeenBibleSchool/TeenBibleSchoolScreen.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -121,6 +122,7 @@ const StackNavigation = () => (
     <Stack.Screen name="TgcPhoto" component={TgcPhotoScreen} />
     <Stack.Screen name="Devotion" component={DevotionScreen} />
     <Stack.Screen name="ChildrenBibleSchool" component={ChildrenBibleScreen} />
+    <Stack.Screen name="TeenBibleSchool" component={TeenBibleSchoolScreen} />
   </Stack.Navigator>
 );
 

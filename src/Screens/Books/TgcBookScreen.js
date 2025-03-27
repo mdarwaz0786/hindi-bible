@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import { Image, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary';
@@ -8,17 +8,9 @@ import BACKGROUND_COLORS from '../../Constants/BackGroundColors';
 import VideoPlayer from '../../Components/Video/VideoPlayer';
 import COLORS from '../../Constants/Colors';
 import Button from '../../Components/Button/Button';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const TgcBookScreen = () => {
   const navigation = useNavigation();
-
-  const pdfFile = {
-    title: 'TGC Learning Guide',
-    fileName: 'tgc_learning_guide.pdf',
-    fileSize: '2.3 MB',
-    fileUrl: 'https://example.com/tgc_learning_guide.pdf',
-  };
 
   return (
     <ScrollView style={styles.container}>
@@ -136,21 +128,6 @@ const TgcBookScreen = () => {
           </Text>
         </View>
       </View>
-
-      <View style={styles.pdfWrapper}>
-        {[1, 2, 3].map((_, index) => (
-          <View key={index} style={styles.pdfContainer}>
-            <FontAwesome name="file-pdf-o" size={35} color="red" />
-            <View style={styles.pdfInfo}>
-              <Text style={styles.pdfTitle}>{pdfFile.title} {index + 1}</Text>
-              <Text style={styles.pdfDetails}>{pdfFile.fileName} • {pdfFile.fileSize}</Text>
-            </View>
-            <TouchableOpacity onPress={() => Linking.openURL(pdfFile.fileUrl)}>
-              <FontAwesome name="download" size={30} color="#555" />
-            </TouchableOpacity>
-          </View>
-        ))}
-      </View>
     </ScrollView>
   );
 };
@@ -221,33 +198,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 200,
     resizeMode: 'contain',
-  },
-  pdfWrapper: {
-    marginHorizontal: 16,
-    marginBottom: 20,
-    padding: 10,
-    backgroundColor: BACKGROUND_COLORS.white,
-    borderRadius: 5,
-  },
-  pdfContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: BACKGROUND_COLORS.white,
-    padding: 10,
-  },
-  pdfInfo: {
-    flex: 1,
-    marginLeft: 10,
-  },
-  pdfTitle: {
-    fontSize: 16,
-    fontWeight: '500',
-    color: '#555',
-  },
-  pdfDetails: {
-    fontSize: 14,
-    color: '#777',
   },
 });
 

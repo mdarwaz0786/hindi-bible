@@ -27,6 +27,9 @@ const HomeScreen = () => {
           gradientType="yellow"
           borderRadius={5}
         />
+        <View style={styles.subscriber}>
+          <Text style={styles.subscriberText}>555</Text>
+        </View>
         <GradientButton
           title="Latest News"
           height="30"
@@ -152,6 +155,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 15,
     marginBottom: 0,
+  },
+  subscriber: {
+    borderWidth: 1,
+    borderColor: 'green',
+    borderRadius: 3,
+    padding: 4,
+  },
+  subscriberText: {
+    color: '#000',
   },
   button: {
     marginTop: 12,

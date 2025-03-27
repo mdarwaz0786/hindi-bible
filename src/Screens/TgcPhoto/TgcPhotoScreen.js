@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     alignItems: 'center',
-    marginBottom: 30,
+    marginBottom: 20,
   },
   imageTitleWrapper: {
     backgroundColor: '#fff',
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 5,
     alignSelf: 'flex-start',
-    marginTop: 5,
+    marginTop: -5,
   },
   imageTitle: {
     fontSize: 16,

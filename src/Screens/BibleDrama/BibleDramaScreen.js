@@ -49,7 +49,7 @@ const BibleDramaScreen = () => {
           height="30"
           width="20%"
           fontSize={15}
-          gradientType="yellow"
+          gradientType="purple"
           borderRadius={5}
           onPress={() => navigation.goBack()}
         />
@@ -69,21 +69,21 @@ const BibleDramaScreen = () => {
       <View style={styles.audioContainer}>
         <AudioPlayer
           id="1"
-          chapterTitle="BIBLE DRAMA1"
+          chapterTitle="BIBLE DRAMA-1"
           source={require('../../Assets/myaudio.mp3')}
           setPlayingId={setPlayingId}
           playingId={playingId}
         />
         <AudioPlayer
           id="2"
-          chapterTitle="BIBLE DRAMA2"
+          chapterTitle="BIBLE DRAMA-2"
           source={require('../../Assets/myaudio.mp3')}
           setPlayingId={setPlayingId}
           playingId={playingId}
         />
         <AudioPlayer
           id="3"
-          chapterTitle="BIBLE DRAMA3"
+          chapterTitle="BIBLE DRAMA-3"
           source={require('../../Assets/myaudio.mp3')}
           setPlayingId={setPlayingId}
           playingId={playingId}

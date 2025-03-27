@@ -15,34 +15,22 @@ const PaymentSuccessScreen = () => {
         <TopBarPrimary />
       </View>
 
-      <View style={styles.button}>
-        <GradiantButton
-          title="BACK"
-          height="30"
-          width="25%"
-          fontSize={16}
-          gradientType="yellow"
-          borderRadius={5}
-          onPress={() => navigation.goBack()}
-        />
-      </View>
-
       <View style={styles.mainContainer}>
         <View style={styles.infoContainer}>
           <Text style={styles.topText}>Thank You For Your Contribution To Our Ministry!</Text>
           <Text style={styles.topText}>हमारी सेवकाई में आपके योगदान के लिए धन्यवाद!</Text>
           <Text style={styles.topText}>RS. 1.00</Text>
-          <Text style={styles.bottomText}>Your donation status is success.</Text>
+          <Text style={styles.bottomText}>Your contribution status is success.</Text>
           <Text style={styles.bottomText}>Transaction id</Text>
           <Text style={styles.bottomText}>hgtt1234gft7890</Text>
           <View style={styles.homeButton}>
             <GradiantButton
-              title="HOME PAGE"
+              title="Home"
               height="35"
               width="40%"
               fontSize={14}
               fontWeight={500}
-              gradientType="lightBlue"
+              gradientType="yellow"
               borderRadius={5}
               onPress={() => navigation.navigate('Home')}
             />
@@ -60,9 +48,6 @@ const styles = StyleSheet.create({
   },
   topBar: {
     marginTop: 25,
-  },
-  button: {
-    alignItems: 'center',
   },
   mainContainer: {
     backgroundColor: BACKGROUND_COLORS.warmTan,
@@ -91,6 +76,7 @@ const styles = StyleSheet.create({
   homeButton: {
     alignItems: 'center',
     marginBottom: 20,
+    marginTop: 20,
   },
 });
 

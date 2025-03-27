@@ -17,13 +17,13 @@ const YourContributionScreen = () => {
 
       <View style={styles.button}>
         <GradiantButton
-          title="Home"
+          title="Back"
           height="35"
           width="30%"
           fontSize={16}
-          gradientType="yellow"
+          gradientType="purple"
           borderRadius={5}
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.goBack()}
         />
       </View>
 
@@ -51,7 +51,7 @@ const YourContributionScreen = () => {
 
       <View style={styles.button}>
         <GradiantButton
-          title="PAY THRU APP"
+          title="Pay Thru App"
           height="40"
           width="40%"
           fontSize={16}

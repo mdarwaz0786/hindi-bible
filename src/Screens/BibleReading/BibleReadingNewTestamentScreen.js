@@ -44,7 +44,7 @@ const BibleReadingNewTestamentScreen = () => {
           height="30"
           width="20%"
           fontSize={16}
-          gradientType="yellow"
+          gradientType="purple"
           borderRadius={5}
           onPress={() => navigation.goBack()}
         />
@@ -180,36 +180,6 @@ const BibleReadingNewTestamentScreen = () => {
             fontWeight="500"
           />
         </View>
-        <View style={styles.buttonWrapper}>
-          <GradiantButton
-            title=""
-            height="35"
-            width="30%"
-            gradientType="gray"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-          <GradiantButton
-            title=""
-            height="35"
-            width="30%"
-            gradientType="gray"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-          <GradiantButton
-            title=""
-            height="35"
-            width="30%"
-            gradientType="gray"
-            borderRadius={5}
-            fontSize={15}
-            fontWeight="500"
-          />
-        </View>
-
         <View style={styles.buttonWrapper}>
           <GradiantButton
             title=""

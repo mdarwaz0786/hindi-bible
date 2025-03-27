@@ -19,11 +19,11 @@ const PayThruAppScreen = () => {
 
       <View style={styles.button}>
         <GradiantButton
-          title="BACK"
+          title="Back"
           height="30"
           width="25%"
           fontSize={16}
-          gradientType="yellow"
+          gradientType="purple"
           borderRadius={5}
           onPress={() => navigation.goBack()}
         />
@@ -31,8 +31,8 @@ const PayThruAppScreen = () => {
 
       <View style={styles.mainContainer}>
         <View style={styles.formContainer}>
-          <Text style={[styles.formTitle, { fontSize: 20, marginBottom: 20, }]}>Payment Gateway</Text>
-          <Text style={[styles.formTitle, { fontSize: 14, marginBottom: 20, padding: 5, color: COLORS.white, backgroundColor: BACKGROUND_COLORS.vibrantOrange }]}>Credit card/Debit Card/Wallet</Text>
+          <Text style={[styles.formTitle, { fontSize: 20, marginBottom: 10, }]}>Payment Gateway</Text>
+          <Text style={[styles.formTitle, { fontSize: 14, marginBottom: 10, padding: 5, color: COLORS.white, backgroundColor: BACKGROUND_COLORS.vibrantOrange }]}>UPI/Credit card/Debit Card/Wallet</Text>
           <Text style={styles.formTitle}>If you give  your details, we could acknowledge your payment.</Text>
           <Text style={[styles.formTitle, { marginBottom: 20 }]}>यदि आप अपना विवरण देंगे तो हम आपके भुगतान की पुष्टि कर सकते हैं।</Text>
 
@@ -80,22 +80,23 @@ const styles = StyleSheet.create({
     backgroundColor: BACKGROUND_COLORS.primary,
   },
   topBar: {
-    marginTop: 25,
+    marginTop: 20,
   },
   button: {
     alignItems: 'center',
   },
   mainContainer: {
-    backgroundColor: BACKGROUND_COLORS.warmTan,
-    marginTop: 20,
+    marginTop: 5,
   },
   formContainer: {
     backgroundColor: BACKGROUND_COLORS.deepBrown,
     borderWidth: 1,
     borderRadius: 10,
-    margin: 10,
-    padding: 20,
-    paddingHorizontal: 30,
+    marginHorizontal: 10,
+    marginTop: 10,
+    padding: 10,
+    paddingTop: 5,
+    paddingHorizontal: 20,
   },
   formTitle: {
     fontSize: 14,
@@ -104,7 +105,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   inputGroup: {
-    marginBottom: 30,
+    marginBottom: 12,
   },
   label: {
     color: COLORS.white,

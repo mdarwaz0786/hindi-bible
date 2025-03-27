@@ -88,7 +88,7 @@ const BibleStudyScreen = () => {
         </View>
         <View style={styles.buttonWrapper}>
           <GradiantButton
-            title="Bible Reading"
+            title="Audio Bible"
             height="45"
             width="40%"
             gradientType="orange"

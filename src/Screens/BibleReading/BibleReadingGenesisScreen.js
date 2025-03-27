@@ -49,7 +49,7 @@ const BibleReadingGenesisScreen = () => {
           height="30"
           width="20%"
           fontSize={15}
-          gradientType="yellow"
+          gradientType="purple"
           borderRadius={5}
           onPress={() => navigation.goBack()}
         />
@@ -69,21 +69,21 @@ const BibleReadingGenesisScreen = () => {
       <View style={styles.audioContainer}>
         <AudioPlayer
           id="1"
-          chapterTitle="GENESIS1"
+          chapterTitle="GENESIS-1"
           source={require('../../Assets/myaudio.mp3')}
           setPlayingId={setPlayingId}
           playingId={playingId}
         />
         <AudioPlayer
           id="2"
-          chapterTitle="GENESIS2"
+          chapterTitle="GENESIS-2"
           source={require('../../Assets/myaudio.mp3')}
           setPlayingId={setPlayingId}
           playingId={playingId}
         />
         <AudioPlayer
           id="3"
-          chapterTitle="GENESIS3"
+          chapterTitle="GENESIS-3"
           source={require('../../Assets/myaudio.mp3')}
           setPlayingId={setPlayingId}
           playingId={playingId}

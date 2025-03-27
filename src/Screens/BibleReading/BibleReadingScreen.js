@@ -53,7 +53,7 @@ const BibleReadingScreen = () => {
       </View>
       <View style={styles.button}>
         <Button
-          title="Bible Reading"
+          title="Audio Bible"
           height="40"
           width="43%"
           fontSize={15}

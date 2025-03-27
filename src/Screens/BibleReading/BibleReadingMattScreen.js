@@ -49,7 +49,7 @@ const BibleReadingMattScreen = () => {
           height="30"
           width="20%"
           fontSize={15}
-          gradientType="yellow"
+          gradientType="purple"
           borderRadius={5}
           onPress={() => navigation.goBack()}
         />
@@ -69,21 +69,21 @@ const BibleReadingMattScreen = () => {
       <View style={styles.audioContainer}>
         <AudioPlayer
           id="1"
-          chapterTitle="MATTHEW1"
+          chapterTitle="MATTHEW-1"
           source={require('../../Assets/myaudio.mp3')}
           setPlayingId={setPlayingId}
           playingId={playingId}
         />
         <AudioPlayer
           id="2"
-          chapterTitle="MATTHEW1"
+          chapterTitle="MATTHEW-2"
           source={require('../../Assets/myaudio.mp3')}
           setPlayingId={setPlayingId}
           playingId={playingId}
         />
         <AudioPlayer
           id="3"
-          chapterTitle="MATTHEW1"
+          chapterTitle="MATTHEW-3"
           source={require('../../Assets/myaudio.mp3')}
           setPlayingId={setPlayingId}
           playingId={playingId}

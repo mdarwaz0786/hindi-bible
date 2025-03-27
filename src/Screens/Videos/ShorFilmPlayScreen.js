@@ -54,7 +54,7 @@ const ShortFilmPlayScreen = () => {
       </View>
       <View style={styles.button}>
         <Button
-          title="Short Film"
+          title="Short Film / Plays"
           height="35"
           width="40%"
           fontSize={15}

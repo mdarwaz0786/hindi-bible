@@ -73,9 +73,9 @@ const PdfDownloadScreen = () => {
 
       <View style={styles.button}>
         <Button
-          title="PDF Download"
+          title="PDF / JPEG Download"
           height="40"
-          width="35%"
+          width="50%"
           fontSize={15}
           backgroundColor={BACKGROUND_COLORS.green}
           borderRadius={5}

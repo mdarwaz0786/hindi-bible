@@ -14,7 +14,7 @@ const MediaDownload = ({ type, title, source, size }) => {
 
   const handleOpenLink = () => {
     if (source?.uri) {
-      Linking.openURL(source.uri).catch(err => console.error("Couldn't open URL", err));
+      Linking.openURL(source.uri).catch((err) => console.error("Couldn't open URL", err));
     };
   };
 
@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     borderRadius: 10,
+    resizeMode: 'contain',
   },
   mediaTitle: {
     fontSize: 14,

@@ -66,7 +66,7 @@ const LiteratureScreen = () => {
           <GradiantButton
             title="Articles"
             height="40"
-            width="40%"
+            width="60%"
             gradientType="orange"
             borderRadius={5}
             fontSize={15}
@@ -76,9 +76,9 @@ const LiteratureScreen = () => {
         </View>
         <View style={styles.buttonWrapper}>
           <GradiantButton
-            title="Pdf Download"
+            title="PDF / JPEG Download"
             height="40"
-            width="40%"
+            width="60%"
             gradientType="orange"
             borderRadius={5}
             fontSize={15}

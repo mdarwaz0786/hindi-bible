@@ -86,7 +86,7 @@ const VideosScreen = () => {
         </View>
         <View style={styles.buttonWrapper}>
           <GradiantButton
-            title="Short Films Plays"
+            title="Short Films / Plays"
             height="45"
             width="45%"
             gradientType="orange"

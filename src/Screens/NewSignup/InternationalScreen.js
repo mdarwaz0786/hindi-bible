@@ -31,7 +31,7 @@ const InternationalScreen = () => {
 
       <View style={styles.buttonContainer}>
         <View style={styles.textContainer}>
-          <Text style={{ color: COLORS.goldenYellow, fontSize: 16, textAlign: 'center' }}>Aap 1 ya 1 se zyaada saal select kar sakte hai.</Text>
+          <Text style={{ color: 'yellow', fontSize: 16, textAlign: 'center' }}>Aap 1 ya 1 se zyaada saal select kar sakte hai.</Text>
           <Text style={{ color: COLORS.white, fontSize: 16, textAlign: 'center' }}>Yoc can select 1 or more years.</Text>
         </View>
         <View style={styles.button}>

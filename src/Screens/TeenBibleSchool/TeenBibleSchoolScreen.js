@@ -1,17 +1,13 @@
-import { Dimensions, ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import Button from '../../Components/Button/Button.js';
-import { WebView } from 'react-native-webview';
+import MediaDownload from '../../Components/Media/MediaDownload.js';
 
-const { width } = Dimensions.get('window');
-const playlistId = 'PLgkbyoPwHaNFXNjERggELen0bbYLfjyKL';
-const embedUrl = `https://www.youtube.com/embed/videoseries?list=${playlistId}`;
-
-const AllVideosScreen = () => {
+const TeenBibleScreen = () => {
   const navigation = useNavigation();
 
   return (
@@ -58,27 +54,49 @@ const AllVideosScreen = () => {
       </View>
       <View style={styles.button}>
         <Button
-          title="All Videos"
+          title="Teen Bible School (CBS)"
           height="40"
-          width="25%"
+          width="55%"
           fontSize={15}
           backgroundColor={BACKGROUND_COLORS.green}
           borderRadius={5}
         />
       </View>
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <View style={styles.videoContainer}>
-          <WebView
-            source={{ uri: embedUrl }}
-            style={styles.webview}
-            javaScriptEnabled={true}
-            domStorageEnabled={true}
-            allowsFullscreenVideo={true}
-            originWhitelist={['*']}
-            mixedContentMode="always"
-          />
-        </View>
-      </ScrollView>
+      <View style={styles.mediaContainer}>
+        <MediaDownload
+          title="Sample Video"
+          type="video"
+          source={require('../../Assets/myvideo.mp4')}
+          size="20MB"
+        />
+
+        <MediaDownload
+          title="Sample Audio"
+          type="audio"
+          source={require('../../Assets/myaudio.mp3')}
+          size="5MB"
+        />
+
+        <MediaDownload
+          title="Sample Image"
+          type="image"
+          source={require('../../Assets/videoThumbnail.jpeg')}
+          size="3MB"
+        />
+
+        <MediaDownload
+          title="Sample Pdf"
+          type="pdf"
+          source={require('../../Assets/mypdf.pdf')}
+          size="2MB"
+        />
+
+        <MediaDownload
+          type="link"
+          title="Visit Google"
+          source={{ uri: 'https://www.google.com' }}
+        />
+      </View>
     </ScrollView>
   );
 };
@@ -90,6 +108,7 @@ const styles = StyleSheet.create({
   },
   topBar: {
     marginTop: 25,
+    marginBottom: 10,
   },
   button: {
     alignItems: 'center',
@@ -102,18 +121,18 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginTop: 10,
   },
-  scrollView: {
-    flexGrow: 1,
+  buttonContainer: {
+    paddingHorizontal: 30,
+    marginTop: 50,
+  },
+  buttonWrapper: {
     alignItems: 'center',
-    paddingVertical: 20,
+    marginBottom: 22,
   },
-  videoContainer: {
-    width: width - 20,
-    height: 300,
-  },
-  webview: {
-    flex: 1,
+  mediaContainer: {
+    alignItems: 'center',
+    marginVertical: 10,
   },
 });
 
-export default AllVideosScreen;
+export default TeenBibleScreen;

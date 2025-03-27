@@ -39,7 +39,7 @@ const MainScreen = () => {
           height="35"
           width="25%"
           fontSize={15}
-          backgroundColor={BACKGROUND_COLORS.green}
+          backgroundColor="#4C7FA2"
           borderRadius={5}
         />
       </View>
@@ -145,13 +145,15 @@ const MainScreen = () => {
             onPress={() => navigation.navigate('Devotion')}
           />
           <GradiantButton
-            title=""
+            title="Teen Bible"
+            title2="School (TBS)"
             height="45"
             width="45%"
-            gradientType="gray"
+            gradientType="orange"
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
+            onPress={() => navigation.navigate('TeenBibleSchool')}
           />
         </View>
         <View style={styles.buttonWrapper}>

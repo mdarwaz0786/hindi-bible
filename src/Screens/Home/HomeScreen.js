@@ -1,15 +1,34 @@
 /* eslint-disable react-native/no-inline-styles */
-import { View, Text, StyleSheet, Linking, ScrollView } from 'react-native';
-import React from 'react';
+import { View, Text, StyleSheet, Linking, ScrollView, Animated } from 'react-native';
+import React, { useEffect, useRef } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import GradientButton from '../../Components/Button/GradientButton.js';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import COLORS from '../../Constants/Colors.js';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import VideoPlayer from '../../Components/Video/VideoPlayer.js';
+import Button from '../../Components/Button/Button.js';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
+  const opacity = useRef(new Animated.Value(1)).current;
+
+  useEffect(() => {
+    Animated.loop(
+      Animated.sequence([
+        Animated.timing(opacity, {
+          toValue: 0,
+          duration: 500,
+          useNativeDriver: true,
+        }),
+        Animated.timing(opacity, {
+          toValue: 1,
+          duration: 500,
+          useNativeDriver: true,
+        }),
+      ])
+    ).start();
+  }, [opacity]);
 
   return (
     <ScrollView style={styles.container}>
@@ -18,6 +37,12 @@ const HomeScreen = () => {
       </View>
 
       <Text style={[styles.heading, { fontFamily: 'Cambria', lineHeight: 25 }]}><Text style={{ color: COLORS.peru }}>TGC</Text> HINDI BIBLE STUDY</Text>
+
+      <View style={styles.starContainer}>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <Animated.Text style={{ opacity, fontSize: 20, color: 'red' }}>★</Animated.Text>
+        </View>
+      </View>
 
       <View style={styles.buttonContainer}>
         <GradientButton
@@ -45,6 +70,33 @@ const HomeScreen = () => {
           gradientType="green"
           borderRadius={5}
           onPress={() => navigation.navigate('ContactUs')}
+        />
+      </View>
+
+      <View style={styles.emojiContainer}>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 30 }}>
+          <View style={styles.emojiBackground}>
+            <Text style={styles.emoji}>❤️ 20</Text>
+          </View>
+          <View style={styles.emojiBackground}>
+            <Text style={styles.emoji}>👍 20</Text>
+          </View>
+          <Text style={[styles.text, { marginTop: -15 }]}>26/03/2025</Text>
+        </View>
+      </View>
+
+      <View style={styles.priceButton}>
+        <Button
+          title="1 Year Fee = 300/-"
+          height="40"
+          width="50%"
+          backgroundColor="#c00000"
+          color="#ffff00"
+          borderRadius={5}
+          fontSize={15}
+          fontWeight="500"
+          borderColor="#ffff00"
+          borderWidth={4}
         />
       </View>
 
@@ -137,8 +189,8 @@ const styles = StyleSheet.create({
     backgroundColor: BACKGROUND_COLORS.primary,
   },
   topBar: {
-    marginTop: 25,
-    marginBottom: 16,
+    marginTop: 15,
+    marginBottom: 5,
   },
   heading: {
     textAlign: 'center',
@@ -151,7 +203,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 15,
+    marginTop: 3,
     marginHorizontal: 10,
   },
   subscriber: {
@@ -174,7 +226,37 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 10,
+  },
+  emojiContainer: {
+    flexDirection: 'row',
+    paddingHorizontal: 10,
+    alignItems: 'center',
+    marginTop: 5,
+  },
+  emojiBackground: {
+    backgroundColor: '#f0f0f0',
+    paddingHorizontal: 6,
+    paddingVertical: 4,
+    borderRadius: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  emoji: {
+    fontSize: 14,
+  },
+  text: {
+    fontSize: 15,
+  },
+  starContainer: {
+    flexDirection: 'row',
+    marginLeft: 235,
+    marginTop: 5,
+  },
+  priceButton: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
   },
 });
 

@@ -1,15 +1,20 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import GradiantButton from '../../Components/Button/GradientButton.js';
-import Video from 'react-native-video';
 import { useNavigation } from '@react-navigation/native';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import COLORS from '../../Constants/Colors.js';
+import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
+import VideoPlayer from '../../Components/Video/VideoPlayer.js';
 
 const LatestNewsScreen = () => {
   const navigation = useNavigation();
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
+      <View style={styles.topBar}>
+        <TopBarPrimary />
+      </View>
+
       <View style={styles.topSection}>
         <GradiantButton
           title="Log Out"
@@ -29,52 +34,60 @@ const LatestNewsScreen = () => {
           onPress={() => navigation.navigate('Home')}
         />
       </View>
+
       <View style={styles.videoContainer}>
-        <Video
-          source={require('../../Assets/myvideo.mp4')}
-          style={styles.video}
-          controls={true}
-          resizeMode="cover"
-          paused={true}
-        />
+        <Text style={styles.heading}>Latest News</Text>
+        <View style={styles.videoPlayer}>
+          <VideoPlayer
+            videoSource={require('../../Assets/myvideo.mp4')}
+            thumbnail={require('../../Assets/videoThumbnail.jpeg')}
+            frameSource={require('../../Assets/videoFrame.jpeg')}
+          />
+        </View>
+        <Text style={styles.description}>Following a hiker in a beautiful green forest with patches.</Text>
+        <Text style={styles.description}>एक सुन्दर हरे भरे जंगल में एक यात्री का पीछा करते हुए।</Text>
       </View>
-      <Text style={styles.description}>
-        Following a hiker in a beautiful green forest with patches of sunshine on the path
-      </Text>
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: BACKGROUND_COLORS.black,
-    padding: 16,
+    backgroundColor: BACKGROUND_COLORS.primary,
+  },
+  topBar: {
+    marginTop: 25,
+    marginBottom: 20,
   },
   topSection: {
     marginTop: 10,
     flexDirection: 'row',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     columnGap: 16,
   },
   videoContainer: {
-    marginTop: 100,
-    borderWidth: 2,
-    borderColor: COLORS.mustardYellow,
+    backgroundColor: BACKGROUND_COLORS.deepBrown,
+    marginHorizontal: 16,
+    marginTop: 20,
+    padding: 20,
     borderRadius: 5,
-    overflow: 'hidden',
-    width: '100%',
-    height: 200,
   },
-  video: {
-    width: '100%',
-    height: '100%',
+  videoPlayer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  heading: {
+    textAlign: 'center',
+    color: COLORS.white,
+    fontWeight: 500,
+    fontSize: 18,
   },
   description: {
-    color: '#fff',
-    textAlign: 'center',
-    marginTop: 50,
-    fontSize: 18,
+    color: COLORS.white,
+    fontSize: 14,
+    marginTop: 20,
   },
 });
 

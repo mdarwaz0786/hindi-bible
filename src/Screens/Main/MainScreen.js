@@ -16,14 +16,6 @@ const MainScreen = () => {
       </View>
       <View style={styles.buttonTop}>
         <GradiantButton
-          title="Log Out"
-          height="30"
-          width="25%"
-          gradientType="red"
-          borderRadius={5}
-          fontSize={15}
-        />
-        <GradiantButton
           title="Home"
           height="30"
           width="25%"
@@ -32,6 +24,23 @@ const MainScreen = () => {
           fontSize={15}
           onPress={() => navigation.navigate('Home')}
         />
+        <GradiantButton
+          title="Log Out"
+          height="30"
+          width="25%"
+          gradientType="red"
+          borderRadius={5}
+          fontSize={15}
+        />
+        <GradiantButton
+          title="Back"
+          height="30"
+          width="25%"
+          gradientType="purple"
+          borderRadius={5}
+          fontSize={15}
+          onPress={() => navigation.goBack()}
+        />
       </View>
       <View style={styles.button}>
         <Button
@@ -39,7 +48,7 @@ const MainScreen = () => {
           height="35"
           width="25%"
           fontSize={15}
-          backgroundColor="#4C7FA2"
+          backgroundColor="#3669c3"
           borderRadius={5}
         />
       </View>
@@ -176,6 +185,26 @@ const MainScreen = () => {
             fontWeight="500"
           />
         </View>
+        <View style={styles.buttonWrapper}>
+          <GradiantButton
+            title="Edit Profile"
+            height="35"
+            width="45%"
+            gradientType="green"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+          <GradiantButton
+            title="Order History"
+            height="35"
+            width="45%"
+            gradientType="green"
+            borderRadius={5}
+            fontSize={15}
+            fontWeight="500"
+          />
+        </View>
       </View>
       <View style={styles.button}>
         <GradiantButton
@@ -209,7 +238,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    columnGap: 50,
+    columnGap: 20,
     marginBottom: 20,
   },
   buttonContainer: {

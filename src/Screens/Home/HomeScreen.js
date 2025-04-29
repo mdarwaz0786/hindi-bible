@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import { View, Text, StyleSheet, Linking, ScrollView, Animated } from 'react-native';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import GradientButton from '../../Components/Button/GradientButton.js';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
@@ -8,10 +8,13 @@ import COLORS from '../../Constants/Colors.js';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import VideoPlayer from '../../Components/Video/VideoPlayer.js';
 import Button from '../../Components/Button/Button.js';
+import BeforeRegistrationModal from '../../Components/Modal/MemberLogin/BeforeRegistrationModal.js';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
   const opacity = useRef(new Animated.Value(1)).current;
+
+  const [isBeforeRegisterModalVisible, setIsBeforeRegisterModalVisible] = useState(false);
 
   useEffect(() => {
     Animated.loop(
@@ -40,7 +43,7 @@ const HomeScreen = () => {
 
       <View style={styles.starContainer}>
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-          <Animated.Text style={{ opacity, fontSize: 20, color: 'red' }}>★</Animated.Text>
+          <Animated.Text style={{ opacity, fontSize: 16, color: 'red' }}>★</Animated.Text>
         </View>
       </View>
 
@@ -74,14 +77,14 @@ const HomeScreen = () => {
       </View>
 
       <View style={styles.emojiContainer}>
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 30 }}>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 37 }}>
           <View style={styles.emojiBackground}>
             <Text style={styles.emoji}>❤️ 20</Text>
           </View>
           <View style={styles.emojiBackground}>
             <Text style={styles.emoji}>👍 20</Text>
           </View>
-          <Text style={[styles.text, { marginTop: -15 }]}>26/03/2025</Text>
+          <Text style={[styles.text, { marginTop: 0 }]}>26/03/2025</Text>
         </View>
       </View>
 
@@ -112,14 +115,14 @@ const HomeScreen = () => {
         <GradientButton
           title="1 Day Free Trial"
           title2="Ek Din Ka Free Trial"
-          height="55"
+          height="50"
           width="50%"
           gradientType="orange"
           color={COLORS.white}
           borderRadius={5}
           fontSize={15}
           fontWeight="500"
-          onPress={() => navigation.navigate('Register')}
+          onPress={() => navigation.navigate('OneDayFreeTrial')}
         />
       </View>
 
@@ -127,7 +130,7 @@ const HomeScreen = () => {
         <GradientButton
           title="Your Contribution"
           title2="Aapka Arthik Yogdan"
-          height="55"
+          height="50"
           width="50%"
           gradientType="orange"
           color={COLORS.white}
@@ -141,7 +144,7 @@ const HomeScreen = () => {
       <View style={styles.button}>
         <GradientButton
           title="New Sign Up"
-          height="55"
+          height="50"
           width="50%"
           gradientType="orange"
           color={COLORS.white}
@@ -155,14 +158,14 @@ const HomeScreen = () => {
       <View style={styles.button}>
         <GradientButton
           title="Member Log In"
-          height="55"
+          height="50"
           width="50%"
           gradientType="orange"
           color={COLORS.white}
           borderRadius={5}
           fontSize={15}
           fontWeight="500"
-          onPress={() => navigation.navigate('MemberLoginHome')}
+          onPress={() => setIsBeforeRegisterModalVisible(true)}
         />
       </View>
 
@@ -170,7 +173,7 @@ const HomeScreen = () => {
         <GradientButton
           title="hindibiblestudy.com"
           height="35"
-          width="55%"
+          width="60%"
           gradientType="blue"
           color={COLORS.white}
           borderRadius={5}
@@ -179,6 +182,11 @@ const HomeScreen = () => {
           onPress={() => Linking.openURL('https://hindibiblestudy.com')}
         />
       </View>
+
+      <BeforeRegistrationModal
+        visible={isBeforeRegisterModalVisible}
+        onClose={() => setIsBeforeRegisterModalVisible(false)}
+      />
     </ScrollView>
   );
 };
@@ -189,8 +197,8 @@ const styles = StyleSheet.create({
     backgroundColor: BACKGROUND_COLORS.primary,
   },
   topBar: {
-    marginTop: 15,
     marginBottom: 5,
+    marginTop: 10,
   },
   heading: {
     textAlign: 'center',
@@ -216,6 +224,7 @@ const styles = StyleSheet.create({
   },
   subscriberText: {
     color: '#333',
+    fontSize: 14,
   },
   button: {
     marginTop: 12,
@@ -243,15 +252,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   emoji: {
-    fontSize: 14,
+    fontSize: 12,
   },
   text: {
-    fontSize: 15,
+    fontSize: 14,
   },
   starContainer: {
     flexDirection: 'row',
     marginLeft: 235,
-    marginTop: 5,
   },
   priceButton: {
     alignItems: 'center',

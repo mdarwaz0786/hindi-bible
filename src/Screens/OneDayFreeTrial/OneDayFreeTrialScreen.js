@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 import { View, StyleSheet, Text, ScrollView } from 'react-native';
 import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
@@ -7,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import COLORS from '../../Constants/Colors.js';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 
-const ContactUsScreen = () => {
+const OneDayFreeTrialScreen = () => {
   const navigation = useNavigation();
   return (
     <ScrollView style={styles.container}>
@@ -18,7 +17,7 @@ const ContactUsScreen = () => {
       <View style={styles.homeButton}>
         <GradiantButton
           title="Home"
-          height="30"
+          height="35"
           width="25%"
           gradientType="yellow"
           borderRadius={5}
@@ -27,32 +26,22 @@ const ContactUsScreen = () => {
         />
       </View>
 
-      <View style={styles.contactSection}>
-        <View style={[styles.section, { marginTop: 10 }]}>
-          <Text style={styles.text}>कृपया कॉल न करें</Text>
-          <Text style={styles.text}>Please Do Not Call</Text>
-        </View>
-
+      <View style={styles.middleSection}>
         <View style={styles.section}>
-          <Text style={styles.text}>केवल व्हाट्सएप या ईमेल करें</Text>
-          <Text style={styles.text}>ONLY WHATSAPP OR EMAIL</Text>
-        </View>
-
-        <View style={[styles.section, { marginBottom: 40 }]}>
-          <Text style={styles.text}>WHATSAPP : 7838989070</Text>
-          <Text style={styles.text}>EMAIL : hindibiblestudy.com@gmail.com</Text>
+          <Text style={styles.title}>Show Case</Text>
+          <Text style={styles.text}>Sabhi years ka uploaded content dekhne ke liye neeche show case button par click kare.</Text>
         </View>
       </View>
 
-      <View style={styles.feedbackButton}>
+      <View style={styles.bottomButton}>
         <GradiantButton
-          title="Feedback / Enquiry"
+          title="Show Case"
           height="40"
-          width="45%"
+          width="30%"
           gradientType="orange"
           borderRadius={5}
           fontSize={14}
-          onPress={() => navigation.navigate('Feedback')}
+          onPress={() => navigation.navigate('Main')}
         />
       </View>
     </ScrollView>
@@ -70,27 +59,34 @@ const styles = StyleSheet.create({
   },
   homeButton: {
     flexDirection: 'row',
-    justifyContent: 'flex-end',
-    marginRight: 60,
+    justifyContent: 'center',
   },
-  contactSection: {
+  middleSection: {
     backgroundColor: BACKGROUND_COLORS.darkRed,
-    marginTop: 30,
+    margin: 20,
+    padding: 20,
+    borderRadius: 5,
   },
   section: {
     marginBottom: 16,
   },
   text: {
     textAlign: 'center',
-    fontSize: 18,
+    fontSize: 16,
     color: COLORS.white,
   },
-  feedbackButton: {
-    marginTop: 30,
+  title: {
+    color: COLORS.goldenYellow,
+    fontSize: 24,
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  bottomButton: {
+    marginTop: 5,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
   },
 });
 
-export default ContactUsScreen;
+export default OneDayFreeTrialScreen;

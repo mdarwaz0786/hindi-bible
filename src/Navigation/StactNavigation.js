@@ -59,6 +59,8 @@ import TgcPhotoScreen from '../Screens/TgcPhoto/TgcPhotoScreen.js';
 import DevotionScreen from '../Screens/Devotion/DevotionScreen.js';
 import ChildrenBibleScreen from '../Screens/ChildrenBibleSchool/ChildrenBibleSchoolScreen.js';
 import TeenBibleSchoolScreen from '../Screens/TeenBibleSchool/TeenBibleSchoolScreen.js';
+import FeedbackScreen from '../Screens/Feedback/FeedbackScreen.js';
+import OneDayFreeTrialScreen from '../Screens/OneDayFreeTrial/OneDayFreeTrialScreen.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -123,6 +125,8 @@ const StackNavigation = () => (
     <Stack.Screen name="Devotion" component={DevotionScreen} />
     <Stack.Screen name="ChildrenBibleSchool" component={ChildrenBibleScreen} />
     <Stack.Screen name="TeenBibleSchool" component={TeenBibleSchoolScreen} />
+    <Stack.Screen name="Feedback" component={FeedbackScreen} />
+    <Stack.Screen name="OneDayFreeTrial" component={OneDayFreeTrialScreen} />
   </Stack.Navigator>
 );
 

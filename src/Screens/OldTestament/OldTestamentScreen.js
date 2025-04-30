@@ -477,7 +477,6 @@ const styles = StyleSheet.create({
   buttonWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    columnGap: 10,
     marginBottom: 16,
   },
 });

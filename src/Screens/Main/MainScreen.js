@@ -1,4 +1,4 @@
-import { StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import React from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
@@ -10,7 +10,7 @@ const MainScreen = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.topBar}>
         <TopBarPrimary />
       </View>
@@ -194,6 +194,7 @@ const MainScreen = () => {
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
+            onPress={() => navigation.navigate('EditProfile')}
           />
           <GradiantButton
             title="Order History"
@@ -203,21 +204,11 @@ const MainScreen = () => {
             borderRadius={5}
             fontSize={15}
             fontWeight="500"
+            onPress={() => navigation.navigate('OrderHistory')}
           />
         </View>
       </View>
-      <View style={styles.button}>
-        <GradiantButton
-          title="Contact Us"
-          height="35"
-          width="35%"
-          fontSize={16}
-          gradientType="green"
-          borderRadius={5}
-          onPress={() => navigation.navigate('ContactUs')}
-        />
-      </View>
-    </View>
+    </ScrollView>
   );
 };
 

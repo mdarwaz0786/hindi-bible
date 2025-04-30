@@ -21,7 +21,7 @@ const PayDirectScreen = () => {
           height="35"
           width="30%"
           fontSize={16}
-          gradientType="yellow"
+          gradientType="purple"
           borderRadius={5}
           onPress={() => navigation.goBack()}
         />
@@ -65,7 +65,6 @@ const PayDirectScreen = () => {
           <Text style={styles.value}>Connaught Place, New Delhi</Text>
         </View>
       </View>
-
     </ScrollView>
   );
 };
@@ -110,7 +109,7 @@ const styles = StyleSheet.create({
   accountContainer: {
     backgroundColor: BACKGROUND_COLORS.warmTan,
     padding: 30,
-    marginTop: 20,
+    margin: 10,
   },
   accountTitle: {
     fontSize: 20,
@@ -139,6 +138,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     padding: 16,
     marginBottom: 20,
+    borderRadius: 5,
   },
 });
 

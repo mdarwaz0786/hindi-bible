@@ -16,6 +16,7 @@ import NewTestamentScreen from '../Screens/NewTestament/NewTestamentScreen.js';
 import MattScreen from '../Screens/Matt/MattScreen.js';
 import SingleMattScreen from '../Screens/Matt/SingleMattScreen.js';
 import MemberLoginScreen from '../Screens/MemberLogin/MemberLoginScreen.js';
+import YourContributionHomeScreen from '../Screens/YourContribution/YourContributionHomeScreen.js';
 import YourContributionScreen from '../Screens/YourContribution/YourContributionScreen.js';
 import PayDirectScreen from '../Screens/YourContribution/PayDirectScreen.js';
 import MemberLoginHomeScreen from '../Screens/MemberLogin/MemberLoginHomeScreen.js';
@@ -61,11 +62,18 @@ import ChildrenBibleScreen from '../Screens/ChildrenBibleSchool/ChildrenBibleSch
 import TeenBibleSchoolScreen from '../Screens/TeenBibleSchool/TeenBibleSchoolScreen.js';
 import FeedbackScreen from '../Screens/Feedback/FeedbackScreen.js';
 import OneDayFreeTrialScreen from '../Screens/OneDayFreeTrial/OneDayFreeTrialScreen.js';
+import OrderHistoryScreen from '../Screens/OrderHistory/OrderHistoryScreen.js';
 
 const Stack = createNativeStackNavigator();
 
 const StackNavigation = () => (
-  <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+  <Stack.Navigator
+    initialRouteName="Home"
+    screenOptions={{
+      headerShown: false,
+      animation: 'slide_from_left',
+    }}
+  >
     <Stack.Screen name="Home" component={HomeScreen} />
     <Stack.Screen name="ContactUs" component={ContactUsScreen} />
     <Stack.Screen name="LatestNews" component={LatestNewsScreen} />
@@ -85,6 +93,7 @@ const StackNavigation = () => (
     <Stack.Screen name="MemberLogin" component={MemberLoginScreen} />
     <Stack.Screen name="LoginMember" component={LoginMemberScreen} />
     <Stack.Screen name="EditProfile" component={EditProfileScreen} />
+    <Stack.Screen name="YourContributionHome" component={YourContributionHomeScreen} />
     <Stack.Screen name="YourContribution" component={YourContributionScreen} />
     <Stack.Screen name="PayDirect" component={PayDirectScreen} />
     <Stack.Screen name="PayThruApp" component={PayThruAppScreen} />
@@ -127,6 +136,7 @@ const StackNavigation = () => (
     <Stack.Screen name="TeenBibleSchool" component={TeenBibleSchoolScreen} />
     <Stack.Screen name="Feedback" component={FeedbackScreen} />
     <Stack.Screen name="OneDayFreeTrial" component={OneDayFreeTrialScreen} />
+    <Stack.Screen name="OrderHistory" component={OrderHistoryScreen} />
   </Stack.Navigator>
 );
 

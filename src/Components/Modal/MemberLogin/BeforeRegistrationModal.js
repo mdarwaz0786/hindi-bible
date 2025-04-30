@@ -25,49 +25,51 @@ const BeforeRegistrationModal = ({ visible, onClose }) => {
     >
       <TouchableWithoutFeedback onPress={onClose}>
         <View style={styles.overlay}>
-          <View style={styles.modalContent}>
-            <View style={styles.buttonTop}>
-              <GradiantButton
-                title="Home"
-                height="35"
-                width="30%"
-                gradientType="yellow"
-                borderRadius={5}
-                onPress={() => {
-                  onClose();
-                  navigation.navigate('Home');
-                }}
-              />
+          <TouchableWithoutFeedback>
+            <View style={styles.modalContent}>
+              <View style={styles.buttonTop}>
+                <GradiantButton
+                  title="Home"
+                  height="35"
+                  width="30%"
+                  gradientType="yellow"
+                  borderRadius={5}
+                  onPress={() => {
+                    onClose();
+                    navigation.navigate('Home');
+                  }}
+                />
+              </View>
+              <Text style={styles.message}>Aap Registered Nahi Hai - Kripya Neeche Select kare.</Text>
+              <View style={styles.buttonBottom}>
+                <GradiantButton
+                  title="1 Day Free Trial"
+                  height="35"
+                  width="50%"
+                  gradientType="blue"
+                  borderRadius={5}
+                  onPress={() => {
+                    onClose();
+                    navigation.navigate('Register');
+                  }}
+                />
+                <GradiantButton
+                  title="Sign Up"
+                  height="35"
+                  width="30%"
+                  gradientType="orange"
+                  borderRadius={5}
+                  onPress={() => {
+                    onClose();
+                    navigation.navigate('Register');
+                  }}
+                />
+              </View>
+              <TouchableOpacity style={styles.crossIcon} onPress={onClose}>
+                <Icon name="close" size={24} color="#fff" />
+              </TouchableOpacity>
             </View>
-            <Text style={styles.message}>Aap Registered Nahi Hai - Kripya Neeche Select kare.</Text>
-            <View style={styles.buttonBottom}>
-              <GradiantButton
-                title="1 Day Free Trial"
-                height="35"
-                width="50%"
-                gradientType="blue"
-                borderRadius={5}
-                onPress={() => {
-                  onClose();
-                  navigation.navigate('Register');
-                }}
-              />
-              <GradiantButton
-                title="Sign Up"
-                height="35"
-                width="30%"
-                gradientType="orange"
-                borderRadius={5}
-                onPress={() => {
-                  onClose();
-                  navigation.navigate('Register');
-                }}
-              />
-            </View>
-            <TouchableOpacity style={styles.crossIcon} onPress={onClose}>
-              <Icon name="close" size={24} color="#fff" />
-            </TouchableOpacity>
-          </View>
+          </TouchableWithoutFeedback>
         </View>
       </TouchableWithoutFeedback>
     </Modal>

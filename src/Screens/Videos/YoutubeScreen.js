@@ -64,7 +64,7 @@ const YoutubeScreen = () => {
       <View style={styles.buttonContainer}>
         <View style={styles.buttonWrapper}>
           <GradiantButton
-            title="Topic Platlist"
+            title="Topis wise"
             height="40"
             width="50%"
             gradientType="orange"
@@ -76,7 +76,7 @@ const YoutubeScreen = () => {
         </View>
         <View style={styles.buttonWrapper}>
           <GradiantButton
-            title="All Videos"
+            title="Youtube Playlist"
             height="40"
             width="50%"
             gradientType="orange"

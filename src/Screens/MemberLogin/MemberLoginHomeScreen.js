@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet, ScrollView } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import GradientButton from '../../Components/Button/GradientButton.js';
@@ -9,39 +9,11 @@ import COLORS from '../../Constants/Colors.js';
 const MemberLoginHomeScreen = () => {
   const navigation = useNavigation();
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.topBar}>
         <TopBarPrimary />
       </View>
-
-      <Text style={styles.heading}><Text style={{ color: COLORS.peru }}>TGC</Text> HINDI BIBLE STUDY APP</Text>
-
-      <View style={styles.buttonContainer}>
-        <GradientButton
-          title="Subscribers"
-          height="30"
-          width="30%"
-          gradientType="yellow"
-          borderRadius={5}
-        />
-        <GradientButton
-          title="Latest News"
-          height="30"
-          width="30%"
-          gradientType="blue"
-          borderRadius={5}
-          onPress={() => navigation.navigate('LatestNews')}
-        />
-        <GradientButton
-          title="Contact Us"
-          height="30"
-          width="30%"
-          gradientType="green"
-          borderRadius={5}
-          onPress={() => navigation.navigate('ContactUs')}
-        />
-      </View>
-      <View style={styles.introVideo}>
+      <View style={styles.button}>
         <GradientButton
           title="Edit Profile"
           height="45"
@@ -53,7 +25,7 @@ const MemberLoginHomeScreen = () => {
           onPress={() => navigation.navigate('EditProfile')}
         />
         <GradientButton
-          title="LOG IN"
+          title="Log In"
           height="45"
           width="35%"
           gradientType="orange"
@@ -63,7 +35,7 @@ const MemberLoginHomeScreen = () => {
           onPress={() => navigation.navigate('MemberLogin')}
         />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -92,11 +64,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 20,
   },
-  introVideo: {
+  button: {
     alignItems: 'center',
     justifyContent: 'center',
     rowGap: 35,
-    marginTop: 80,
+    marginTop: 30,
   },
 });
 

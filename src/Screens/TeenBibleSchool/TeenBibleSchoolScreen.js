@@ -5,7 +5,7 @@ import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import Button from '../../Components/Button/Button.js';
-import MediaDownload from '../../Components/Media/MediaDownload.js';
+import MediaDownload from '../../Components/MediaDownload/index.js';
 
 const TeenBibleScreen = () => {
   const navigation = useNavigation();
@@ -54,7 +54,7 @@ const TeenBibleScreen = () => {
       </View>
       <View style={styles.button}>
         <Button
-          title="Teen Bible School (CBS)"
+          title="Teen Bible School (TBS)"
           height="40"
           width="55%"
           fontSize={15}

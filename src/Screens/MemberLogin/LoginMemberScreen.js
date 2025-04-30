@@ -1,4 +1,5 @@
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
@@ -12,7 +13,7 @@ const LoginMemberScreen = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.topBar}>
         <TopBarPrimary />
       </View>
@@ -44,13 +45,12 @@ const LoginMemberScreen = () => {
             secureTextEntry={!passwordVisible}
           />
           <TouchableOpacity style={styles.showButton} onPress={() => setPasswordVisible(!passwordVisible)}>
-            <Icon name={passwordVisible ? 'eye' : 'eye-off'} size={25} color={COLORS.white} />
-            <Text style={styles.showText}>{passwordVisible ? 'Hide Password' : 'Show Password'}</Text>
+            <Icon name={passwordVisible ? 'eye' : 'eye-off'} size={25} color={COLORS.black} />
           </TouchableOpacity>
         </View>
       </View>
 
-      <View style={styles.button}>
+      <View style={[styles.button, { marginBottom: 50 }]}>
         <GradiantButton
           title="Login"
           height="35"
@@ -61,7 +61,7 @@ const LoginMemberScreen = () => {
           onPress={() => navigation.navigate('Main')}
         />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -77,7 +77,6 @@ const styles = StyleSheet.create({
   },
   button: {
     alignItems: 'center',
-    marginVertical: 10,
   },
   formContainer: {
     backgroundColor: BACKGROUND_COLORS.skyBlue,
@@ -106,10 +105,9 @@ const styles = StyleSheet.create({
     color: COLORS.black,
   },
   showButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginLeft: 16,
-    marginTop: 20,
+    position: 'absolute',
+    right: 20,
+    top: 32,
   },
   showText: {
     marginLeft: 10,

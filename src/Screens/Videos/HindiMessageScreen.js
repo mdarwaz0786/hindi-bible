@@ -87,7 +87,7 @@ const HindiMessageScreen = () => {
               thumbnail: require('../../Assets/videoThumbnail.jpeg'),
               frameSource: require('../../Assets/videoFrame.jpeg'),
               buttonTitle: 'Hindi Message',
-              title: 'Video 1 - How to learn web development to learn web development...',
+              title: 'Video 2 - How to learn web development to learn web development...',
               publishedOn: '20 March 2025',
               description: 'Historys Greatest Inventions That Changed the World, and 10-Minute Home Workout for a Healthier Lifestyle are some fascinating video titles covering topics from technology to science and personal well-being.',
             })

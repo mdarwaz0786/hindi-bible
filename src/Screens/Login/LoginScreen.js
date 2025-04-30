@@ -1,4 +1,5 @@
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
@@ -12,7 +13,7 @@ const LoginScreen = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.topBar}>
         <TopBarPrimary />
       </View>
@@ -41,18 +42,19 @@ const LoginScreen = () => {
 
         <View style={styles.inputGroup}>
           <Text style={styles.label}>PASSWORD</Text>
-          <TextInput
-            style={styles.input}
-            secureTextEntry={!passwordVisible}
-          />
-          <TouchableOpacity style={styles.showButton} onPress={() => setPasswordVisible(!passwordVisible)}>
-            <Icon name={passwordVisible ? 'eye' : 'eye-off'} size={25} color={COLORS.white} />
-            <Text style={styles.showText}>{passwordVisible ? 'Hide Password' : 'Show Password'}</Text>
-          </TouchableOpacity>
+          <View style={styles.passwordInputContainer}>
+            <TextInput
+              style={styles.input}
+              secureTextEntry={!passwordVisible}
+            />
+            <TouchableOpacity style={styles.showButton} onPress={() => setPasswordVisible(!passwordVisible)}>
+              <Icon name={passwordVisible ? 'eye' : 'eye-off'} size={25} color={COLORS.black} />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
 
-      <View style={styles.button}>
+      <View style={[styles.button, { marginBottom: 20 }]}>
         <GradiantButton
           title="LOGIN"
           height="35"
@@ -63,7 +65,7 @@ const LoginScreen = () => {
           onPress={() => navigation.navigate('LoginSuccess')}
         />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -86,7 +88,7 @@ const styles = StyleSheet.create({
     padding: 20,
     paddingHorizontal: 25,
     marginTop: 20,
-    marginBottom: 35,
+    marginBottom: 25,
     marginHorizontal: 30,
   },
   formTitle: {
@@ -113,17 +115,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: COLORS.black,
   },
-  showButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginLeft: 16,
-    marginTop: 20,
+  passwordInputContainer: {
+    position: 'relative',
   },
-  showText: {
-    marginLeft: 10,
-    fontSize: 16,
-    fontWeight: '400',
-    color: COLORS.lightGreen,
+  showButton: {
+    position: 'absolute',
+    right: 10,
+    top: 9,
   },
 });
 

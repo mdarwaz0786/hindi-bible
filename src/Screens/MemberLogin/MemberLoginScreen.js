@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Modal } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Modal, ScrollView } from 'react-native';
 import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
@@ -13,7 +13,7 @@ const MemberLoginScreen = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.topBar}>
         <TopBarPrimary />
       </View>
@@ -45,41 +45,40 @@ const MemberLoginScreen = () => {
             secureTextEntry={!passwordVisible}
           />
           <TouchableOpacity style={styles.showButton} onPress={() => setPasswordVisible(!passwordVisible)}>
-            <Icon name={passwordVisible ? 'eye' : 'eye-off'} size={25} color={COLORS.white} />
-            <Text style={styles.showText}>{passwordVisible ? 'Hide Password' : 'Show Password'}</Text>
+            <Icon name={passwordVisible ? 'eye' : 'eye-off'} size={25} color={COLORS.black} />
           </TouchableOpacity>
-          <View style={styles.buttonContainer}>
-            <GradiantButton
-              title="CHANGE USERNAME - PASSWORD"
-              height="40"
-              width="100%"
-              fontSize={13}
-              fontWeight="400"
-              gradientType="green"
-              borderRadius={5}
-            />
-            <GradiantButton
-              title="Forgot username / Password"
-              height="40"
-              width="100%"
-              fontWeight="400"
-              fontSize={15}
-              gradientType="orange"
-              borderRadius={5}
-            />
-          </View>
+        </View>
+        <View style={styles.button}>
+          <GradiantButton
+            title="LOG IN"
+            height="35"
+            width="35%"
+            fontSize={16}
+            gradientType="orange"
+            borderRadius={5}
+            onPress={() => navigation.navigate('Main')}
+          />
         </View>
       </View>
 
-      <View style={styles.button}>
+      <View style={styles.buttonContainer}>
         <GradiantButton
-          title="LOG IN"
-          height="35"
-          width="30%"
-          fontSize={16}
+          title="CHANGE USERNAME - PASSWORD"
+          height="40"
+          width="100%"
+          fontSize={14}
+          fontWeight="400"
+          gradientType="green"
+          borderRadius={5}
+        />
+        <GradiantButton
+          title="FORGOT USERNAME / PASSWORD"
+          height="40"
+          width="100%"
+          fontWeight="400"
+          fontSize={14}
           gradientType="orange"
           borderRadius={5}
-          onPress={() => navigation.navigate('Main')}
         />
       </View>
 
@@ -101,7 +100,7 @@ const MemberLoginScreen = () => {
           </View>
         </View>
       </Modal>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -116,6 +115,7 @@ const styles = StyleSheet.create({
   },
   button: {
     alignItems: 'center',
+    marginBottom: 20,
   },
   formContainer: {
     backgroundColor: BACKGROUND_COLORS.skyBlue,
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     borderColor: COLORS.black,
     paddingTop: 25,
     paddingHorizontal: 40,
-    marginVertical: 30,
+    marginBottom: 30,
     marginHorizontal: 20,
   },
   formTitle: {
@@ -151,11 +151,9 @@ const styles = StyleSheet.create({
     color: COLORS.black,
   },
   showButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginLeft: 16,
-    marginTop: 20,
-    marginBottom: 20,
+    position: 'absolute',
+    right: 10,
+    top: 30,
   },
   showText: {
     marginLeft: 10,
@@ -164,7 +162,9 @@ const styles = StyleSheet.create({
     color: COLORS.lightGreen,
   },
   buttonContainer: {
-    rowGap: 12,
+    rowGap: 20,
+    paddingHorizontal: 20,
+    marginBottom: 30,
   },
   modalContainer: {
     flex: 1,

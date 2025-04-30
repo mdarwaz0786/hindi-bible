@@ -9,12 +9,14 @@ import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import VideoPlayer from '../../Components/Video/VideoPlayer.js';
 import Button from '../../Components/Button/Button.js';
 import BeforeRegistrationModal from '../../Components/Modal/MemberLogin/BeforeRegistrationModal.js';
+import AfterRegistrationModal from '../../Components/Modal/MemberLogin/AfterRegistrationModal.js';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
   const opacity = useRef(new Animated.Value(1)).current;
 
   const [isBeforeRegisterModalVisible, setIsBeforeRegisterModalVisible] = useState(false);
+  const [isAfterRegisterModalVisible, setIsAfterRegisterModalVisible] = useState(false);
 
   useEffect(() => {
     Animated.loop(
@@ -137,7 +139,7 @@ const HomeScreen = () => {
           borderRadius={5}
           fontSize={15}
           fontWeight="500"
-          onPress={() => navigation.navigate('YourContribution')}
+          onPress={() => navigation.navigate('YourContributionHome')}
         />
       </View>
 
@@ -151,7 +153,7 @@ const HomeScreen = () => {
           borderRadius={5}
           fontSize={15}
           fontWeight="500"
-          onPress={() => navigation.navigate('NewSignup')}
+          onPress={() => setIsAfterRegisterModalVisible(true)}
         />
       </View>
 
@@ -165,7 +167,8 @@ const HomeScreen = () => {
           borderRadius={5}
           fontSize={15}
           fontWeight="500"
-          onPress={() => setIsBeforeRegisterModalVisible(true)}
+          onPress={() => navigation.navigate('MemberLoginHome')}
+        // onPress={() => setIsBeforeRegisterModalVisible(true)}
         />
       </View>
 
@@ -186,6 +189,11 @@ const HomeScreen = () => {
       <BeforeRegistrationModal
         visible={isBeforeRegisterModalVisible}
         onClose={() => setIsBeforeRegisterModalVisible(false)}
+      />
+
+      <AfterRegistrationModal
+        visible={isAfterRegisterModalVisible}
+        onClose={() => setIsAfterRegisterModalVisible(false)}
       />
     </ScrollView>
   );

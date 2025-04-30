@@ -1,15 +1,48 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable comma-dangle */
 import { StyleSheet, Text, View, TextInput, ScrollView } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
 import COLORS from '../../Constants/Colors.js';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
+import { Picker } from '@react-native-picker/picker';
 
 const PayThruAppScreen = () => {
   const navigation = useNavigation();
+  const [countryCode, setCountryCode] = useState('+91');
+  const [mobile, setMobile] = useState('');
+
+  const countryCodes = [
+    { label: '+1', value: '+1' },
+    { label: '+91', value: '+91' },
+    { label: '+44', value: '+44' },
+    { label: '+61', value: '+61' },
+    { label: '+49', value: '+49' },
+    { label: '+33', value: '+33' },
+    { label: '+39', value: '+39' },
+    { label: '+81', value: '+81' },
+    { label: '+55', value: '+55' },
+    { label: '+86', value: '+86' },
+    { label: '+34', value: '+34' },
+    { label: '+27', value: '+27' },
+    { label: '+52', value: '+52' },
+    { label: '+64', value: '+64' },
+    { label: '+7', value: '+7' },
+    { label: '+977', value: '+977' },
+    { label: '+92', value: '+92' },
+    { label: '+94', value: '+94' },
+    { label: '+880', value: '+880' },
+    { label: '+39', value: '+39' },
+    { label: '+353', value: '+353' },
+    { label: '+63', value: '+63' },
+    { label: '+44', value: '+44' },
+    { label: '+54', value: '+54' },
+    { label: '+971', value: '+971' },
+    { label: '+60', value: '+60' },
+    { label: '+41', value: '+41' },
+  ];
 
   return (
     <ScrollView style={styles.container}>
@@ -32,7 +65,7 @@ const PayThruAppScreen = () => {
       <View style={styles.mainContainer}>
         <View style={styles.formContainer}>
           <Text style={[styles.formTitle, { fontSize: 20, marginBottom: 10, }]}>Payment Gateway</Text>
-          <Text style={[styles.formTitle, { fontSize: 14, marginBottom: 10, padding: 5, color: COLORS.white, backgroundColor: BACKGROUND_COLORS.vibrantOrange }]}>UPI/Credit card/Debit Card/Wallet</Text>
+          <Text style={[styles.formTitle, { fontSize: 14, marginBottom: 10, padding: 10, color: COLORS.white, backgroundColor: BACKGROUND_COLORS.vibrantOrange }]}>UPI/Credit card/Debit Card/Wallet</Text>
           <Text style={styles.formTitle}>If you give  your details, we could acknowledge your payment.</Text>
           <Text style={[styles.formTitle, { marginBottom: 20 }]}>यदि आप अपना विवरण देंगे तो हम आपके भुगतान की पुष्टि कर सकते हैं।</Text>
 
@@ -43,7 +76,25 @@ const PayThruAppScreen = () => {
 
           <View style={styles.inputGroup}>
             <Text style={styles.label}>Mobile <Text style={styles.redStar}>*</Text></Text>
-            <TextInput style={styles.input} keyboardType="phone-pad" />
+            <View style={styles.mobileInputContainer}>
+              <View style={styles.pickerWrapper}>
+                <Picker
+                  selectedValue={countryCode}
+                  onValueChange={(itemValue) => setCountryCode(itemValue)}
+                  style={styles.picker}
+                >
+                  {countryCodes.map((code) => (
+                    <Picker.Item key={code.value} label={code.label} value={code.value} />
+                  ))}
+                </Picker>
+              </View>
+              <TextInput
+                style={styles.mobileInput}
+                keyboardType="phone-pad"
+                value={mobile}
+                onChangeText={(text) => setMobile(text)}
+              />
+            </View>
           </View>
 
           <View style={styles.inputGroup}>
@@ -52,15 +103,20 @@ const PayThruAppScreen = () => {
           </View>
 
           <View style={styles.inputGroup}>
-            <Text style={styles.label}>Account <Text style={styles.redStar}>*</Text></Text>
-            <TextInput style={styles.input} keyboardType="numeric" />
+            <Text style={styles.label}>Ammount <Text style={styles.redStar}>*</Text></Text>
+            <TextInput
+              style={styles.input}
+              keyboardType="numeric"
+              placeholder="Rs."
+              placeholderTextColor="black"
+            />
           </View>
 
           <View style={styles.button}>
             <GradiantButton
-              title="PAY NOW"
+              title="PAY"
               height="35"
-              width="35%"
+              width="25%"
               fontSize={14}
               fontWeight={500}
               gradientType="lightBlue"
@@ -121,6 +177,28 @@ const styles = StyleSheet.create({
   input: {
     backgroundColor: BACKGROUND_COLORS.white,
     borderRadius: 5,
+    padding: 10,
+    fontSize: 16,
+    color: COLORS.black,
+  },
+  mobileInputContainer: {
+    flexDirection: 'row',
+    backgroundColor: BACKGROUND_COLORS.white,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  pickerWrapper: {
+    width: 100,
+    borderRightWidth: 1,
+    borderRightColor: '#ccc',
+  },
+  picker: {
+    height: 50,
+    width: '101%',
+    marginLeft: 5,
+  },
+  mobileInput: {
+    flex: 1,
     padding: 10,
     fontSize: 16,
     color: COLORS.black,

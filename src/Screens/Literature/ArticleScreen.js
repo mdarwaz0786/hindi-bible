@@ -74,7 +74,7 @@ const ArticleScreen = () => {
         />
       </View>
 
-      <View style={[styles.videoWrapper, { paddingTop: 0 }]}>
+      <View style={[styles.imageWrapper, { paddingTop: 0 }]}>
         <View style={styles.imageContainer}>
           <Image style={styles.image} source={require('../../Assets/videoThumbnail.jpeg')} />
         </View>
@@ -138,14 +138,14 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginTop: 10,
   },
-  videoWrapper: {
+  imageWrapper: {
     backgroundColor: BACKGROUND_COLORS.deepBrown,
     padding: 20,
     marginHorizontal: 16,
     marginTop: 0,
     marginBottom: 20,
   },
-  videoContainer: {
+  imageContainer: {
     alignItems: 'center',
   },
   title: {
@@ -175,9 +175,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     textDecorationLine: 'underline',
   },
-  imageContainer: {
-    marginBottom: 0,
-  },
   image: {
     width: '100%',
     height: 200,
@@ -187,15 +184,15 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     marginBottom: 20,
     padding: 10,
-    backgroundColor: BACKGROUND_COLORS.white,
     borderRadius: 5,
   },
   pdfContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     backgroundColor: BACKGROUND_COLORS.white,
-    padding: 10,
+    padding: 16,
+    marginBottom: 16,
   },
   pdfInfo: {
     flex: 1,

@@ -71,7 +71,7 @@ const StackNavigation = () => (
     initialRouteName="Home"
     screenOptions={{
       headerShown: false,
-      animation: 'slide_from_left',
+      animation: 'fade',
     }}
   >
     <Stack.Screen name="Home" component={HomeScreen} />

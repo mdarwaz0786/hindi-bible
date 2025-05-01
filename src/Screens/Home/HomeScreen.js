@@ -167,8 +167,8 @@ const HomeScreen = () => {
           borderRadius={5}
           fontSize={15}
           fontWeight="500"
-          onPress={() => navigation.navigate('MemberLoginHome')}
-        // onPress={() => setIsBeforeRegisterModalVisible(true)}
+          // onPress={() => navigation.navigate('MemberLoginHome')}
+          onPress={() => setIsBeforeRegisterModalVisible(true)}
         />
       </View>
 

@@ -172,7 +172,7 @@ const HomeScreen = () => {
         />
       </View>
 
-      <View style={styles.button}>
+      <View style={[styles.button, { marginBottom: 12 }]}>
         <GradientButton
           title="hindibiblestudy.com"
           height="35"

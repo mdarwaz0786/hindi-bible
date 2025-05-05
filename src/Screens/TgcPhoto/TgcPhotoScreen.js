@@ -1,10 +1,11 @@
-import { ScrollView, StyleSheet, Text, View, Image } from 'react-native';
-import React from 'react';
+import { ScrollView, StyleSheet, Text, View, Image, Alert } from 'react-native';
+import React, { useState } from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors';
 import { useNavigation } from '@react-navigation/native';
 import GradiantButton from '../../Components/Button/GradientButton';
 import Button from '../../Components/Button/Button';
+import SearchInput from '../../Components/Search/SearchInput';
 
 const TgcPhotoScreen = () => {
   const navigation = useNavigation();
@@ -19,6 +20,12 @@ const TgcPhotoScreen = () => {
       image: require('../../Assets/videoThumbnail.jpeg'),
     },
   ];
+
+  const [search, setSearch] = useState('');
+
+  const handleSearch = () => {
+    Alert.alert('Search Submitted', `You searched for: "${search}"`);
+  };
 
   return (
     <ScrollView style={styles.container}>
@@ -75,6 +82,12 @@ const TgcPhotoScreen = () => {
         />
       </View>
 
+      <SearchInput
+        value={search}
+        onChangeText={setSearch}
+        onSearch={handleSearch}
+      />
+
       <View style={styles.imageWrapper}>
         {imageFiles.map((image, index) => (
           <View key={index} style={styles.imageContainer}>
@@ -123,7 +136,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   imageWrapper: {
-    padding: 16,
+    padding: 12,
   },
   image: {
     width: '100%',

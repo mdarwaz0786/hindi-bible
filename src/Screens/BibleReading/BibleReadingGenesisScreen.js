@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import { StyleSheet, View } from 'react-native';
+import { Alert, StyleSheet, View } from 'react-native';
 import React, { useState } from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
@@ -7,10 +7,16 @@ import { useNavigation } from '@react-navigation/native';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import Button from '../../Components/Button/Button.js';
 import AudioPlayer from '../../Components/Audio/AudioPlayer.js';
+import SearchInput from '../../Components/Search/SearchInput.js';
 
 const BibleReadingGenesisScreen = () => {
   const navigation = useNavigation();
   const [playingId, setPlayingId] = useState(null);
+  const [search, setSearch] = useState('');
+
+  const handleSearch = () => {
+    Alert.alert('Search Submitted', `You searched for: "${search}"`);
+  };
 
   return (
     <View style={styles.container}>
@@ -55,7 +61,7 @@ const BibleReadingGenesisScreen = () => {
         />
       </View>
 
-      <View style={{ alignItems: 'center' }}>
+      <View style={{ alignItems: 'center', marginBottom: 5 }}>
         <Button
           title="Genesis"
           height="30"
@@ -65,6 +71,12 @@ const BibleReadingGenesisScreen = () => {
           fontSize={15}
         />
       </View>
+
+      <SearchInput
+        value={search}
+        onChangeText={setSearch}
+        onSearch={handleSearch}
+      />
 
       <View style={styles.audioContainer}>
         <AudioPlayer

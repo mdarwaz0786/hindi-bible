@@ -1,14 +1,21 @@
-import { ScrollView, StyleSheet, View } from 'react-native';
-import React from 'react';
+import { Alert, ScrollView, StyleSheet, View } from 'react-native';
+import React, { useState } from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import Button from '../../Components/Button/Button.js';
 import MediaDownload from '../../Components/MediaDownload/index.js';
+import SearchInput from '../../Components/Search/SearchInput.js';
 
 const ChildrenBibleScreen = () => {
   const navigation = useNavigation();
+
+  const [search, setSearch] = useState('');
+
+  const handleSearch = () => {
+    Alert.alert('Search Submitted', `You searched for: "${search}"`);
+  };
 
   return (
     <ScrollView style={styles.container}>
@@ -62,6 +69,11 @@ const ChildrenBibleScreen = () => {
           borderRadius={5}
         />
       </View>
+      <SearchInput
+        value={search}
+        onChangeText={setSearch}
+        onSearch={handleSearch}
+      />
       <View style={styles.mediaContainer}>
         <MediaDownload
           title="Sample Video"
@@ -112,6 +124,7 @@ const styles = StyleSheet.create({
   },
   button: {
     alignItems: 'center',
+    marginBottom: 8,
   },
   buttonTop: {
     flexDirection: 'row',

@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
-import { Image, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import React from 'react';
+import { Alert, Image, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary';
 import GradiantButton from '../../Components/Button/GradientButton';
@@ -9,6 +9,7 @@ import VideoPlayer from '../../Components/Video/VideoPlayer';
 import COLORS from '../../Constants/Colors';
 import Button from '../../Components/Button/Button';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import SearchInput from '../../Components/Search/SearchInput';
 
 const ZaruriSuchnaScreen = () => {
   const navigation = useNavigation();
@@ -18,6 +19,12 @@ const ZaruriSuchnaScreen = () => {
     fileName: 'tgc_learning_guide.pdf',
     fileSize: '2.3 MB',
     fileUrl: 'https://example.com/tgc_learning_guide.pdf',
+  };
+
+  const [search, setSearch] = useState('');
+
+  const handleSearch = () => {
+    Alert.alert('Search Submitted', `You searched for: "${search}"`);
   };
 
   return (
@@ -74,6 +81,12 @@ const ZaruriSuchnaScreen = () => {
           borderRadius={5}
         />
       </View>
+
+      <SearchInput
+        value={search}
+        onChangeText={setSearch}
+        onSearch={handleSearch}
+      />
 
       <View style={styles.videoWrapper}>
         <View style={styles.videoContainer}>
@@ -167,7 +180,7 @@ const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
     marginTop: 5,
-    marginBottom: 20,
+    marginBottom: 10,
   },
   buttonTop: {
     flexDirection: 'row',
@@ -181,7 +194,7 @@ const styles = StyleSheet.create({
     backgroundColor: BACKGROUND_COLORS.deepBrown,
     padding: 20,
     marginHorizontal: 16,
-    marginTop: 0,
+    marginTop: 20,
     marginBottom: 20,
   },
   videoContainer: {

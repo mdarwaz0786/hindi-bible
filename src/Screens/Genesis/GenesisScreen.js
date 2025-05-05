@@ -1,17 +1,23 @@
-import { StyleSheet, View } from 'react-native';
-import React from 'react';
+import { Alert, ScrollView, StyleSheet, View } from 'react-native';
+import React, { useState } from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary.js';
 import GradiantButton from '../../Components/Button/GradientButton.js';
 import { useNavigation } from '@react-navigation/native';
 import BACKGROUND_COLORS from '../../Constants/BackGroundColors.js';
 import Video from '../../Components/Video/Video.js';
 import Button from '../../Components/Button/Button.js';
+import SearchInput from '../../Components/Search/SearchInput.js';
 
 const GenesisScreen = () => {
   const navigation = useNavigation();
+  const [search, setSearch] = useState('');
+
+  const handleSearch = () => {
+    Alert.alert('Search Submitted', `You searched for: "${search}"`);
+  };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.topBar}>
         <TopBarPrimary />
       </View>
@@ -62,6 +68,11 @@ const GenesisScreen = () => {
           borderRadius={5}
         />
       </View>
+      <SearchInput
+        value={search}
+        onChangeText={setSearch}
+        onSearch={handleSearch}
+      />
       <View style={styles.videoContainer}>
         <Video
           thumbnail={require('../../Assets/videoThumbnail.jpeg')}
@@ -94,7 +105,7 @@ const GenesisScreen = () => {
           }
         />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -124,6 +135,30 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     rowGap: 20,
     marginTop: 20,
+  },
+  searchContainer: {
+    flexDirection: 'row',
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    alignItems: 'center',
+    paddingLeft: 10,
+    marginTop: 10,
+    marginHorizontal: 25,
+    height: 45,
+    borderColor: '#999',
+    borderWidth: 1,
+  },
+  searchInput: {
+    flex: 1,
+    fontSize: 16,
+    color: '#555',
+  },
+  searchButton: {
+    borderLeftColor: '#999',
+    borderLeftWidth: 1,
+    borderRadius: 8,
+    padding: 9,
+    backgroundColor: '#eee',
   },
 });
 

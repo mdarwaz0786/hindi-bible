@@ -12,6 +12,7 @@ const BACKGROUND_COLORS = {
   green: '#3f6b26',
   lightGreen: '#6eb141',
   paleYellow: '#FFFFA3',
+  maroon: '#500505',
 };
 
 export default BACKGROUND_COLORS;

@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   modalContent: {
-    backgroundColor: BACKGROUND_COLORS.darkRed,
+    backgroundColor: BACKGROUND_COLORS.maroon,
     borderRadius: 5,
     padding: 20,
     width: '90%',
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.black,
     padding: 20,
-    backgroundColor: BACKGROUND_COLORS.darkRed,
+    backgroundColor: BACKGROUND_COLORS.maroon,
     alignItems: 'center',
   },
   checkboxContainer: {

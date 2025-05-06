@@ -525,10 +525,15 @@ const RegisterScreen = () => {
           <TextInput style={styles.input} keyboardType="email-address" />
         </View>
 
-        <View style={styles.inputGroup}>
-          <Text style={[styles.label, { marginBottom: 0 }]}>Upload Profile Picture</Text>
-          <TouchableOpacity onPress={pickImage} style={styles.imageUploadButton}>
-            <Text style={styles.buttonText}>Choose Image (Optional)</Text>
+        <View style={[styles.inputGroup, { marginBottom: 0 }]}>
+          <TouchableOpacity onPress={pickImage}>
+            <View style={styles.imageUploadContent}>
+              <Image
+                source={require('../../Assets/profile-icon.png')}
+                style={styles.profileIcon}
+              />
+              <Text style={styles.buttonText}>Set Profile Photo (Optional)</Text>
+            </View>
           </TouchableOpacity>
           {imageUri && (
             <View style={styles.image}>
@@ -564,7 +569,6 @@ const styles = StyleSheet.create({
   },
   button: {
     alignItems: 'center',
-    marginVertical: 10,
   },
   formContainer: {
     backgroundColor: BACKGROUND_COLORS.skyBlue,
@@ -572,11 +576,11 @@ const styles = StyleSheet.create({
     borderColor: COLORS.black,
     padding: 20,
     paddingHorizontal: 20,
-    marginVertical: 30,
+    marginVertical: 20,
     marginHorizontal: 20,
   },
   inputGroup: {
-    marginBottom: 30,
+    marginBottom: 20,
   },
   label: {
     color: COLORS.white,
@@ -591,13 +595,14 @@ const styles = StyleSheet.create({
     padding: 10,
     fontSize: 16,
     color: COLORS.black,
-    height: 53,
+    height: 50,
   },
   mobileInputContainer: {
     flexDirection: 'row',
     backgroundColor: BACKGROUND_COLORS.white,
     borderRadius: 5,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   pickerWrapper: {
     width: 100,
@@ -609,12 +614,12 @@ const styles = StyleSheet.create({
     paddingLeft: 5,
   },
   picker: {
-    height: 53,
+    height: 50,
     width: '101%',
     marginLeft: 0,
   },
   pickerFullWidth: {
-    height: 53,
+    height: 50,
     width: '100%',
   },
   mobileInput: {
@@ -623,17 +628,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: COLORS.black,
   },
-  imageUploadButton: {
-    backgroundColor: 'white',
-    padding: 16,
-    borderRadius: 5,
-    marginTop: 5,
-    alignItems: 'center',
-  },
   buttonText: {
-    color: 'blue',
-    fontSize: 16,
-    fontWeight: '500',
+    color: COLORS.white,
+    fontSize: 14,
+    fontWeight: '400',
   },
   image: {
     flexDirection: 'row',
@@ -645,6 +643,17 @@ const styles = StyleSheet.create({
     marginTop: 30,
     borderRadius: 10,
     resizeMode: 'contain',
+  },
+  imageUploadContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  profileIcon: {
+    width: 50,
+    height: 50,
+    resizeMode: 'cover',
+    borderRadius: 16,
+    marginRight: 10,
   },
 });
 

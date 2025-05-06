@@ -143,6 +143,7 @@ const styles = StyleSheet.create({
   },
   mainContainer: {
     marginTop: 5,
+    marginBottom: 10,
   },
   formContainer: {
     backgroundColor: BACKGROUND_COLORS.deepBrown,

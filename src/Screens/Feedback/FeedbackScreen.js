@@ -103,32 +103,33 @@ const FeedbackScreen = () => {
           fontSize={14}
           onPress={() => handleSubmit()}
         />
+      </View>
 
+      <View style={styles.bottomContainer}>
         <View style={styles.officeContainer}>
           <Text style={styles.heading}>Our Offices</Text>
           <View style={styles.infoRow}>
-            <Icon name="phone" size={20} color={COLORS.white} style={styles.icon} />
-            <Text style={styles.infoText}><Text style={{ fontSize: 15, fontWeight: 600 }}>Phone:</Text> +91-7838989070 ( WhatsApp / SMS only )</Text>
+            <Icon name="phone" size={24} color="#64B5DB" style={styles.icon} />
+            <Text style={styles.infoText}><Text style={{ fontSize: 14, fontWeight: 600 }}>Phone:</Text> +91-7838989070 (WhatsApp/SMS only)</Text>
           </View>
           <View style={styles.warningRow}>
             <Text style={styles.warningText}>Please Do No Make Call.</Text>
             <Text style={styles.warningText}>कृपया कॉल न करें.</Text>
           </View>
           <View style={styles.infoRow}>
-            <Icon name="email" size={20} color={COLORS.white} style={styles.icon} />
-            <Text style={styles.infoText}><Text style={{ fontSize: 15, fontWeight: 600 }}>Email:</Text> hindibiblestudy.com@gmail.com</Text>
+            <Icon name="email" size={24} color="#64B5DB" style={styles.icon} />
+            <Text style={styles.infoText}><Text style={{ fontSize: 14, fontWeight: 600 }}>Email:</Text> hindibiblestudy.com@gmail.com</Text>
           </View>
         </View>
-
 
         <View style={styles.workingContainer}>
           <Text style={styles.heading}>Working Hours</Text>
           <View style={[styles.infoRow, { marginBottom: 10 }]}>
-            <Icon name="access-time" size={16} color={COLORS.white} style={styles.icon} />
+            <Icon name="access-time" size={20} color={COLORS.white} style={styles.icon} />
             <Text style={styles.infoText}>Monday - Friday - 10am to 5pm</Text>
           </View>
           <View style={styles.infoRow}>
-            <Icon name="access-time" size={16} color={COLORS.white} style={styles.icon} />
+            <Icon name="access-time" size={20} color={COLORS.white} style={styles.icon} />
             <Text style={styles.infoText}>Saturday - Sunday - Closed</Text>
           </View>
         </View>
@@ -153,15 +154,21 @@ const styles = StyleSheet.create({
   formContainer: {
     backgroundColor: BACKGROUND_COLORS.deepBrown,
     borderRadius: 5,
-    padding: 20,
+    padding: 16,
     marginHorizontal: 16,
-    marginTop: 10,
-    marginBottom: 20,
+    marginTop: 20,
+  },
+  bottomContainer: {
+    backgroundColor: BACKGROUND_COLORS.deepBrown,
+    borderRadius: 5,
+    padding: 16,
+    marginHorizontal: 16,
+    marginVertical: 20,
   },
   heading: {
     fontSize: 18,
     fontWeight: '500',
-    marginBottom: 20,
+    marginBottom: 10,
     alignSelf: 'center',
     color: COLORS.white,
   },
@@ -174,7 +181,7 @@ const styles = StyleSheet.create({
   input: {
     padding: 10,
     marginBottom: 10,
-    borderRadius: 8,
+    borderRadius: 5,
     backgroundColor: BACKGROUND_COLORS.white,
   },
   textArea: {
@@ -183,7 +190,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   label: {
-    marginBottom: 5,
+    marginBottom: 8,
     marginTop: 10,
     color: COLORS.white,
   },
@@ -191,7 +198,7 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   officeContainer: {
-    marginTop: 50,
+    marginTop: 5,
   },
   infoRow: {
     flexDirection: 'row',
@@ -206,7 +213,7 @@ const styles = StyleSheet.create({
   },
   warningRow: {
     marginVertical: 20,
-    marginLeft: 30,
+    marginLeft: 35,
   },
   warningText: {
     color: COLORS.white,

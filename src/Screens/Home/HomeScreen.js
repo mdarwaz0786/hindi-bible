@@ -92,10 +92,10 @@ const HomeScreen = () => {
 
       <View style={styles.priceButton}>
         <Button
-          title="1 Year Fee = 300/-"
+          title="1 YEAR FEE = 300/-"
           height="40"
           width="50%"
-          backgroundColor="#c00000"
+          backgroundColor={BACKGROUND_COLORS.darkRed}
           color="#ffff00"
           borderRadius={5}
           fontSize={15}

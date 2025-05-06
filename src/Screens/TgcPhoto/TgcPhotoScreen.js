@@ -1,3 +1,5 @@
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable quotes */
 import { ScrollView, StyleSheet, Text, View, Image, Alert } from 'react-native';
 import React, { useState } from 'react';
 import TopBarPrimary from '../../Components/TopBar/TopBarPrimary';
@@ -17,6 +19,21 @@ const TgcPhotoScreen = () => {
     },
     {
       title: 'CONFERENCE',
+      image: require('../../Assets/videoThumbnail.jpeg'),
+    },
+  ];
+
+  const albumImages = [
+    {
+      title: 'CONFERENCE',
+      image: require('../../Assets/videoThumbnail.jpeg'),
+    },
+    {
+      title: 'MEETING',
+      image: require('../../Assets/videoThumbnail.jpeg'),
+    },
+    {
+      title: 'PLAYING',
       image: require('../../Assets/videoThumbnail.jpeg'),
     },
   ];
@@ -99,16 +116,32 @@ const TgcPhotoScreen = () => {
         ))}
       </View>
 
-      <View style={styles.buttonBottom}>
-        <GradiantButton
-          title="Album"
-          height="35"
-          width="25%"
-          gradientType="orange"
-          borderRadius={5}
-          fontSize={15}
-        />
-      </View>
+      {[{ title: 'Album Title', images: albumImages }].map((album, i) => (
+        <View key={i} style={styles.imageWrapper}>
+          <View style={styles.imageContainer}>
+            <Image source={album.images[0].image} style={styles.image} />
+            <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+              <View style={styles.imageTitleWrapper}>
+                <Text style={styles.imageTitle}>{album.title}</Text>
+              </View>
+              <GradiantButton
+                title="Album"
+                height="31"
+                width="25%"
+                gradientType="orange"
+                borderRadius={5}
+                fontSize={15}
+                onPress={() =>
+                  navigation.navigate('AlbumImage', {
+                    images: album.images,
+                    initialIndex: 0,
+                  })
+                }
+              />
+            </View>
+          </View>
+        </View>
+      ))}
     </ScrollView>
   );
 };
@@ -136,7 +169,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   imageWrapper: {
-    padding: 12,
+    paddingHorizontal: 16,
   },
   image: {
     width: '100%',
@@ -144,8 +177,8 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   imageContainer: {
-    alignItems: 'center',
     marginBottom: 20,
+    marginTop: 10,
   },
   imageTitleWrapper: {
     backgroundColor: '#fff',
@@ -153,16 +186,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 5,
     alignSelf: 'flex-start',
-    marginTop: -5,
   },
   imageTitle: {
     fontSize: 16,
     fontWeight: '400',
     color: '#333',
-  },
-  buttonBottom: {
-    marginBottom: 16,
-    alignItems: 'center',
   },
 });
 

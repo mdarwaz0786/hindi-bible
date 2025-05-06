@@ -569,7 +569,6 @@ const styles = StyleSheet.create({
   },
   button: {
     alignItems: 'center',
-    marginVertical: 10,
   },
   formContainer: {
     backgroundColor: BACKGROUND_COLORS.skyBlue,
@@ -577,11 +576,11 @@ const styles = StyleSheet.create({
     borderColor: COLORS.black,
     padding: 20,
     paddingHorizontal: 20,
-    marginVertical: 30,
+    marginVertical: 20,
     marginHorizontal: 20,
   },
   inputGroup: {
-    marginBottom: 30,
+    marginBottom: 20,
   },
   label: {
     color: COLORS.white,
@@ -596,13 +595,14 @@ const styles = StyleSheet.create({
     padding: 10,
     fontSize: 16,
     color: COLORS.black,
-    height: 53,
+    height: 50,
   },
   mobileInputContainer: {
     flexDirection: 'row',
     backgroundColor: BACKGROUND_COLORS.white,
     borderRadius: 5,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   pickerWrapper: {
     width: 100,
@@ -614,12 +614,12 @@ const styles = StyleSheet.create({
     paddingLeft: 5,
   },
   picker: {
-    height: 53,
+    height: 50,
     width: '101%',
     marginLeft: 0,
   },
   pickerFullWidth: {
-    height: 53,
+    height: 50,
     width: '100%',
   },
   mobileInput: {

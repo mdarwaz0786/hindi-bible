@@ -61,6 +61,7 @@ import TeenBibleSchoolScreen from '../Screens/TeenBibleSchool/TeenBibleSchoolScr
 import FeedbackScreen from '../Screens/Feedback/FeedbackScreen.js';
 import OneDayFreeTrialScreen from '../Screens/OneDayFreeTrial/OneDayFreeTrialScreen.js';
 import OrderHistoryScreen from '../Screens/OrderHistory/OrderHistoryScreen.js';
+import AlbumImage from '../Components/Image/AlbumImage.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -127,6 +128,7 @@ const StackNavigation = () => (
     <Stack.Screen name="PdfDownload" component={PdfDownloadScreen} />
     <Stack.Screen name="ZaruriSuchna" component={ZaruriSuchnaScreen} />
     <Stack.Screen name="TgcPhoto" component={TgcPhotoScreen} />
+    <Stack.Screen name="AlbumImage" component={AlbumImage} />
     <Stack.Screen name="Devotion" component={DevotionScreen} />
     <Stack.Screen name="ChildrenBibleSchool" component={ChildrenBibleScreen} />
     <Stack.Screen name="TeenBibleSchool" component={TeenBibleSchoolScreen} />

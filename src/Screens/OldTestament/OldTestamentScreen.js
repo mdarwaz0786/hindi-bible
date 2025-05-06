@@ -459,6 +459,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: BACKGROUND_COLORS.primary,
     padding: 16,
+    paddingVertical: 0,
   },
   topBar: {
     marginTop: 25,
@@ -472,7 +473,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   buttonContainer: {
-    marginTop: 20,
+    marginTop: 16,
   },
   buttonWrapper: {
     flexDirection: 'row',

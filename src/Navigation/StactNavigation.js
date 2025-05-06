@@ -3,7 +3,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../Screens/Home/HomeScreen.js';
 import ContactUsScreen from '../Screens/ContactUs/ContactUsScreen.js';
 import LatestNewsScreen from '../Screens/LatestNews/LatestNewsScreen.js';
-import IntroVideoScreen from '../Screens/IntroVideo/IntroVideoScreen.js';
 import RegisterScreen from '../Screens/Register/RegisterScreen.js';
 import LoginScreen from '../Screens/Login/LoginScreen.js';
 import LoginSuccessScreen from '../Screens/LoginSuccess/LoginSuccess.js';
@@ -14,7 +13,6 @@ import OldTestamentScreen from '../Screens/OldTestament/OldTestamentScreen.js';
 import GenesisScreen from '../Screens/Genesis/GenesisScreen.js';
 import NewTestamentScreen from '../Screens/NewTestament/NewTestamentScreen.js';
 import MattScreen from '../Screens/Matt/MattScreen.js';
-import SingleMattScreen from '../Screens/Matt/SingleMattScreen.js';
 import MemberLoginScreen from '../Screens/MemberLogin/MemberLoginScreen.js';
 import YourContributionHomeScreen from '../Screens/YourContribution/YourContributionHomeScreen.js';
 import YourContributionScreen from '../Screens/YourContribution/YourContributionScreen.js';
@@ -77,7 +75,6 @@ const StackNavigation = () => (
     <Stack.Screen name="Home" component={HomeScreen} />
     <Stack.Screen name="ContactUs" component={ContactUsScreen} />
     <Stack.Screen name="LatestNews" component={LatestNewsScreen} />
-    <Stack.Screen name="IntroVideo" component={IntroVideoScreen} />
     <Stack.Screen name="Register" component={RegisterScreen} />
     <Stack.Screen name="Login" component={LoginScreen} />
     <Stack.Screen name="LoginSuccess" component={LoginSuccessScreen} />
@@ -88,7 +85,6 @@ const StackNavigation = () => (
     <Stack.Screen name="Genesis" component={GenesisScreen} />
     <Stack.Screen name="NewTestament" component={NewTestamentScreen} />
     <Stack.Screen name="Matt" component={MattScreen} />
-    <Stack.Screen name="SingleMatt" component={SingleMattScreen} />
     <Stack.Screen name="MemberLoginHome" component={MemberLoginHomeScreen} />
     <Stack.Screen name="MemberLogin" component={MemberLoginScreen} />
     <Stack.Screen name="LoginMember" component={LoginMemberScreen} />
